@@ -1,0 +1,25 @@
+# @version 2018.11.17, 03:37
+defaultSeverity: error
+extends:
+  - "tslint:recommended"
+  - "tslint-react"
+rules:
+  quotemark: false
+  # quotemark:
+  #   - true
+  #   - "single"
+  #   - "jsx-double"
+  max-classes-per-file: false
+  jsx-no-multiline-js: false
+  jsx-no-lambda: false
+  object-literal-sort-keys: false
+  trailing-comma: false # [true, {multiline: "never", singleline: "never"}]
+  only-arrow-functions: false
+  jsx-boolean-value: false
+  object-literal-key-quotes: false
+  variable-name: false
+  forin: false
+  no-var-requires: false
+  ordered-imports: false
+  tslint.jsEnable: false
+

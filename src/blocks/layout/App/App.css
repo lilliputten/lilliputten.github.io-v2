@@ -1,0 +1,17 @@
+/* vim: set ft=stylus: */
+
+.App {
+
+  text-align: center;
+  // DEMO: Config variable
+  // background-color: color($testColor alpha(20%));
+
+  &-Title {
+    font-size: 1.5em;
+  }
+
+  &-Intro {
+    font-size: large;
+  }
+
+}

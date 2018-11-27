@@ -1,0 +1,11 @@
+--- ./webpack.config.dev.js.orig	2018-09-10 19:44:07.491077400 +0300
++++ ./webpack.config.dev.js	2018-09-10 19:43:52.138444400 +0300
+@@ -80,7 +80,7 @@
+     // We placed these paths second because we want `node_modules` to "win"
+     // if there are any conflicts. This matches Node resolution mechanism.
+     // https://github.com/facebookincubator/create-react-app/issues/253
+-    modules: ['node_modules', paths.appNodeModules].concat(
++    modules: [paths.appSrc, 'node_modules', paths.appNodeModules].concat(
+       // It is guaranteed to exist because we tweak it in `env.js`
+       process.env.NODE_PATH.split(path.delimiter).filter(Boolean)
+     ),

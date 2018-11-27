@@ -1,0 +1,7 @@
+/* vim: set ft=stylus: */
+
+.Main {
+  margin: $(containerPadding)px;
+  position: relative;
+  // overflow: hidden;
+}
