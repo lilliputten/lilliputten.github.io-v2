@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { PagesConsumer, IPageContext } from './PageContext';
-// import PageLoader, { IPage } from './PageLoader';
 
 // NOTE: @see hack at [Using React Context in a TypeScript
 // App](https://medium.com/@thehappybug/using-react-context-in-a-typescript-app-c4ef7504c858)

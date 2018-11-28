@@ -4,7 +4,6 @@ import { IClassNameProps } from '@bem-react/core';
 import * as React from 'react';
 import { HashRouter } from 'react-router-dom';
 
-// import AppDispatcher from 'lib/flux/AppDispatcher';
 import AppStore from 'lib/flux/AppStore';
 
 import { PagesProvider, IPageContext } from 'lib/pages/PageContext';
@@ -15,14 +14,8 @@ import Main from 'blocks/layout/Main/Main';
 import './App.css';
 import Header from './Header/App-Header';
 
-// console.log('App AppDispatcher', AppDispatcher);
-
 // DEMO: Import config:
-// import { css as cssConfig } from 'config';
-// console.log(cssConfig);
-// // import * as config from 'config';
-// // console.log(config);
-// debugger;
+// import { pages as pagesConfig } from 'config';
 
 const cnApp = cn('App');
 
