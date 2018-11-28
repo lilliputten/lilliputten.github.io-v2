@@ -4,56 +4,93 @@
  * @module config
  * @author lilliputten <lilliputten@yandex.ru>
  * @since 2018.09.26, 23:11
- * @version 2018.11.17, 06:57
- *
- * TODO 2018.09.27, 00:12 -- Make algorythmic eval of submodules/elems?
+ * @version 2018.11.29, 01:29
  *
  */
 
 (function(__global){
 
-  // Variable to store config module
-  var config;
+  /** List of used submodule names */
+  var submoduleNames = [
+    'css',
+    'site',
+    'pages',
+  ];
+
+  /** makeConfig ** {{{ Make config object from modules list
+   * @param {Array} submodules
+   * @return {Object}
+   */
+  function makeConfig (submodules) {
+
+    var config = {};
+
+    submodules.map(function(module, i){
+      var id = submoduleNames[i];
+      return config[id] = module;
+    });
+
+    // Export to global scope
+    __global.config = config;
+
+    return config;
+  }/*}}}*/
+
+  // /** modules ** {{{ DEBUG: Fake modules object
+  //  */
+  // /* eslint-disable no-console, no-debugger */
+  // var modules = {
+  //   define: function (id, list, cb) {
+  //     var provide = function(module) {
+  //       console.log('provide', module);
+  //     };
+  //     console.log('define', id, list, cb);
+  //     cb && cb.apply(window, [provide].concat(list));
+  //   },
+  // };/*}}}*/
 
   /** Universal export... ** {{{ */
   if (typeof module === 'object' && typeof module.exports === 'object') {
 
-    config = {
-      css: require('./__css/config__css.js'),
-      site: require('./__site/config__site.js'),
-    };
+    /** submodules ** {{{ Make config modules list
+     */
+    var submodules = submoduleNames.map(function(id){
 
-    // Export to globals
-    __global.config = config;
+      // require commonjs module...
+      try {
+        var data = require('./__' + id + '/config__' + id + '.js');
+      }
+      catch(err) {
+        var msg = 'Cannot load config module \'' + id + '\': ';
+        console.error(msg, err); // eslint-disable-line no-console
+        debugger; // eslint-disable-line no-debugger
+        throw new Error(msg + (err.message || err));
+      }
 
-    // Export
-    module.exports = config;
-    module.exports.site = config.site;
-    module.exports.css = config.css;
+      // Export indiviudual submoduleNames...
+      module.exports[id] = data;
+
+      return data;
+
+    });/*}}}*/
+
+    // Make config object & store to global scope
+    module.exports = makeConfig(submodules);
+    module.exports.__submodules = submoduleNames;
 
   }/*}}}*/
   /** YM export... ** {{{ */
   if (typeof modules === 'object' && typeof modules.define === 'function') {
 
-    modules.define('config', [
-      'config__css',
-      'config__site',
-    ], function(provide,
-      css,
-      site,
-    // eslint-disable-next-line no-unused-vars
-    __BASE) {
+    var configModuleNames = submoduleNames.map(function(id){ return 'config__' + id; });
 
-      config = /** @lends config.prototype */ {
-        css : css,
-        site : site,
-      };
+    modules.define('config', configModuleNames, function(provide /*, modules... */) {
 
-      // Export to globals
-      __global.config = config;
+      // Make config modules list from passed in arguments
+      var submodules = Array.from(arguments).splice(1);
 
-      // Export
-      provide(config);
+      // Make config object & store to global scope
+      provide(makeConfig(submodules));
 
     });
   }/*}}}*/
