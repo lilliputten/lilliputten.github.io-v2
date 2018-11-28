@@ -10,8 +10,8 @@
 
 (function(__global){
 
-  /** List of used submodule names */
-  var submoduleNames = [
+  /** List of used submodules */
+  var __submodules = [
     'css',
     'site',
     'pages',
@@ -26,7 +26,7 @@
     var config = {};
 
     submodules.map(function(module, i){
-      var id = submoduleNames[i];
+      var id = __submodules[i];
       return config[id] = module;
     });
 
@@ -54,7 +54,7 @@
 
     /** submodules ** {{{ Make config modules list
      */
-    var submodules = submoduleNames.map(function(id){
+    var submodules = __submodules.map(function(id){
 
       // require commonjs module...
       try {
@@ -67,7 +67,7 @@
         throw new Error(msg + (err.message || err));
       }
 
-      // Export indiviudual submoduleNames...
+      // Export indiviudual __submodules...
       module.exports[id] = data;
 
       return data;
@@ -76,13 +76,13 @@
 
     // Make config object & store to global scope
     module.exports = makeConfig(submodules);
-    module.exports.__submodules = submoduleNames;
+    module.exports.__submodules = __submodules;
 
   }/*}}}*/
   /** YM export... ** {{{ */
   if (typeof modules === 'object' && typeof modules.define === 'function') {
 
-    var configModuleNames = submoduleNames.map(function(id){ return 'config__' + id; });
+    var configModuleNames = __submodules.map(function(id){ return 'config__' + id; });
 
     modules.define('config', configModuleNames, function(provide /*, modules... */) {
 
