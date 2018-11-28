@@ -3,7 +3,7 @@ import { IClassNameProps } from '@bem-react/core';
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 
-const cnHome = cn('HomePage');
+const cnHomePage = cn('HomePage');
 
 export interface IHomeProps extends IClassNameProps {
   text?: string;
@@ -13,7 +13,7 @@ export default class HomePage<P extends IHomeProps> extends React.Component<P> {
 
   public static defaultProps = {
     text: 'HomePage: default',
-    className: cnHome(),
+    className: cnHomePage(),
   };
 
   public block = 'HomePage';

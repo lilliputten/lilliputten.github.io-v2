@@ -4,13 +4,18 @@ import { IClassNameProps } from '@bem-react/core';
 import * as React from 'react';
 import { HashRouter } from 'react-router-dom';
 
-import { PagesProvider, IPagesContext } from 'lib/pages/PagesContext';
+// import AppDispatcher from 'lib/flux/AppDispatcher';
+import AppStore from 'lib/flux/AppStore';
+
+import { PagesProvider, IPageContext } from 'lib/pages/PageContext';
 import PageLoader from 'lib/pages/PageLoader';
 
 import Main from 'blocks/layout/Main/Main';
 
 import './App.css';
 import Header from './Header/App-Header';
+
+// console.log('App AppDispatcher', AppDispatcher);
 
 // DEMO: Import config:
 // import { css as cssConfig } from 'config';
@@ -22,8 +27,9 @@ import Header from './Header/App-Header';
 const cnApp = cn('App');
 
 const pageLoader = new PageLoader();
-const pagesContext: IPagesContext = {
+const pagesContext: IPageContext = {
   pageLoader,
+  AppStore,
 };
 
 // const AppRegistry = new Registry({ id: cnApp(), inverted: true });

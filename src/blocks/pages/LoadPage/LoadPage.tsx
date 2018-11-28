@@ -2,19 +2,22 @@
 import { IClassNameProps } from '@bem-react/core';
 import * as React from 'react';
 // import { Link } from 'react-router-dom';
-import { IPagesContext } from 'lib/pages/PagesContext';
+import { IPageContext } from 'lib/pages/PageContext';
 import { IPage } from 'lib/pages/PageLoader';
 import LoadedPage from 'blocks/pages/LoadedPage/LoadedPage';
 import withPageContextHOC from 'lib/pages/withPageContextHOC';
 
+import AppActions from 'lib/flux/AppActions';
+import AppStore from 'lib/flux/AppStore';
+
 import './LoadPage.css';
 
-// const cnLoad = cn('LoadPage');
+// const cnLoadPage = cn('LoadPage');
 
 export interface ILoadPageProps extends IClassNameProps {
   text?: string; // DEBUG
   location: any;
-  context: IPagesContext;
+  context: IPageContext;
   // pageLoader: PageLoader;
 }
 export interface ILoadPageState {
@@ -25,7 +28,7 @@ class LoadPage extends React.Component<ILoadPageProps, ILoadPageState> {
 
   public static defaultProps = {
     text: 'LoadPage: default',
-    // className: cnLoad(),
+    // className: cnLoadPage(),
   };
 
   public block = 'LoadPage';
@@ -70,7 +73,7 @@ class LoadPage extends React.Component<ILoadPageProps, ILoadPageState> {
   /** render ** {{{
    */
   public render() {
-      // <div className={cnLoad()}>
+      // <div className={cnLoadPage()}>
       //   {this.state.content}
       // </div>
     return (

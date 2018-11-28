@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { PagesConsumer, IPagesContext } from './PagesContext';
+import { PagesConsumer, IPageContext } from './PageContext';
 // import PageLoader, { IPage } from './PageLoader';
 
 // NOTE: @see hack at [Using React Context in a TypeScript
@@ -7,7 +7,7 @@ import { PagesConsumer, IPagesContext } from './PagesContext';
 type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
 
 export default <
-    Context extends { context?: IPagesContext },
+    Context extends { context?: IPageContext },
     P = Omit<Context, 'context'>
   >(Component: React.ComponentClass<Context> | React.StatelessComponent<Context>): React.SFC<P> =>
     (props: P) => (

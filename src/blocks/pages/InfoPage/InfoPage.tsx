@@ -4,7 +4,7 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 import regularPageHOC from 'lib/pages/regularPageHOC';
 
-const cnInfo = cn('InfoPage');
+const cnInfoPage = cn('InfoPage');
 
 export interface IInfoProps extends IClassNameProps {
   text?: string;
@@ -14,7 +14,7 @@ class InfoPage<P extends IInfoProps> extends React.Component<P> {
 
   public static defaultProps = {
     text: 'InfoPage: default',
-    className: cnInfo(),
+    className: cnInfoPage(),
   };
 
   public block = 'InfoPage';

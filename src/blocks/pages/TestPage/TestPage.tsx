@@ -14,7 +14,7 @@ import './TestPage.css';
 
 const ExampleWithMods = compose(mod1, mod2)(Example);
 
-const cnTest = cn('TestPage');
+const cnTestPage = cn('TestPage');
 
 export interface ITestPageProps extends IClassNameProps {
   text?: string;
@@ -28,7 +28,7 @@ class TestPage extends React.Component<ITestPageProps, ITestPageState> {
 
   public static defaultProps = {
     text: 'TestPage: default',
-    className: cnTest(),
+    className: cnTestPage(),
   };
 
   public block = 'TestPage';
@@ -58,10 +58,8 @@ class TestPage extends React.Component<ITestPageProps, ITestPageState> {
   /** render ** {{{
    */
   public render() {
-    // console.log('TestPage render', this.timestamp, this.props, this.state);
-    // debugger;
     return (
-      <div className={cnTest(/* null, ['MainPage'] */)}>
+      <div className={cnTestPage(/* null, ['MainPage'] */)}>
         {this.props.text} -
         - <Link to="/">home</Link> -
         - <Link to="/info">info</Link> -

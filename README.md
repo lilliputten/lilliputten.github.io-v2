@@ -7,7 +7,7 @@
 - `config-overrides.js`
 - `jest.config.js`
 - `.lvimrc`
-- `tsconfig.json`
+- `tsconfig.json` (set/reset `noUnusedLocals`, `noUnusedParameters` for production/development)
 - `tslint.yaml`
 - `.eslintrc.yml`
 - `src/config/__css/config__css.js`
@@ -33,7 +33,7 @@ bem-react-core-3:
 ### Typescript typings
 
 ```shell
-npm install -D @types/react-router-dom
+npm i -D @types/react-router-dom
 ```
 
 ### 'value is never used' errors
