@@ -1,14 +1,17 @@
-# @version 2018.11.17, 03:37
+# @version 2018.11.28, 05:32
 defaultSeverity: error
 extends:
   - "tslint:recommended"
   - "tslint-react"
 rules:
-  quotemark: false
-  # quotemark:
-  #   - true
-  #   - "single"
-  #   - "jsx-double"
+  # NOTE: Set `no-console`, `no-debugger` in `true` for production!
+  no-console: true
+  no-debugger: true
+  # quotemark: false
+  quotemark:
+    - true
+    - "single"
+    - "jsx-double"
   max-classes-per-file: false
   jsx-no-multiline-js: false
   jsx-no-lambda: false
@@ -22,4 +25,3 @@ rules:
   no-var-requires: false
   ordered-imports: false
   tslint.jsEnable: false
-

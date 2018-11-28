@@ -8,6 +8,8 @@
 - `jest.config.js`
 - `.lvimrc`
 - `tsconfig.json`
+- `tslint.yaml`
+- `.eslintrc.yml`
 - `src/config/__css/config__css.js`
 - `src/config/__site/config__site.js`
 

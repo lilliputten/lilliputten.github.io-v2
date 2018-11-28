@@ -1,40 +1,50 @@
 /* eslint-env es6, node, commonjs */
+
+const levelsPath = 'src/blocks/';
+
+const levelsList = [
+  'interface',
+  'layout',
+  'pages',
+  'demo',
+];
+
+const defaultLevel = 'interface';
+
 module.exports = {
-  levels: [
-    { path: 'src/blocks/layout', layer: 'common' },
-    { path: 'src/blocks/pages', layer: 'common' },
-    { path: 'src/blocks/demo', layer: 'common' },
-    // {
-    //   layer: 'desktop',
-    //   path: 'src/desktop'
-    // },
-    // {
-    //   layer: 'touch',
-    //   path: 'src/touch'
-    // }
-  ].map(level => Object.assign({
+
+  levelsPath,
+  levelsList,
+  defaultLevel,
+
+  levels: levelsList.map((path) => ({
+    path: levelsPath + path,
+    layer: 'common',
     schemeOptions: 'react',
     naming: 'react',
-    scheme: 'nested' }, level)
-  ),
+    scheme: 'nested',
+  })),
+
   // remove sets to build one universal bundle for index.html
   // sets: {
   //   desktop: 'common desktop',
   //   touch: 'common touch'
   // },
+
   modules: {
     'bem-tools': {
       plugins: {
         create: {
           levels: {
-            'src/blocks/layout': { default: true }
+            [levelsPath + defaultLevel]: { default: true },
           },
           techs: ['tsx', 'css'],
           templates: {
-            tsx: '.bem/templates/tsx.js'
-          }
-        }
-      }
-    }
-  }
+            tsx: '.bem/templates/tsx.js',
+          },
+        },
+      },
+    },
+  },
+
 };

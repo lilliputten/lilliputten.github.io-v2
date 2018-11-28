@@ -1,7 +1,11 @@
 import { cn } from '@bem-react/classname';
+// import { Registry, withRegistry, RegistryConsumer } from '@bem-react/di';
 import { IClassNameProps } from '@bem-react/core';
 import * as React from 'react';
 import { HashRouter } from 'react-router-dom';
+
+import { PagesProvider, IPagesContext } from 'lib/pages/PagesContext';
+import PageLoader from 'lib/pages/PageLoader';
 
 import Main from 'blocks/layout/Main/Main';
 
@@ -16,6 +20,14 @@ import Header from './Header/App-Header';
 // debugger;
 
 const cnApp = cn('App');
+
+const pageLoader = new PageLoader();
+const pagesContext: IPagesContext = {
+  pageLoader,
+};
+
+// const AppRegistry = new Registry({ id: cnApp(), inverted: true });
+// AppRegistry.set('pageLoader', pageLoader);
 
 export interface IAppProps extends IClassNameProps {
   path: string;
@@ -33,18 +45,24 @@ export default class App extends React.Component<IAppProps, IAppState> {
 
   public block = 'App';
 
+  /** constructor ** {{{
+   */
   constructor(props: IAppProps) {
     super(props);
 
     this.state = {
       title: 'not loaded',
     };
-  }
+  }/*}}}*/
 
+  /** componentDidMount ** {{{
+   */
   public componentDidMount() {
     this.setState({ title: 'Welcome to BEM in the TypeScript world' });
-  }
+  }/*}}}*/
 
+  /** render ** {{{
+   */
   public render() {
       // <Fragment>
       //   <Header title={this.state.title}/>
@@ -59,11 +77,13 @@ export default class App extends React.Component<IAppProps, IAppState> {
       // </Fragment>
     return (
       <HashRouter>
-        <div className={this.props.className}>
-          <Header title={this.state.title}/>
-          <Main text="Main: content" />
-        </div>
+        <PagesProvider value={pagesContext}>
+          <div className={this.props.className}>
+            <Header title={this.state.title}/>
+            <Main text="Main: content" />
+          </div>
+        </PagesProvider>
       </HashRouter>
     );
-  }
+  }/*}}}*/
 }
