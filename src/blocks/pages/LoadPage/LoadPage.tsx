@@ -3,8 +3,9 @@ import { IClassNameProps } from '@bem-react/core';
 import * as React from 'react';
 // import { Link } from 'react-router-dom';
 import { IPageContext } from 'lib/pages/PageContext';
-import { IPage } from 'lib/pages/PageLoader';
+import { TPage } from 'lib/pages/PageTools';
 import LoadedPage from 'blocks/pages/LoadedPage/LoadedPage';
+import Error from 'blocks/interface/Error/Error';
 import withPageContextHOC from 'lib/pages/withPageContextHOC';
 
 import AppActions from 'lib/flux/AppActions';
@@ -18,7 +19,6 @@ export interface ILoadPageProps extends IClassNameProps {
   text?: string; // DEBUG
   location: any;
   context: IPageContext;
-  // pageLoader: PageLoader;
 }
 export interface ILoadPageState {
   content?: JSX.Element | React.Component | string | null;
@@ -42,31 +42,52 @@ class LoadPage extends React.Component<ILoadPageProps, ILoadPageState> {
     this.state = {
     };
 
+    this.onPageUpdated = this.onPageUpdated.bind(this);
+    this.onErrorThrown = this.onErrorThrown.bind(this);
+
   }/*}}}*/
 
-  /** componentWillMount ** {{{
+  /** onPageUpdated ** {{{
    */
-  public componentWillMount() {
+  onPageUpdated() {
+    const page = AppStore.getCurrentPage();
+    const content = (
+      <LoadedPage {...this.props}>
+        {page && page.content}
+      </LoadedPage>
+    );
+    this.setState({ content });
+  }/*}}}*/
+  /** onErrorThrown ** {{{
+   */
+  onErrorThrown() {
+    const err = AppStore.getError();
+    const content = (
+      <Error {...this.props} error={err} />
+    );
+    this.setState({ content });
+  }/*}}}*/
+
+  /** componentDidMount ** {{{
+   */
+  public componentDidMount() {
 
     const props = this.props;
 
-    const {pageLoader} = props.context;
     const {pathname} = props.location;
 
-    pageLoader.getPage({pathname})
-      .then((page: IPage) => {
-        const content = (
-          <LoadedPage {...props}>
-            {page.content}
-          </LoadedPage>
-        );
-        this.setState({ content });
-      })
-      .catch((err: any) => {
-        console.error('LoadPage error', err); // tslint:disable-line no-console
-        debugger; // tslint:disable-line no-debugger
-      })
-    ;
+    AppStore.on('pageUpdated', this.onPageUpdated);
+    AppStore.on('errorThrown', this.onErrorThrown);
+
+    AppActions.fetchPage(pathname);
+
+  }/*}}}*/
+  /** componentWillUnmount ** {{{
+   */
+  public componentWillUnmount() {
+
+    AppStore.off('pageUpdated', this.onPageUpdated);
+    AppStore.off('errorThrown', this.onErrorThrown);
 
   }/*}}}*/
 

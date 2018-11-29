@@ -21,7 +21,7 @@ const cnApp = cn('App');
 
 const pageLoader = new PageLoader();
 const pagesContext: IPageContext = {
-  pageLoader,
+  // pageLoader,
   AppStore,
 };
 

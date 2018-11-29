@@ -1,13 +1,18 @@
 import AppDispatcher from './AppDispatcher';
 
-// const appDispatcher = new AppDispatcher();
-
 class AppActions {
 
-  public showPage(data: any) {
+  public fetchPage(pathname: string) {
     AppDispatcher.dispatch({
-      actionType: 'SHOW_PAGE',
-      value: data,
+      actionType: 'fetchPage',
+      value: pathname,
+    });
+  }
+
+  public setAppMode(appMode: string) {
+    AppDispatcher.dispatch({
+      actionType: 'setAppMode',
+      value: appMode,
     });
   }
 

@@ -1,9 +1,9 @@
 import * as React from 'react';
-import PageLoader from 'lib/pages/PageLoader';
+// import PageLoader from 'lib/pages/PageLoader';
 import AppStore, { AppStoreClass } from 'lib/flux/AppStore';
 
 export interface IPageContext {
-  pageLoader: PageLoader;
+  // pageLoader: PageLoader;
   AppStore: AppStoreClass;
 }
 

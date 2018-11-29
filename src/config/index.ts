@@ -8,9 +8,15 @@ import config = require('./config.js');
 // if (Array.isArray(config.__submodules)) {
 //   config.__submodules.map((id: string) => module.exports[id] = config[id]);
 // }
+//
+// // Static export (due to TS errors; TODO?)
+// export default config;
+// export const css = config.css;
+// export const site = config.site;
 
-// Static export (due to TS errors; TODO?)
-export default config;
-export const css = config.css;
-export const site = config.site;
-export const pages = config.pages;
+// TODO: Make imports compatible with VSCode Intellisense
+// export const pages = config.pages;
+export const css = require('./__css/config__css');
+export const site = require('./__site/config__site');
+export const pages = require('./__pages/config__pages');
+export default { css, site, pages };

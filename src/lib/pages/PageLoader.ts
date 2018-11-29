@@ -1,7 +1,6 @@
+import PageTools, { TPage, TPageId, TPagePathname, TPageUrl, TPageContent } from 'lib/pages/PageTools';
 
-export interface IPage {
-  content: React.Component | string | null;
-}
+export { TPage, TPageId, TPagePathname, TPageUrl, TPageContent };
 
 // // TODO:
 // // https://blog.logrocket.com/async-rendering-in-react-with-suspense-5d0eaac886c8
@@ -12,18 +11,42 @@ export interface IPage {
 
 export default class PageLoader {
 
-  // /** constructor ** {{{ */
-  // constructor(props?: P) {
-  //   console.log(props);
-  // }/*}}}*/
+  private pageTools: PageTools;
 
-  /** getPage ** {{{
+  /** constructor ** {{{ */
+  constructor() {
+    // super();
+    this.pageTools = new PageTools();
+  }/*}}}*/
+
+  /** loadPage ** {{{
    */
-  public getPage({ pathname }: { pathname: string }): Promise<IPage> {
-    const promise = new Promise<IPage>((resolve/* , reject */) => {
-      resolve({
-        content: `page ${pathname} content`,
-      });
+  public loadPage(pathname: TPagePathname): Promise<TPage> {
+    const id = this.pageTools.normalizeId(pathname);
+    const url = this.pageTools.normalizeUrl(pathname);
+    // console.log('loadPage', pathname, '->', id, url);
+    // debugger;
+    const promise = new Promise<TPage>((resolve, reject) => {
+      if (false) {
+        resolve({
+          id: id,
+          url: url,
+          content: `page ${id} content, url: ${url}`,
+        });
+      }
+      else {
+        const message = `Fake error for page '${id}'`;
+        const err = {
+          error: 'cannotLoadPage',
+          message,
+          allowRefetchPage: true,
+          id,
+          url,
+        };
+        console.error('PageLoader:loadPage', err); // tslint:disable-line no-console
+        // /*DEBUG*/debugger; // tslint:disable-line no-debugger
+        reject(err);
+      }
     });
     return promise;
   }/*}}}*/
