@@ -1,0 +1,23 @@
+--- ./webpackDevServer.config.js.orig	2018-11-29 06:49:11.167277300 +0300
++++ ./webpackDevServer.config.js	2018-11-29 06:49:04.675357500 +0300
+@@ -98,6 +98,20 @@
+       // it used the same host and port.
+       // https://github.com/facebookincubator/create-react-app/issues/2272#issuecomment-302832432
+       app.use(noopServiceWorkerMiddleware());
++
++      // // XXX: Fake response (SAMPLE!):
++      // app.get('/site/fake.json', function(req, res) {
++      //   res.json({ fake: 'response' });
++      // });
++
++      // XXX: Serve raw files:
++      const fs = require('fs');
++      app.get('/site/*', function(req, res) {
++        let file = String(req.path).replace(/^[/\\]/,'');
++        let buf = fs.readFileSync(file);
++        res.send(buf && buf.toString('utf-8'));
++      });
++
+     },
+   };
+ };
