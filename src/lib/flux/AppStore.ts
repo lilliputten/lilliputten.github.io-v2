@@ -8,7 +8,7 @@ import { TPage, TPageId, TPagePathname, TPageContent } from 'lib/pages/PageTools
 type TEventName = string | symbol;
 type TEventListener = (...args: any[]) => void;
 
-// @see https://nodejs.org/api/events.html
+// @see https://nodejs.org/api/events.html#events_class_eventemitter
 export class AppStoreClass extends EventEmitter {
 
   private dispatchToken: string;
@@ -134,7 +134,7 @@ export class AppStoreClass extends EventEmitter {
         }
         else {
           const err = new Error(`Cannot fetch page '${id} from PageCacher'`);
-          console.error('AppStore:getOrLoadPage', err); // tslint:disable-line no-console
+          console.error('AppStore:getOrLoadPage error (empty page object)', err); // tslint:disable-line no-console
           // /*DEBUG*/debugger; // tslint:disable-line no-debugger
           reject(err);
         }
@@ -149,7 +149,6 @@ export class AppStoreClass extends EventEmitter {
       ;
     }
   }/*}}}*/
-
   /** fetchPage ** {{{
    */
   private fetchPage(pathname: TPagePathname) {
@@ -158,7 +157,7 @@ export class AppStoreClass extends EventEmitter {
         this.pageUpdated(page.id);
       })
       .catch((err) => {
-        console.error('AppStore:fetchPage', err); // tslint:disable-line no-console
+        console.error('AppStore:fetchPage error (promise catch)', err); // tslint:disable-line no-console
         // /*DEBUG*/debugger; // tslint:disable-line no-debugger
         this.errorThrown(err);
       })

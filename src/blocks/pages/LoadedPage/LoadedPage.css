@@ -1,3 +1,17 @@
 /* vim: set ft=stylus: */
 .LoadedPage {
+  width: 100%;
+  // animation: LoadedPageEnter $(pageTransitionTimeout)ms linear;
 }
+
+@keyframes LoadedPageEnter {
+  from {
+    position: absolute;
+    opacity: 0;
+  }
+  to {
+    position: relative;
+    opacity: 1;
+  }
+}
+

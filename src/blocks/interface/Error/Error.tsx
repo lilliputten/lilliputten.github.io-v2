@@ -52,9 +52,31 @@ export default class Error<P extends IErrorProps> extends React.Component<P> {
       // return String(err.message || err.stack || err);
       result = String(err);
     }
+    else if (err instanceof Response) {
+      result = err.statusText || 'Unknown network error';
+      if (err.status) {
+        result += ` (${err.status})`;
+      }
+    }
     else {
       // Try to fetch something...
       result = String(err.description || err.message || err.type || err.error || err);
+    }
+
+    result = (
+      <div className={cnError('Error')}>
+        {result}
+      </div>
+    );
+
+    if (err.details) {
+      const details = this.getErrorContent(err.details);
+      result = (
+        <React.Fragment>
+          {result}
+          {details}
+        </React.Fragment>
+      );
     }
 
     // TODO: Make button
@@ -62,9 +84,7 @@ export default class Error<P extends IErrorProps> extends React.Component<P> {
       // const pathname = this.props.location && this.props.location.pathname;
       result = (
         <React.Fragment>
-          <div className={cnError('MainMsg')}>
-            {result}
-          </div>
+          {result}
           <div className={cnError('Button')}>
             <Link onClick={(e) => this.onReloadClick(e, err)} to="">Reload</Link>
           </div>
@@ -84,7 +104,7 @@ export default class Error<P extends IErrorProps> extends React.Component<P> {
     return (
       <div className={cnError()}>
         <div className={cnError('Title')}>
-          Error occured!
+          Something went wrong!
         </div>
         <div className={cnError('Message')}>
           {errorContent}

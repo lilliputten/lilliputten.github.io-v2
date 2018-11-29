@@ -63,7 +63,9 @@ class TestPage extends React.Component<ITestPageProps, ITestPageState> {
         {this.props.text} -
         - <Link to="/">home</Link> -
         - <Link to="/info">info</Link> -
-        - <Link to="/try">try</Link> -
+        - <Link to="/try/">try</Link> -
+        - <Link to="/try/test">try/test</Link> -
+        - <Link to="/try/xxx">try/xxx</Link> -
         <ExampleWithMods mod1={true} />
         <ExampleWithMods mod1={true} mod2={true} text="Example: app" />
       </div>

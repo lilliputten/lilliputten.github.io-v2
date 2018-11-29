@@ -7,6 +7,7 @@ import { TPage } from 'lib/pages/PageTools';
 import LoadedPage from 'blocks/pages/LoadedPage/LoadedPage';
 import Error from 'blocks/interface/Error/Error';
 import withPageContextHOC from 'lib/pages/withPageContextHOC';
+import { Route, Switch } from 'react-router-dom';
 
 import AppActions from 'lib/flux/AppActions';
 import AppStore from 'lib/flux/AppStore';
@@ -76,8 +77,8 @@ class LoadPage extends React.Component<ILoadPageProps, ILoadPageState> {
 
     const {pathname} = props.location;
 
-    AppStore.on('pageUpdated', this.onPageUpdated);
-    AppStore.on('errorThrown', this.onErrorThrown);
+    AppStore.addListener('pageUpdated', this.onPageUpdated);
+    AppStore.addListener('errorThrown', this.onErrorThrown);
 
     AppActions.fetchPage(pathname);
 
@@ -86,8 +87,8 @@ class LoadPage extends React.Component<ILoadPageProps, ILoadPageState> {
    */
   public componentWillUnmount() {
 
-    AppStore.off('pageUpdated', this.onPageUpdated);
-    AppStore.off('errorThrown', this.onErrorThrown);
+    AppStore.removeListener('pageUpdated', this.onPageUpdated);
+    AppStore.removeListener('errorThrown', this.onErrorThrown);
 
   }/*}}}*/
 
@@ -97,6 +98,16 @@ class LoadPage extends React.Component<ILoadPageProps, ILoadPageState> {
       // <div className={cnLoadPage()}>
       //   {this.state.content}
       // </div>
+      // <React.Fragment>
+      //   {this.state.content}
+      // </React.Fragment>
+      // <Route
+      //   render={
+      //     ({ location }) => state.content || null
+      //   }
+      // />
+    // TODO: Animate rendered content?
+    // const state = this.state;
     return (
       <React.Fragment>
         {this.state.content}
