@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
 
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
 
     "target": "es6",
     "module": "commonjs",
