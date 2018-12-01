@@ -66,7 +66,7 @@ export default class App extends React.Component<IAppProps, IAppState> {
       <PagesProvider value={pagesContext}>
         <div className={this.props.className}>
           <Header title={this.state.title}/>
-          <Main text="Main: content" />
+          <Main />
         </div>
       </PagesProvider>
     );

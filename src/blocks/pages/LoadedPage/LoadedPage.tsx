@@ -9,14 +9,10 @@ import regularPageHOC from 'lib/pages/regularPageHOC';
 import './LoadedPage.css';
 
 const cnLoadedPage = cn('LoadedPage');
-// const cnPageTransition = cn('PageTransition');
 
 // export interface ILoadedPageProps {
-//   // text?: string; // DEBUG
 // }
 // export interface ILoadedPageState {
-//   // content?: React.Component | string | null;
-//   // className: string;
 // }
 
 class LoadedPage extends React.Component/* <ILoadedPageProps, ILoadedPageState> */ {

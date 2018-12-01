@@ -1,7 +1,39 @@
 /* vim: set ft=stylus: */
 
 .Main {
+
   margin: $(containerPadding)px;
   position: relative;
-  // overflow: hidden;
+
+  &-Show {
+
+    position: relative;
+    width: 100%;
+    // overflow: hidden;
+
+    &_entering {
+      position: relative;
+      // top: -$transition-offet;
+      opacity: 0;
+      transition: opacity $(pageTransitionTimeout)ms ease-in;
+      &&Active {
+        // top: 0px;
+        opacity: 1;
+      }
+    }
+
+    &_exiting {
+      position: absolute;
+      top: 0;
+      // border: 1px solid red;
+      opacity: 1;
+      transition: opacity $(pageTransitionTimeout)ms ease-out;
+      &&Active {
+        opacity: 0;
+        // top: 20px;
+      }
+    }
+
+  }
+
 }

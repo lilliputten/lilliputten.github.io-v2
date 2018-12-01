@@ -64,11 +64,11 @@
 
     // Timeouts...
     animationTimeout: 250,
-    pageTransitionTimeout: 3000,
+    pageTransitionTimeout: 500,
 
   };/*}}}*/
 
-  /** configCss (extend) ** {{{
+  /** extend configCss ** {{{
    */
   Object.assign(configCss, /** @lends config__css.prototype */ {
 
