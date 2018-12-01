@@ -31,7 +31,8 @@ export default class PageLoader {
           error: 'pageLoadError',
           message: `Cannot load page '${id}'`,
           details: err,
-          allowRefetchPage: true,
+          allowReloadLink: true,
+          allowHomeLink: true,
         });
       })
     ;

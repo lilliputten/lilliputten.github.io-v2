@@ -35,12 +35,14 @@ export default class Error<P extends IErrorProps> extends React.Component<P> {
     );
   }/*}}}*/
 
-  /** onReloadClick ** {{{
+  /** fetchLink ** {{{
    */
-  private onReloadClick(e: any, err: { url: string }) {
-    e.preventDefault();
-    e.stopPropagation();
-    AppActions.fetchPage(err.url);
+  private fetchLink(url: string, e: any) {
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+    AppActions.fetchPage(url);
   }/*}}}*/
 
   /** getErrorContent ** {{{
@@ -91,14 +93,18 @@ export default class Error<P extends IErrorProps> extends React.Component<P> {
       );
     }
 
-    // TODO: Make button
-    if (err.allowRefetchPage) {
-      // const pathname = this.props.location && this.props.location.pathname;
+    // Make buttons...
+    if (err.allowHomeLink || err.allowReloadLink) {
       result = (
         <React.Fragment>
           {result}
-          <div className={cnError('Button')}>
-            <Link onClick={(e) => this.onReloadClick(e, err)} to="">Reload</Link>
+          <div className={cnError('Actions')}>
+            {err.allowReloadLink && (<div className={cnError('Button')}>
+              <Link onClick={(e) => this.fetchLink(err.url, e)} to={err.url}>Reload</Link>
+            </div>)}
+            {err.allowHomeLink && (<div className={cnError('Button')}>
+              <Link to="/">Home</Link>
+            </div>)}
           </div>
         </React.Fragment>
       );
