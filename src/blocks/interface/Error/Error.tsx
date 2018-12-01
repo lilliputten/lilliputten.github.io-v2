@@ -2,7 +2,7 @@
 import { cn } from '@bem-react/classname';
 import { IClassNameProps } from '@bem-react/core';
 import * as React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'lib/pages/PageLink'; // 'react-router-dom';
 import AppActions from 'lib/flux/AppActions';
 
 import './Error.css';
@@ -18,9 +18,26 @@ export default class Error<P extends IErrorProps> extends React.Component<P> {
 
   public block = 'Error';
 
+  /** render ** {{{
+   */
+  public render() {
+    const {error} = this.props;
+    const errorContent = this.getErrorContent(error);
+    return (
+      <div className={cnError()}>
+        <div className={cnError('Title')}>
+          Something went wrong!
+        </div>
+        <div className={cnError('Message')}>
+          {errorContent}
+        </div>
+      </div>
+    );
+  }/*}}}*/
+
   /** onReloadClick ** {{{
    */
-  onReloadClick (e: any, err: { url: string }) {
+  private onReloadClick(e: any, err: { url: string }) {
     e.preventDefault();
     e.stopPropagation();
     AppActions.fetchPage(err.url);
@@ -32,11 +49,9 @@ export default class Error<P extends IErrorProps> extends React.Component<P> {
 
     if (!err) {
       return 'Undefined (empty) error';
-    }
-    else if (Array.isArray(err)) {
-      return err.map((err) => this.getErrorContent(err));
-    }
-    else if (typeof err !== 'object') {
+    } else if (Array.isArray(err)) {
+      return err.map((errItem) => this.getErrorContent(errItem));
+    } else if (typeof err !== 'object') {
       return String(err);
     }
 
@@ -46,19 +61,16 @@ export default class Error<P extends IErrorProps> extends React.Component<P> {
 
     if (err.message) {
       result = String(err.message);
-    }
-    else if (err instanceof Error) {
+    } else if (err instanceof Error) {
       // ???
       // return String(err.message || err.stack || err);
       result = String(err);
-    }
-    else if (err instanceof Response) {
+    } else if (err instanceof Response) {
       result = err.statusText || 'Unknown network error';
       if (err.status) {
         result += ` (${err.status})`;
       }
-    }
-    else {
+    } else {
       // Try to fetch something...
       result = String(err.description || err.message || err.type || err.error || err);
     }
@@ -94,23 +106,6 @@ export default class Error<P extends IErrorProps> extends React.Component<P> {
 
     return result;
 
-  }/*}}}*/
-
-  /** render ** {{{
-   */
-  public render() {
-    const {error} = this.props;
-    const errorContent = this.getErrorContent(error);
-    return (
-      <div className={cnError()}>
-        <div className={cnError('Title')}>
-          Something went wrong!
-        </div>
-        <div className={cnError('Message')}>
-          {errorContent}
-        </div>
-      </div>
-    );
   }/*}}}*/
 
 }

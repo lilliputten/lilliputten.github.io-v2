@@ -15,7 +15,7 @@ export default class LoadingSpinner<P /* extends ILoadingSpinnerProps */> extend
   public render() {
     return (
       <div className={cnLoadingSpinner()}>
-        LoadingSpinner...
+        Loading...
       </div>
     );
   }

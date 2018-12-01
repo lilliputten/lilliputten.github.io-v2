@@ -3,7 +3,7 @@ import { EventEmitter } from 'events';
 import PageLoader from 'lib/pages/PageLoader';
 import PageCacher from 'lib/pages/PageCacher';
 import PageTools from 'lib/pages/PageTools';
-import { TPage, TPageId, TPagePathname, TPageContent } from 'lib/pages/PageTools';
+import { IPage, TPageId, TPageKey, TPagePathname, TPageContent } from 'lib/pages/PageTools';
 
 type TEventName = string | symbol;
 type TEventListener = (...args: any[]) => void;
@@ -19,6 +19,7 @@ export class AppStoreClass extends EventEmitter {
 
   private appMode: string;
   private pageId: string;
+  private pageKey: string;
 
   private error: any;
 
@@ -60,18 +61,23 @@ export class AppStoreClass extends EventEmitter {
   }/*}}}*/
   /** isPageCached ** {{{
    */
-  isPageCached(id: TPageId): boolean {
+  public isPageCached(id: TPageId): boolean {
     return id ? this.pageCacher.isPageCached(id) : false;
   }/*}}}*/
   /** isPageExists ** {{{
    */
-  isPageExists(id: TPageId): boolean {
+  public isPageExists(id: TPageId): boolean {
     return this.isPageCached(id);
   }/*}}}*/
   /** getPage ** {{{
    */
-  public getPage(id: TPageId): TPage | null {
+  public getPage(id: TPageId): IPage | null {
     return this.isPageCached(id) ? this.pageCacher.fetchPage(id) : null;
+  }/*}}}*/
+  /** getCurrentPageKey ** {{{
+   */
+  public getCurrentPageKey(): TPageKey {
+    return String(this.pageId).replace(/\W+/g, '_');
   }/*}}}*/
   /** getCurrentPageId ** {{{
    */
@@ -80,7 +86,7 @@ export class AppStoreClass extends EventEmitter {
   }/*}}}*/
   /** getCurrentPage ** {{{
    */
-  public getCurrentPage(): TPage | null {
+  public getCurrentPage(): IPage | null {
     return this.getPage(this.pageId);
   }/*}}}*/
 
@@ -95,15 +101,15 @@ export class AppStoreClass extends EventEmitter {
   private setAppMode(appMode: string) {
     this.appMode = appMode;
   }/*}}}*/
-  /** setPageId ** {{{
-   */
-  private setPageId(pageId: TPageId) {
-    this.pageId = pageId;
-  }/*}}}*/
+  // /** setPageId ** {{{
+  //  */
+  // private setPageId(pageId: TPageId) {
+  //   this.pageId = pageId;
+  // }/*}}}*/
 
   /** savePage ** {{{
    */
-  private savePage(page: TPage) {
+  private savePage(page: IPage) {
     const id = page.id;
     this.pageCacher.savePage(page);
   }/*}}}*/
@@ -124,25 +130,23 @@ export class AppStoreClass extends EventEmitter {
 
   /** getOrLoadPage ** {{{
    */
-  private getOrLoadPage(pathname: TPagePathname): Promise<TPage> {
+  private getOrLoadPage(pathname: TPagePathname): Promise<IPage> {
     const id = this.pageTools.normalizeId(pathname);
     if (this.pageCacher.isPageCached(id)) {
       return new Promise((resolve, reject) => {
         const page = this.pageCacher.fetchPage(id);
-        if (page) {
-          resolve(page);
-        }
-        else {
+        if (!page) {
           const err = new Error(`Cannot fetch page '${id} from PageCacher'`);
           console.error('AppStore:getOrLoadPage error (empty page object)', err); // tslint:disable-line no-console
           // /*DEBUG*/debugger; // tslint:disable-line no-debugger
           reject(err);
+        } else {
+          resolve(page);
         }
       });
-    }
-    else {
+    } else {
       return this.pageLoader.loadPage(pathname)
-        .then((page: TPage) => {
+        .then((page: IPage) => {
           this.pageCacher.savePage(page);
           return page;
         })

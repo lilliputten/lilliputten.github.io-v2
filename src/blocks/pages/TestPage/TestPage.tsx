@@ -1,7 +1,7 @@
 import { cn } from '@bem-react/classname';
 import { IClassNameProps } from '@bem-react/core';
 import * as React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'lib/pages/PageLink'; // 'react-router-dom';
 import regularPageHOC from 'lib/pages/regularPageHOC';
 
 import { compose } from 'ramda';

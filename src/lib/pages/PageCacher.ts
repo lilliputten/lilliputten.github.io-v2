@@ -1,29 +1,20 @@
-import PageTools, { TPage, TPageId, TPagePathname, TPageUrl, TPageContent } from 'lib/pages/PageTools';
+import { IPage, TPageId, TPagePathname, TPageUrl, TPageContent } from 'lib/pages/PageTools';
 
 export { TPageId, TPagePathname, TPageUrl, TPageContent };
-// export type TPagePathname = string;
-// export type TPageUrl = string;
-// export type TPageContent = React.Component | string | null;
 
-export type TPageStore = { [id: string]: TPage };
-
-// // TODO:
-// // https://blog.logrocket.com/async-rendering-in-react-with-suspense-5d0eaac886c8
-// const someFetcher = createResource(async () => {
-//   const res = await fetch(`https://api.github.com/search/users?q=yomete`);
-//   return await res.json();
-// });
+export interface IPageStore {
+  [id: string]: IPage;
+}
 
 export default class PageCacher {
 
-  private pageTools: PageTools;
+  // private pageTools: PageTools = PageTools();
 
-  private pageStore: TPageStore;
+  private pageStore: IPageStore = {};
 
   /** constructor ** {{{ */
   constructor() {
-    this.pageTools = new PageTools();
-    this.pageStore = {};
+    // this.pageStore = {};
   }/*}}}*/
 
   /** getAllPages ** {{{
@@ -34,19 +25,19 @@ export default class PageCacher {
 
   /** isPageCached ** {{{
    */
-  isPageCached (id: TPageId): boolean {
+  public isPageCached(id: TPageId): boolean {
     return !!(this.pageStore[id]);
   }/*}}}*/
 
   /** fetchPage ** {{{
    */
-  public fetchPage(id: TPageId): TPage | null {
+  public fetchPage(id: TPageId): IPage | null {
     return this.pageStore[id];
   }/*}}}*/
 
   /** savePage ** {{{
    */
-  public savePage(page: TPage) {
+  public savePage(page: IPage) {
     const id = page && page.id;
     if (id) {
       this.pageStore[id] = page;
@@ -55,7 +46,7 @@ export default class PageCacher {
 
   /** removePage ** {{{
    */
-  removePage (id: TPageId) {
+  public removePage(id: TPageId) {
     delete this.pageStore[id];
   }/*}}}*/
 

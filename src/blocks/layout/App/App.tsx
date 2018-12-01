@@ -74,15 +74,22 @@ export default class App extends React.Component<IAppProps, IAppState> {
       //     To get started, edit <code>{this.props.path}</code> and save to reload.
       //   </div>
       // </Fragment>
+      // <HashRouter>
+      //   <PagesProvider value={pagesContext}>
+      //     <div className={this.props.className}>
+      //       <Header title={this.state.title}/>
+      //       <Main text="Main: content" />
+      //     </div>
+      //   </PagesProvider>
+      // </HashRouter>
     return (
-      <HashRouter>
-        <PagesProvider value={pagesContext}>
-          <div className={this.props.className}>
-            <Header title={this.state.title}/>
-            <Main text="Main: content" />
-          </div>
-        </PagesProvider>
-      </HashRouter>
+      <PagesProvider value={pagesContext}>
+        <div className={this.props.className}>
+          <Header title={this.state.title}/>
+          <Main text="Main: content" />
+        </div>
+      </PagesProvider>
     );
   }/*}}}*/
+
 }

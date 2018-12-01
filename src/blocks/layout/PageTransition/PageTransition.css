@@ -4,6 +4,17 @@
   $transition-offet: 100px;
   width: 100%;
 
+  // &_appear {
+  //   // position: absolute;
+  //   // top: -$transition-offet;
+  //   opacity: 0;
+  //   transition: all $(pageTransitionTimeout)ms ease-in;
+  //   &&_active {
+  //     // top: 0px;
+  //     opacity: 1;
+  //   }
+  // }
+  //
   &_entering {
     position: absolute;
     // top: -$transition-offet;

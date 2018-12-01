@@ -1,20 +1,23 @@
-// import { cn } from '@bem-react/classname';
+import { cn } from '@bem-react/classname';
 import { IClassNameProps } from '@bem-react/core';
 import * as React from 'react';
-// import { Link } from 'react-router-dom';
+// import Link from 'lib/pages/PageLink'; // 'react-router-dom';
 import { IPageContext } from 'lib/pages/PageContext';
-import { TPage } from 'lib/pages/PageTools';
+// import { IPage } from 'lib/pages/PageTools';
 import LoadedPage from 'blocks/pages/LoadedPage/LoadedPage';
 import Error from 'blocks/interface/Error/Error';
 import withPageContextHOC from 'lib/pages/withPageContextHOC';
 import { Route, Switch } from 'react-router-dom';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
+import { css as cssConfig } from 'config';
 
 import AppActions from 'lib/flux/AppActions';
 import AppStore from 'lib/flux/AppStore';
 
 import './LoadPage.css';
 
-// const cnLoadPage = cn('LoadPage');
+const cnLoadPage = cn('LoadPage');
+const cnPageTransition = cn('PageTransition');
 
 export interface ILoadPageProps extends IClassNameProps {
   text?: string; // DEBUG
@@ -22,7 +25,8 @@ export interface ILoadPageProps extends IClassNameProps {
   context: IPageContext;
 }
 export interface ILoadPageState {
-  content?: JSX.Element | React.Component | string | null;
+  key: string;
+  content: JSX.Element | React.Component | string | null;
 }
 
 class LoadPage extends React.Component<ILoadPageProps, ILoadPageState> {
@@ -41,32 +45,36 @@ class LoadPage extends React.Component<ILoadPageProps, ILoadPageState> {
     super(props);
 
     this.state = {
+      key: 'loading',
+      content: 'loading...',
     };
 
-    this.onPageUpdated = this.onPageUpdated.bind(this);
-    this.onErrorThrown = this.onErrorThrown.bind(this);
+    // this.onPageUpdated = this.onPageUpdated.bind(this);
+    // this.onErrorThrown = this.onErrorThrown.bind(this);
 
   }/*}}}*/
 
   /** onPageUpdated ** {{{
    */
-  onPageUpdated() {
+  onPageUpdated = () => {
     const page = AppStore.getCurrentPage();
+    const key = AppStore.getCurrentPageKey();
     const content = (
-      <LoadedPage {...this.props}>
+      <LoadedPage key={key} {...this.props}>
         {page && page.content}
       </LoadedPage>
     );
-    this.setState({ content });
+    this.setState({ key, content });
   }/*}}}*/
   /** onErrorThrown ** {{{
    */
-  onErrorThrown() {
+  onErrorThrown = () => {
     const err = AppStore.getError();
+    const key = 'error';
     const content = (
-      <Error {...this.props} error={err} />
+      <Error key={key} {...this.props} error={err} />
     );
-    this.setState({ content });
+    this.setState({ key, content });
   }/*}}}*/
 
   /** componentDidMount ** {{{
@@ -77,6 +85,7 @@ class LoadPage extends React.Component<ILoadPageProps, ILoadPageState> {
 
     const {pathname} = props.location;
 
+    debugger;
     AppStore.addListener('pageUpdated', this.onPageUpdated);
     AppStore.addListener('errorThrown', this.onErrorThrown);
 
@@ -95,23 +104,27 @@ class LoadPage extends React.Component<ILoadPageProps, ILoadPageState> {
   /** render ** {{{
    */
   public render() {
-      // <div className={cnLoadPage()}>
-      //   {this.state.content}
-      // </div>
-      // <React.Fragment>
-      //   {this.state.content}
-      // </React.Fragment>
-      // <Route
-      //   render={
-      //     ({ location }) => state.content || null
-      //   }
-      // />
-    // TODO: Animate rendered content?
-    // const state = this.state;
     return (
-      <React.Fragment>
-        {this.state.content}
-      </React.Fragment>
+      <CSSTransition
+        in={true}
+        appear={true}
+        key={location.pathname}
+        timeout={cssConfig.pageTransitionTimeout}
+        classNames={{
+          appear: cnPageTransition({ entering: true }),
+          appearActive: cnPageTransition({ entering: 'active' }),
+          enter: cnPageTransition({ entering: true }),
+          enterActive: cnPageTransition({ entering: 'active' }),
+          enterDone: cnPageTransition(),
+          exit: cnPageTransition({ exiting: true }),
+          exitActive: cnPageTransition({ exiting: 'active' }),
+          exitDone: cnPageTransition(),
+        }}
+      >
+        <div key={this.state.key} className={cnLoadPage({ key: this.state.key }, ['PageTransition'])}>
+          {this.state.content}
+        </div>
+      </CSSTransition>
     );
   }/*}}}*/
 

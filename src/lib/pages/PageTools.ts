@@ -2,36 +2,60 @@
 import { pages as pagesConfig } from 'config';
 
 export type TPageId = string;
+export type TPageKey = string;
 export type TPagePathname = string;
 export type TPageUrl = string;
 export type TPageContent = React.Component | string | null;
 
-export type TPage = {
+export interface IPage {
   id: TPageId;
   url: TPageUrl;
   content: TPageContent;
-};
+}
 
 export default class PageTools {
 
-  /** delay ** {{{ DEBUG: Timeout
+  /** delayPromise ** {{{ DEBUG: Timeout
    * @param {Number} [timeout=1000]
    * @param {*} [data]
    * @return {Promise}
    */
-  public delay(timeout: number = 1000, data: any = null): Promise<any> {
+  public delayPromise(timeout: number = 1000, data: any = null): Promise<any> {
     return new Promise((resolve) => setTimeout(() => {
         resolve(data);
       }, timeout)
     );
   }/*}}}*/
 
+  /** getUrlFromWindow ** {{{ Get hash from window location */
+  public getUrlFromWindow(): string {
+    if (typeof window === 'object' && window.location && window.location.hash) {
+      return window.location.hash.substr(1);
+    }
+    return '';
+  }/*}}}*/
+
+  /** setUrlToWindow ** {{{ Set hash to window location
+   * @param {String} hash
+   */
+  public setUrlToWindow(hash: string) {
+    if (!hash.startsWith('#')) {
+      hash = '#' + hash;
+    }
+    if ( typeof window === 'object' && window.location ) {
+      window.location.hash = hash;
+    }
+  }/*}}}*/
+
   /** normalizeUrl ** {{{
    */
   public normalizeUrl(pathname: TPagePathname): TPageUrl {
     let url = pathname;
+    if (!url.startsWith('/')) {
+      url = '/' + url;
+    }
     if (!url.startsWith(pagesConfig.urlPrefix)) {
-      url = pagesConfig.urlPrefix + pathname;
+      url = pagesConfig.urlPrefix + url;
     }
     if (url.endsWith('/')) {
       url += pagesConfig.indexName;
@@ -40,6 +64,13 @@ export default class PageTools {
       url += pagesConfig.extension;
     }
     return url;
+  }/*}}}*/
+
+  /** normalizeKey ** {{{
+   */
+  public normalizeKey(pathname: TPagePathname): TPageKey {
+    const key = pathname;
+    return key.replace(/\W+/g, '_');
   }/*}}}*/
 
   /** normalizeId ** {{{
