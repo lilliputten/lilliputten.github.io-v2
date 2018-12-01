@@ -1,8 +1,7 @@
 /* eslint-env es6, node, commonjs */
 
-// import config from './config.js';
-import config = require('./config.js');
-
+// import config = require('./config.js');
+//
 // // TODO: Export by `__submodules` list?
 // module.exports.default = config;
 // if (Array.isArray(config.__submodules)) {

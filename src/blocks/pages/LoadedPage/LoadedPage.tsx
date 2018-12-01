@@ -21,9 +21,6 @@ const cnLoadedPage = cn('LoadedPage');
 
 class LoadedPage extends React.Component/* <ILoadedPageProps, ILoadedPageState> */ {
 
-  // public static defaultProps = {
-  // };
-
   public block = 'LoadedPage';
 
   /** render ** {{{

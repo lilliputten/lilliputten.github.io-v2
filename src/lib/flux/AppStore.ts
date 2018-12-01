@@ -3,15 +3,15 @@ import { EventEmitter } from 'events';
 import PageLoader from 'lib/pages/PageLoader';
 import PageCacher from 'lib/pages/PageCacher';
 import PageTools from 'lib/pages/PageTools';
-import { IPage, TPageId, TPageKey, TPagePathname, TPageContent } from 'lib/pages/PageTools';
+import { IPage, TPageId, TPageKey, TPagePathname } from 'lib/pages/PageTools';
 
-type TEventName = string | symbol;
-type TEventListener = (...args: any[]) => void;
+// type TEventName = string | symbol;
+// type TEventListener = (...args: any[]) => void;
 
 // @see https://nodejs.org/api/events.html#events_class_eventemitter
 export class AppStoreClass extends EventEmitter {
 
-  private dispatchToken: string;
+  private dispatchToken: string; // tslint:disable-line no-unused-vars
 
   private pageLoader: PageLoader;
   private pageCacher: PageCacher;
@@ -19,7 +19,6 @@ export class AppStoreClass extends EventEmitter {
 
   private appMode: string;
   private pageId: string;
-  private pageKey: string;
 
   private error: any;
 
@@ -74,6 +73,16 @@ export class AppStoreClass extends EventEmitter {
   public getPage(id: TPageId): IPage | null {
     return this.isPageCached(id) ? this.pageCacher.fetchPage(id) : null;
   }/*}}}*/
+  /** getDispatchToken ** {{{
+   */
+  public getDispatchToken() {
+    return this.dispatchToken;
+  }/*}}}*/
+  /** getAppMode ** {{{
+   */
+  public getAppMode() {
+    return this.appMode;
+  }/*}}}*/
   /** getCurrentPageKey ** {{{
    */
   public getCurrentPageKey(): TPageKey {
@@ -107,12 +116,12 @@ export class AppStoreClass extends EventEmitter {
   //   this.pageId = pageId;
   // }/*}}}*/
 
-  /** savePage ** {{{
-   */
-  private savePage(page: IPage) {
-    const id = page.id;
-    this.pageCacher.savePage(page);
-  }/*}}}*/
+  // /** savePage ** {{{
+  //  */
+  // private savePage(page: IPage) {
+  //   const id = page.id;
+  //   this.pageCacher.savePage(page);
+  // }/*}}}*/
 
   /** pageUpdated ** {{{
    */
@@ -168,11 +177,11 @@ export class AppStoreClass extends EventEmitter {
     ;
   }/*}}}*/
 
-  /** removePage ** {{{
-   */
-  private removePage(id: TPageId) {
-    this.pageCacher.removePage(id);
-  }/*}}}*/
+  // /** removePage ** {{{
+  //  */
+  // private removePage(id: TPageId) {
+  //   this.pageCacher.removePage(id);
+  // }/*}}}*/
 
   /** dispatcherCallback ** {{{ Dispatch flux actions
    * @param {String} action

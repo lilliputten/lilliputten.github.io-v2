@@ -1,6 +1,6 @@
 // NOTE: Sample, template!
 import { cn } from '@bem-react/classname';
-import { IClassNameProps } from '@bem-react/core';
+// import { IClassNameProps } from '@bem-react/core';
 import * as React from 'react';
 
 const cnLoadingSpinner = cn('LoadingSpinner');

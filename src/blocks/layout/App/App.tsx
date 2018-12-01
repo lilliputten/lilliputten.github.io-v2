@@ -2,12 +2,11 @@ import { cn } from '@bem-react/classname';
 // import { Registry, withRegistry, RegistryConsumer } from '@bem-react/di';
 import { IClassNameProps } from '@bem-react/core';
 import * as React from 'react';
-import { HashRouter } from 'react-router-dom';
 
 import AppStore from 'lib/flux/AppStore';
 
 import { PagesProvider, IPageContext } from 'lib/pages/PageContext';
-import PageLoader from 'lib/pages/PageLoader';
+// import PageLoader from 'lib/pages/PageLoader';
 
 import Main from 'blocks/layout/Main/Main';
 
@@ -19,7 +18,7 @@ import Header from './Header/App-Header';
 
 const cnApp = cn('App');
 
-const pageLoader = new PageLoader();
+// const pageLoader = new PageLoader();
 const pagesContext: IPageContext = {
   // pageLoader,
   AppStore,
@@ -63,25 +62,6 @@ export default class App extends React.Component<IAppProps, IAppState> {
   /** render ** {{{
    */
   public render() {
-      // <Fragment>
-      //   <Header title={this.state.title}/>
-      //   <ExampleWithMods mod1 />
-      //   <ExampleWithMods mod1 mod2 />
-      //   <Bem block='App' elem='Intro'>
-      //     To get started, edit <code>{this.props.path}</code> and save to reload.
-      //   </Bem>
-      //   <div className={cnApp('Intro')}>
-      //     To get started, edit <code>{this.props.path}</code> and save to reload.
-      //   </div>
-      // </Fragment>
-      // <HashRouter>
-      //   <PagesProvider value={pagesContext}>
-      //     <div className={this.props.className}>
-      //       <Header title={this.state.title}/>
-      //       <Main text="Main: content" />
-      //     </div>
-      //   </PagesProvider>
-      // </HashRouter>
     return (
       <PagesProvider value={pagesContext}>
         <div className={this.props.className}>
