@@ -180,6 +180,8 @@ class Main extends React.Component<IMainProps, IMainState> {
         id,
         content,
       });
+      const pageType = id.startsWith('/') ? ((id === '/') ? 'home' : 'page') : id;
+      AppActions.setPageType(pageType);
     }
   }/*}}}*/
 

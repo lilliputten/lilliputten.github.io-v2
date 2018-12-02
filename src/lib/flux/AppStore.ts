@@ -17,7 +17,7 @@ export class AppStoreClass extends EventEmitter {
   private pageCacher: PageCacher;
   private pageTools: PageTools;
 
-  private appMode: string;
+  private pageType: string;
   private pageId: string;
 
   private error: any;
@@ -45,12 +45,12 @@ export class AppStoreClass extends EventEmitter {
   // /** addChangeListener ** {{{
   //  */
   // public addChangeListener(eventName: TEventName, listener: TEventListener): this {
-  //   return this.on(eventName, listener);
+  //   return this.addListener(eventName, listener);
   // }/*}}}*/
   // /** removeChangeListener ** {{{
   //  */
   // public removeChangeListener(eventName: TEventName, listener: TEventListener): this {
-  //   return this.off(eventName, listener);
+  //   return this.removeListener(eventName, listener);
   // }/*}}}*/
 
   /** getAllPages ** {{{
@@ -78,10 +78,10 @@ export class AppStoreClass extends EventEmitter {
   public getDispatchToken() {
     return this.dispatchToken;
   }/*}}}*/
-  /** getAppMode ** {{{
+  /** getPageType ** {{{
    */
-  public getAppMode() {
-    return this.appMode;
+  public getPageType() {
+    return this.pageType;
   }/*}}}*/
   /** getCurrentPageKey ** {{{
    */
@@ -105,23 +105,11 @@ export class AppStoreClass extends EventEmitter {
     return this.error;
   }/*}}}*/
 
-  /** setAppMode ** {{{
+  /** setPageType ** {{{
    */
-  private setAppMode(appMode: string) {
-    this.appMode = appMode;
+  private setPageType(pageType: string) {
+    this.pageType = pageType;
   }/*}}}*/
-  // /** setPageId ** {{{
-  //  */
-  // private setPageId(pageId: TPageId) {
-  //   this.pageId = pageId;
-  // }/*}}}*/
-
-  // /** savePage ** {{{
-  //  */
-  // private savePage(page: IPage) {
-  //   const id = page.id;
-  //   this.pageCacher.savePage(page);
-  // }/*}}}*/
 
   /** pageUpdated ** {{{
    */
@@ -190,8 +178,8 @@ export class AppStoreClass extends EventEmitter {
   private dispatcherCallback(action: any) {
 
     switch (action.actionType) {
-      case 'setAppMode':
-        this.setAppMode(action.value);
+      case 'setPageType':
+        this.setPageType(action.value);
         break;
       case 'fetchPage':
         this.fetchPage(action.value);

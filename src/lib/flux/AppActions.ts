@@ -9,10 +9,10 @@ class AppActions {
     });
   }
 
-  public setAppMode(appMode: string) {
+  public setPageType(pageType: string) {
     AppDispatcher.dispatch({
-      actionType: 'setAppMode',
-      value: appMode,
+      actionType: 'setPageType',
+      value: pageType,
     });
   }
 
