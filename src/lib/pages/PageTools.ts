@@ -7,12 +7,6 @@ export type TPagePathname = string;
 export type TPageUrl = string;
 export type TPageContent = React.Component | string | null;
 
-export interface IPage {
-  id: TPageId;
-  url: TPageUrl;
-  content: TPageContent;
-}
-
 export default class PageTools {
 
   /** delayPromise ** {{{ DEBUG: Timeout

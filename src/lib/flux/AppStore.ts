@@ -3,7 +3,8 @@ import { EventEmitter } from 'events';
 import PageLoader from 'lib/pages/PageLoader';
 import PageCacher from 'lib/pages/PageCacher';
 import PageTools from 'lib/pages/PageTools';
-import { IPage, TPageId, TPageKey, TPagePathname } from 'lib/pages/PageTools';
+import { TPageId, TPageKey, TPagePathname } from 'lib/pages/PageTools';
+import { IPage } from 'lib/pages/PageLoader';
 
 // type TEventName = string | symbol;
 // type TEventListener = (...args: any[]) => void;

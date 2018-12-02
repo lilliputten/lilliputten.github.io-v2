@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MdReactParser parse method returned object content property should be rendered 1`] = `
+<div
+  className="markdown"
+>
+  <h1>
+    <span
+      className="inner"
+    >
+      title
+    </span>
+  </h1>
+  <p>
+    text
+  </p>
+</div>
+`;
+
+exports[`MdReactParser parse method returned object frontmatter property should be object 1`] = `
+Object {
+  "number": 1,
+  "param": "value",
+}
+`;

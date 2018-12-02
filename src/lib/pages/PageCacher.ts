@@ -1,4 +1,5 @@
-import { IPage, TPageId, TPagePathname, TPageUrl, TPageContent } from 'lib/pages/PageTools';
+import { TPageId, TPagePathname, TPageUrl, TPageContent } from 'lib/pages/PageTools';
+import { IPage } from 'lib/pages/PageLoader';
 
 export { TPageId, TPagePathname, TPageUrl, TPageContent };
 

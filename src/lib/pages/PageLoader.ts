@@ -1,7 +1,15 @@
-import PageTools, { IPage, TPageId, TPagePathname, TPageUrl, TPageContent } from 'lib/pages/PageTools';
+import PageTools, { TPageId, TPagePathname, TPageUrl, TPageContent } from 'lib/pages/PageTools';
 import MdReactParser from './MdReactParser';
 
-export { IPage, TPageId, TPagePathname, TPageUrl, TPageContent };
+export { TPageId, TPagePathname, TPageUrl, TPageContent };
+
+export interface IPage {
+  id: TPageId;
+  url: TPageUrl;
+  source?: string,
+  frontmatter: object;
+  content: TPageContent;
+}
 
 export default class PageLoader {
 
@@ -16,7 +24,7 @@ export default class PageLoader {
 
   /** loadPage ** {{{
    */
-  public loadPage(pathname: TPagePathname): Promise<IPage> {
+  public loadPage(pathname: TPagePathname): Promise<IPage | any> {
 
     const url = this.pageTools.normalizeUrl(pathname);
     const id = this.pageTools.normalizeId(url);

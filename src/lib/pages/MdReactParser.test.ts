@@ -1,7 +1,11 @@
 import * as React from 'react';
+// import * as ReactDOM from 'react-dom';
 
 import { pages as pagesConfig } from '../../config';
 import MdReactParser from './MdReactParser';
+
+// import renderer from 'react-test-renderer';
+const renderer = require('react-test-renderer');
 
 /** Do test for fail cases? */
 const TO_TEST_FAIL_PROMISES = false;
@@ -43,7 +47,10 @@ text
     let mdParsed: any;
 
     /*{{{*/beforeAll(() => {
-      mdParsed = mdReactParser.parse({ source: mdContent });
+      mdParsed = mdReactParser.parse({
+        className: 'markdown',
+        source: mdContent,
+      });
     });/*}}}*/
 
     /*{{{*/it('should return object', () => {
@@ -64,6 +71,7 @@ text
 
         /*{{{*/it('should be object', () => {
           expect(typeof mdParsed.frontmatter).toBe('object');
+          expect(mdParsed.frontmatter).toMatchSnapshot();
         });/*}}}*/
 
         /*{{{*/it('should contain parsed parameters', () => {
@@ -81,9 +89,19 @@ text
 
         /*{{{*/it('should be valid react element', () => {
           expect(React.isValidElement(mdParsed.content)).toBe(true);
+          // expect(mdParsed.content).toMatchSnapshot();
+        });/*}}}*/
+
+        /*{{{*/it('should be rendered', () => {
+          const component = renderer.create(mdParsed.content);
+          expect(component.toJSON()).toMatchSnapshot();
         });/*}}}*/
 
       });/*}}}*/
+
+      // /*{{{*/describe('content render', () => {
+      //
+      // });/*}}}*/
 
     });/*}}}*/
 

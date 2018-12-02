@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageLoader loadPage method success promise should resolve object 1`] = `
+Object {
+  "content": <ReactMarkdown
+    astPlugins={Array []}
+    escapeHtml={true}
+    plugins={
+      Array [
+        Array [
+          [Function],
+          Object {
+            "beginMarker": "foo",
+            "endMarker": "bar",
+          },
+        ],
+      ]
+    }
+    rawSourcePos={false}
+    renderers={
+      Object {
+        "comments": [Function],
+        "heading": [Function],
+      }
+    }
+    skipHtml={false}
+    source="# success
+
+text
+"
+    sourcePos={false}
+    transformLinkUri={[Function]}
+  />,
+  "frontmatter": Object {
+    "frontmatter": "value",
+  },
+  "id": "/success",
+  "source": "
+---
+frontmatter: value
+---
+
+# success
+
+text
+",
+  "url": "/site/success.md",
+}
+`;

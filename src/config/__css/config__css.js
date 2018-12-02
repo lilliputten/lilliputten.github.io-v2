@@ -64,7 +64,7 @@
 
     // Timeouts...
     animationTimeout: 250,
-    pageTransitionTimeout: 500,
+    pageTransitionTimeout: 1000,
 
   };/*}}}*/
 
