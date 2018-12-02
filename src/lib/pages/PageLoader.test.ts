@@ -15,15 +15,15 @@ describe('PageLoader', () => {
 
   /*{{{*/describe('should have basic features', () => {
 
-    /*{{{*/it('should create instance', () => {
+    /*{{{*/it('should create instance without crashing', () => {
       expect(typeof pageLoader).toBe('object');
     });/*}}}*/
 
-    /*{{{*/it('should has fetchUrl private method', () => {
+    /*{{{*/it('should have fetchUrl private method', () => {
       expect(typeof (pageLoader as any).fetchUrl).toBe('function');
     });/*}}}*/
 
-    /*{{{*/it('should has loadPage method', () => {
+    /*{{{*/it('should have loadPage method', () => {
       expect(typeof pageLoader.loadPage).toBe('function');
     });/*}}}*/
 
@@ -36,7 +36,8 @@ describe('PageLoader', () => {
 
     /*{{{*/beforeAll(() => {
       window.fetch = jest.fn().mockImplementation((url) => {
-        const successContent = `---
+        const successContent = `
+---
 frontmatter: value
 ---
 

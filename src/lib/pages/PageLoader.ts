@@ -1,14 +1,17 @@
 import PageTools, { IPage, TPageId, TPagePathname, TPageUrl, TPageContent } from 'lib/pages/PageTools';
+import MdReactParser from './MdReactParser';
 
 export { IPage, TPageId, TPagePathname, TPageUrl, TPageContent };
 
 export default class PageLoader {
 
   private pageTools: PageTools;
+  private mdReactParser: MdReactParser;
 
   /** constructor ** {{{ */
   constructor() {
     this.pageTools = new PageTools();
+    this.mdReactParser = new MdReactParser();
   }/*}}}*/
 
   /** loadPage ** {{{
@@ -19,8 +22,15 @@ export default class PageLoader {
     const id = this.pageTools.normalizeId(url);
 
     const promise = this.fetchUrl(url)
-      .then((content) => {
-        return { id, url, content };
+      .then((source) => {
+        const {frontmatter, content} = this.mdReactParser.parse({ source });
+        return {
+          id,
+          url,
+          source,
+          frontmatter,
+          content,
+        };
       })
       // TODO: Make md parser
       .catch((err) => {
@@ -47,7 +57,7 @@ export default class PageLoader {
     return new Promise((resolve, reject) => {
       try {
         return fetch(url)
-          .then((result) => this.pageTools.delayPromise(3000, result))
+          // .then((result) => this.pageTools.delayPromise(3000, result))
           .then((res: any) => {
             if (res && res.status !== 200) {
               // tslint:disable-next-line no-console
