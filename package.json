@@ -42,7 +42,10 @@
     "postcss-url": "^8.0.0",
     "ramda": "^0.25.0",
     "react": "16.4.1",
-    "react-dom": "16.4.1"
+    "react-dom": "16.4.1",
+    "react-markdown": "^4.0.4",
+    "remark-comments": "^1.2.4",
+    "typed-react-markdown": "^0.1.0"
   },
   "devDependencies": {
     "@types/es6-promise": "^3.3.0",

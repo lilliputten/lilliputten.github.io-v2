@@ -28,7 +28,7 @@ class TestPage extends React.Component<ITestPageProps, ITestPageState> {
 
   public static defaultProps = {
     text: 'TestPage: default',
-    className: cnTestPage(),
+    // className: cnTestPage(),
   };
 
   public block = 'TestPage';
@@ -59,7 +59,7 @@ class TestPage extends React.Component<ITestPageProps, ITestPageState> {
    */
   public render() {
     return (
-      <div className={cnTestPage(/* null, ['MainPage'] */)}>
+      <div className={cnTestPage()}>
         {this.props.text} -
         - <Link to="/">home</Link> -
         - <Link to="/info">info</Link> -
