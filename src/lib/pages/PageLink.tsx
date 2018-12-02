@@ -1,4 +1,3 @@
-// NOTE: Sample!
 
 import * as React from 'react';
 

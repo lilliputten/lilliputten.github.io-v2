@@ -52,8 +52,7 @@ export default class PageLoader {
             if (res && res.status !== 200) {
               // tslint:disable-next-line no-console
               console.error('PageLoader:fetchUrl error (invalid response status)', res);
-              // tslint:disable-next-line no-debugger
-              debugger;
+              // debugger; // tslint:disable-line no-debugger
               return reject(res);
             } else {
               res.text()
@@ -66,8 +65,7 @@ export default class PageLoader {
       } catch (err) {
         // tslint:disable-next-line no-console
         console.error('PageLoader:fetchUrl error (catch)', err);
-        // tslint:disable-next-line no-debugger
-        debugger;
+        // debugger; // tslint:disable-line no-debugger
         return reject(err);
       }});
   }/*}}}*/

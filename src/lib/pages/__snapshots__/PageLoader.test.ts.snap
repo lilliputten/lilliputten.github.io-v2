@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageLoader loadPage method success promise should resolve object 1`] = `
+Object {
+  "content": "---
+frontmatter: value
+---
+
+# success
+
+text
+",
+  "id": "/success",
+  "url": "/site/success.md",
+}
+`;

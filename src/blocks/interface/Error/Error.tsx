@@ -67,6 +67,7 @@ export default class Error<P extends IErrorProps> extends React.Component<P> {
       // ???
       // return String(err.message || err.stack || err);
       result = String(err);
+    // } else if (typeof err.status === 'number') {
     } else if (err instanceof Response) {
       result = err.statusText || 'Unknown network error';
       if (err.status) {
