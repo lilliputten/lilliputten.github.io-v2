@@ -36,7 +36,15 @@ param: value
 
 root text
 
-```js
+```javascript
 var a = '77';
 console.log(a);
+```
+
+```log
+some log
+```
+
+```
+$ npm run -s start
 ```

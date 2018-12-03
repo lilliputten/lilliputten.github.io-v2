@@ -52,7 +52,6 @@ export default class MdReactParser {
       const codeProps = {
         content: props.value,
         language: props.language,
-        inline: false,
       };
       return React.createElement(CodeBlock, codeProps, null);
     },
