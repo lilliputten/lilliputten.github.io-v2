@@ -32,8 +32,6 @@ export default class CodeBlock extends React.Component<ICodeBlockProps> {
    */
   public render() {
     const {language, content} = this.props;
-    // const language = this.props.language || '';
-    // const content = this.props.content || '';
     const hasLanguage = language && Lowlight.hasLanguage(language);
     return (
       <div className={cnCodeBlock()}>
