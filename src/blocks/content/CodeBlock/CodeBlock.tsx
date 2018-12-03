@@ -1,13 +1,18 @@
 import * as React from 'react';
 import { cn } from '@bem-react/classname';
 
-import './solarized-dark.css';
+import './CodeBlock.css';
+import 'highlight.js/styles/solarized-dark.css';
 
 const Lowlight = require('react-lowlight');
 
 // Used languages list
 const usedLanguages: { [id: string]: any } = {
   'js,javascript': require('highlight.js/lib/languages/javascript'),
+  'shell': require('highlight.js/lib/languages/shell'),
+  'sh,bash': require('highlight.js/lib/languages/shell'),
+  'html,xml': require('highlight.js/lib/languages/xml'),
+  'css': require('highlight.js/lib/languages/css'),
 };
 
 // Init languages...
