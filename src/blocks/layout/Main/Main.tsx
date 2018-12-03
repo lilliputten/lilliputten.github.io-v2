@@ -6,7 +6,7 @@ import PageAnim from 'blocks/layout/PageAnim/PageAnim';
 
 import LoadingSpinner from 'blocks/interface/LoadingSpinner/LoadingSpinner';
 import LoadedPage from 'blocks/pages/LoadedPage/LoadedPage';
-import Error from 'blocks/interface/Error/Error';
+import Error from 'blocks/content/Error/Error';
 
 import AppActions from 'lib/flux/AppActions';
 import AppStore from 'lib/flux/AppStore';
@@ -157,7 +157,10 @@ class Main extends React.Component<IMainProps, IMainState> {
     const err = AppStore.getError();
     const id = 'error';
     const content = (
-      <Error {...this.props} error={err} />
+      <React.Fragment>
+        <h1>Something went wrong!</h1>
+        <Error {...this.props} error={err} />
+      </React.Fragment>
     );
     this.changeState({ id, content });
   }/*}}}*/

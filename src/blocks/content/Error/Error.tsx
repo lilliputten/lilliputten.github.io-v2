@@ -25,9 +25,6 @@ export default class Error<P extends IErrorProps> extends React.Component<P> {
     const errorContent = this.getErrorContent(error);
     return (
       <div className={cnError()}>
-        <div className={cnError('Title')}>
-          Something went wrong!
-        </div>
         <div className={cnError('Message')}>
           {errorContent}
         </div>
