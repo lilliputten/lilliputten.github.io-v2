@@ -4,7 +4,7 @@ import PageTools from 'lib/pages/PageTools';
 
 import PageAnim from 'blocks/layout/PageAnim/PageAnim';
 
-import LoadingSpinner from 'blocks/interface/LoadingSpinner/LoadingSpinner';
+import LoadingSpinner from 'blocks/content/LoadingSpinner/LoadingSpinner';
 import LoadedPage from 'blocks/pages/LoadedPage/LoadedPage';
 import Error from 'blocks/content/Error/Error';
 

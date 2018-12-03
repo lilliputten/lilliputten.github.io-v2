@@ -3,7 +3,7 @@ import { cn } from '@bem-react/classname';
 
 import { site as siteConfig } from 'config';
 
-import LoadingSpinner from 'blocks/interface/LoadingSpinner/LoadingSpinner';
+import LoadingSpinner from 'blocks/content/LoadingSpinner/LoadingSpinner';
 import Error from 'blocks/content/Error/Error';
 
 import './Gallery.css';
@@ -50,15 +50,17 @@ export default class Gallery extends React.Component<IGalleryProps, IGalleryStat
       // tslint:disable-next-line no-console
       console.error('Gallery:getResponeThumbSizesPromise error (invalid response status)', res);
       debugger; // tslint:disable-line no-debugger
-      throw new Error(res);
+      // throw new Error(res);
+      return Promise.reject({ error: 'Invalid response status for image thumbnail (' + res.status + ')' /*  + res.url */, details: res });
     }
 
+    // Fetch buffer...
     return res.arrayBuffer()
       .then((data: any) => {
+        // Create buffer
         const buf = new Buffer(data, 'binary');
+        // Try to get sizes
         const sizes = imageSize(buf);
-        // console.log(res, data, sizes);
-        // debugger;
         return sizes;
       })
     ;
@@ -87,41 +89,22 @@ export default class Gallery extends React.Component<IGalleryProps, IGalleryStat
       // Prefetch images and resolve image sizes...
       fetch(thumbnail)
         .then((res) => {
-          // if (!res || res.status !== 200) {
-          //   // tslint:disable-next-line no-console
-          //   console.error('Gallery:fetchImageThumbSizesPromise image sizes loading error (invalid response status)', res);
-          //   debugger; // tslint:disable-line no-debugger
-          //   return reject(res);
-          // } else {
-            this.getResponeThumbSizesPromise(res)
-              .then((sizes: any) => {
-                // console.log(imageProps, sizes, res);
-                // debugger;
-                return resolve({...imageProps,
-                  thumbnailWidth: sizes.width,
-                  thumbnailHeight: sizes.height,
-                });
-              })
-              .catch((err: any) => {
-                // tslint:disable-next-line no-console
-                console.error('Gallery:fetchImageThumbSizesPromise image sizes loading error (promise catch)', err);
-                // debugger; // tslint:disable-line no-debugger
-                reject({ error: 'Cannot fetch image data for ' + thumbnail, details: err });
-              })
-            ;
-          // }
+          this.getResponeThumbSizesPromise(res)
+            .then((sizes: any) => {
+              return resolve({...imageProps,
+                thumbnailWidth: sizes.width,
+                thumbnailHeight: sizes.height,
+              });
+            })
+            .catch((err: any) => {
+              // tslint:disable-next-line no-console
+              console.error('Gallery:fetchImageThumbSizesPromise image sizes loading error (promise catch)', err);
+              debugger; // tslint:disable-line no-debugger
+              reject({ error: 'Cannot fetch image data for image thumbnail'/*  + thumbnail */, details: err });
+            })
+          ;
         })
       ;
-      // imageSize(thumbnail, (err: any, sizes: any) => {
-      //   debugger;
-      //   if (err) {
-      //     console.error('Gallery image sizes loading', err);
-      //     debugger;
-      //     reject(err);
-      //   }
-      //   console.log(sizes.width, sizes.height);
-      //   resolve({...imageProps, thumbnailWidth: sizes.width, thumbnailHeight: sizes.height});
-      // });
       return null;
     });
 
@@ -159,22 +142,21 @@ export default class Gallery extends React.Component<IGalleryProps, IGalleryStat
    */
   public componentDidMount() {
 
-    const {id, items} = this.props;
+    const {items} = this.props;
 
+    // Fetch all image thumb and their sizes
     const imagePromises = items.map((props) => this.fetchImageDataPromise(props));
 
+    // Process all image properties or thrown error...
     Promise.all(imagePromises)
       .then((images) => {
-        console.log(images);
-        debugger;
-        /**
-         * @see https://github.com/benhowell/react-grid-gallery#image-options
-         */
+        // @see https://github.com/benhowell/react-grid-gallery#image-options
+        const imagesCount = images.length;
         this.setState({ content: (
           <ReactGridGallery
             enableImageSelection={false}
             backdropClosesModal={true}
-            showLightboxThumbnails={true}
+            showLightboxThumbnails={imagesCount > 1}
             images={images}
           />
         )});
@@ -192,11 +174,10 @@ export default class Gallery extends React.Component<IGalleryProps, IGalleryStat
   /** render ** {{{
    */
   public render() {
-    console.log('Gallery', this.props, this.state);
-    const content = this.state.content || (<LoadingSpinner />);
+    const {id} = this.props;
     return (
-      <div className={cnGallery()}>
-        {content}
+      <div className={cnGallery({ id })}>
+        {this.state.content || (<LoadingSpinner />)}
       </div>
     );
   }/*}}}*/

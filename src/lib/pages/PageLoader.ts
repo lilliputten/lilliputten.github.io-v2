@@ -30,7 +30,15 @@ export default class PageLoader {
     const id = this.pageTools.normalizeId(url);
 
     const promise = this.fetchUrl(url)
-      .then((source) => {
+      .then((source: any) => {
+        // Error?
+        if (typeof source !== 'string' || source.startsWith('<!DOCTYPE') || source.startsWith('<html')) {
+          // tslint:disable-next-line no-console
+          console.error('PageLoader:loadPage error (invalid response content)', source);
+          debugger; // tslint:disable-line no-debugger
+          throw new Error('Invalid response content (received html instead of markdown)');
+        }
+        // Precoess received data...
         const {frontmatter, content} = this.mdReactParser.parse({ source });
         return {
           id,
@@ -40,9 +48,10 @@ export default class PageLoader {
           content,
         };
       })
-      // TODO: Make md parser
-      .catch((err) => {
-        console.error('PageLoader:loadPage error (promise catch)', err); // tslint:disable-line no-console
+      // Error?
+      .catch((err: any) => {
+        // tslint:disable-next-line no-console
+        console.error('PageLoader:loadPage error (promise catch)', err);
         debugger; // tslint:disable-line no-debugger
         return Promise.reject({
           id, url,

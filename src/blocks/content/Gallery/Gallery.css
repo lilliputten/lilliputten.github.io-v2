@@ -1,6 +1,48 @@
 /* vim: set ft=stylus: */
 .Gallery {
   > .ReactGridGallery {
+
     @mixin clearfix;
+
+    // Thumbnails...
+    .tile {
+
+      // Tags...
+      .tile-bottom-bar div span {
+        color: #fff !important;
+        font-weight: $defaultFontWeight !important;
+        opacity: .7;
+      }
+
+      // Hover effects...
+        transition: all .25s;
+      &:hover {
+        box-shadow: 0 0 0 1px color($primaryColor alpha(.5));
+        opacity: .85;
+      }
+    }
+
+  }
+}
+
+// Lighbox popup...
+#lightboxBackdrop {
+  // Buttons (next, prev, close)
+  button {
+    transition: all .15s;
+    &:hover {
+      opacity: .6;
+    }
+    // Thumbnials...
+  }
+  div[class^='thumbnail'] {
+    transition: all .25s;
+    &:hover {
+      opacity: .7;
+    }
+  }
+  // Active thumbnails...
+  div[class*='thumbnail__active'] {
+    box-shadow: 0 0 0 3px color($primaryColor alpha(1));
   }
 }

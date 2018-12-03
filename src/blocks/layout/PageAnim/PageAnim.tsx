@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { cn } from '@bem-react/classname';
 
-import LoadingSpinner from 'blocks/interface/LoadingSpinner/LoadingSpinner';
+import LoadingSpinner from 'blocks/content/LoadingSpinner/LoadingSpinner';
 
 import { css as cssConfig } from 'config';
 
