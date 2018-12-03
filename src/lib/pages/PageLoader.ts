@@ -67,7 +67,7 @@ export default class PageLoader {
         return fetch(url)
           // .then((result) => this.pageTools.delayPromise(3000, result))
           .then((res: any) => {
-            if (res && res.status !== 200) {
+            if (!res || res.status !== 200) {
               // tslint:disable-next-line no-console
               console.error('PageLoader:fetchUrl error (invalid response status)', res);
               // debugger; // tslint:disable-line no-debugger

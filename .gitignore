@@ -9,6 +9,7 @@ zia*
 *.sw?
 *~
 \!ARC*
+*.session
 
 # Include special jest files/folders
 !__mocks__
