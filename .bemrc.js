@@ -3,6 +3,7 @@
 const levelsPath = 'src/blocks/';
 
 const levelsList = [
+  'content',
   'interface',
   'layout',
   'pages',

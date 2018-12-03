@@ -1,6 +1,7 @@
 /* vim: set ft=stylus: */
 
 .App-Header {
+  text-align: center;
   background-color: $primaryColor;
   height: 150px;
   padding: 20px;

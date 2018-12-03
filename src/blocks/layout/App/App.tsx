@@ -56,7 +56,7 @@ export default class App extends React.Component<IAppProps, IAppState> {
   /** componentDidMount ** {{{
    */
   public componentDidMount() {
-    this.setState({ title: 'Welcome to BEM in the TypeScript world' });
+    this.setState({ title: 'Welcome!' });
   }/*}}}*/
 
   /** render ** {{{

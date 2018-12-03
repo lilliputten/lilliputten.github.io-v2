@@ -24,6 +24,7 @@ export default class HomePage<P extends IHomeProps> extends React.Component<P> {
         {this.props.text} -
         - <Link to="/info">info</Link> -
         - <Link to="/test">test</Link> -
+        - <Link to="/try/">try</Link> -
       </div>
     );
   }

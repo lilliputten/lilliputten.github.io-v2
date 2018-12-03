@@ -6,7 +6,7 @@ export { TPageId, TPagePathname, TPageUrl, TPageContent };
 export interface IPage {
   id: TPageId;
   url: TPageUrl;
-  source?: string,
+  source?: string;
   frontmatter: object;
   content: TPageContent;
 }

@@ -2,25 +2,23 @@
 
 exports[`PageLoader loadPage method success promise should resolve object 1`] = `
 Object {
-  "content": <ReactMarkdown
+  "content": <ReactMarkdownWithHtml
     astPlugins={Array []}
-    escapeHtml={true}
+    escapeHtml={false}
     plugins={
       Array [
         Array [
           [Function],
-          Object {
-            "beginMarker": "foo",
-            "endMarker": "bar",
-          },
         ],
       ]
     }
     rawSourcePos={false}
     renderers={
       Object {
-        "comments": [Function],
+        "code": [Function],
+        "customComments": [Function],
         "heading": [Function],
+        "text": [Function],
       }
     }
     skipHtml={false}

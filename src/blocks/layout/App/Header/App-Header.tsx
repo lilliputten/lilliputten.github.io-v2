@@ -45,9 +45,9 @@ export default class AppHeader extends React.Component<IAppHeaderProps, IAppHead
   /** render ** {{{
    */
   public render() {
-    const {pageType, loading} = this.state;
+    const {pageType: mode, loading} = this.state;
     return (
-      <header className={cnApp('Header', {pageType, loading})}>
+      <header className={cnApp('Header', {mode, loading})}>
         <img className={cnApp('Logo')} src={logoSvg} alt="logo" />
         <h1 className={cnApp('Title')}>{this.props.title}</h1>
       </header>
