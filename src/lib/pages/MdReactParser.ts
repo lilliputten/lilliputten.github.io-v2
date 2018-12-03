@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import CodeBlock from 'blocks/content/CodeBlock/CodeBlock';
+import Gallery from 'blocks/content/Gallery/Gallery';
 
 /**
  * @see https://github.com/rexxars/react-markdown
@@ -28,7 +29,7 @@ export default class MdReactParser {
   /** customTagHandlers */
   private customTagHandlers: { [id: string]: any } = {
     COMMENTS: null,
-    GALLERY: (props: any) => React.createElement('div', {className: 'customTag'}, props.tag),
+    GALLERY: (props: any) => React.createElement(Gallery, {...props.data, id: props.id}),
   };
 
   /** renderers{} ** {{{

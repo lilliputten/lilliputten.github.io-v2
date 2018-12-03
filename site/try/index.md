@@ -14,21 +14,27 @@ param: value
 <a href="#/test">test</a>
 
 <--GALLERY:default
+  path: Projects/Web/130803-ExDentis/
+  thumbWidth: 200
+  # thumbHeight: 200
   items:
     -
-      url: Projects/Web/130803-ExDentis/001.jpg
+      image: 001.jpg
       title: Index page
+      tags:
+        - index
+        - try
     -
-      url: Projects/Web/130803-ExDentis/002.jpg
+      image: 002.jpg
       title: Top level catalogue section
     -
-      url: Projects/Web/130803-ExDentis/003.jpg
+      image: 003.jpg
       title: Product's page
     -
-      url: Projects/Web/130803-ExDentis/004.jpg
+      image: 004.jpg
       title: Internal catalogue section
     -
-      url: Projects/Web/130803-ExDentis/005.jpg
+      image: 005.jpg
       title: Regular page
 -->
 
@@ -45,6 +51,16 @@ console.log(a);
 some log
 ```
 
+```css
+.sel {
+  border: 1px solid red;
+}
 ```
+
+```html
+<a href="xx">link</a>
+```
+
+```shell
 $ npm run -s start
 ```

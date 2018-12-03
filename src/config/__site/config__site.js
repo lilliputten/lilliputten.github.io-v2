@@ -9,7 +9,10 @@
 
 (function(){
 
-  var siteAddr = 'dotnetweb';
+  var siteAddr = 'https://lilliputten.github.io';
+
+  var galleryRoot = 'https://res.cloudinary.com/lilliputten/image/upload/';
+  var galleryId = 'v1542040058';
 
   /** configSite ** {{{ */
   var configSite = /** @lends config__site.prototype */ {
@@ -22,6 +25,11 @@
 
     siteAddr: siteAddr,
     siteUrl: 'http://' + siteAddr,
+
+    galleryRoot,
+    galleryId,
+    galleryThumb: ({url, width, height}) => `${galleryRoot}c_thumb${width ? ',w_' + width : ''}${height ? ',h_' + height : ''},g_face/${galleryId}/${url}`,
+    galleryImage: ({url}) => `${galleryRoot}${galleryId}/${url}`,
 
   };/*}}}*/
 
