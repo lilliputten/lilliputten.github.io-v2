@@ -5,7 +5,7 @@ param: value
 
 <--COMMENTS comments -->
 
-"Nice" text -- smartypants.
+"Nice" text -- via `smartypants`.
 
 <a href="#/">home</a>
 |
