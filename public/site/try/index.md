@@ -13,6 +13,9 @@ param: value
 |
 <a href="#/test">test</a>
 
+- list item 1
+- second list item
+
 <--GALLERY:default
   path: Projects/Web/130803-ExDentis/
   thumbWidth: 200

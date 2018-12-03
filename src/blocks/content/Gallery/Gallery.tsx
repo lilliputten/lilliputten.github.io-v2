@@ -176,9 +176,9 @@ export default class Gallery extends React.Component<IGalleryProps, IGalleryStat
   public render() {
     const {id} = this.props;
     return (
-      <div className={cnGallery({ id })}>
+      <p className={cnGallery({ id })}>
         {this.state.content || (<LoadingSpinner />)}
-      </div>
+      </p>
     );
   }/*}}}*/
 

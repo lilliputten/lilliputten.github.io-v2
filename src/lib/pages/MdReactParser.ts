@@ -2,6 +2,7 @@ import * as React from 'react';
 
 import CodeBlock from 'blocks/content/CodeBlock/CodeBlock';
 import Gallery from 'blocks/content/Gallery/Gallery';
+import List from 'blocks/content/List/List';
 
 /**
  * @see https://github.com/rexxars/react-markdown
@@ -33,29 +34,42 @@ export default class MdReactParser {
   };
 
   /** renderers{} ** {{{
+   * @see node_modules/react-markdown/lib/renderers.js
    */
   private renderers = {
-    // Comments (TODO)
+    /** customComments ** {{{
+     */
     customComments: (props: any) => {
       const result = (props.tag && this.customTagHandlers[props.tag]) ? this.customTagHandlers[props.tag] : null;
       return (typeof result === 'function') ? result(props) : result;
-    },
-    // Our own heading...
+    },/*}}}*/
+    /** heading ** {{{
+     */
     heading: (props: any) => {
       const inner = React.createElement('span', {className: 'inner'}, props.children);
       return React.createElement('h'.concat(props.level), {}, inner);
-    },
+    },/*}}}*/
+    /** text ** {{{
+     */
     text: (props: any) => {
       const text = (typeof props.children === 'string') ? this.smartypants(props.children) : props.children;
       return text;
-    },
+    },/*}}}*/
+    /** code ** {{{
+     */
     code: (props: any) => {
       const codeProps = {
         content: props.value,
         language: props.language,
       };
       return React.createElement(CodeBlock, codeProps, null);
-    },
+    },/*}}}*/
+    /** list ** {{{
+     */
+    list: (props: any) => {
+      return React.createElement(List, props, props.children);
+    },/*}}}*/
+    // listItem: ListItem,
   };
   /*}}}*/
 

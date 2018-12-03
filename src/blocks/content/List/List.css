@@ -1,0 +1,30 @@
+/* vim: set ft=stylus: */
+.List {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  position: relative;
+
+  & > li {
+    $size: 25px;
+    $offset: 30px;
+
+    min-height: $size;
+    padding-left: $offset;
+    position: relative;
+
+    &:before {
+      content: "";
+      background-size: cover;
+      background-image: url('/images/items/bullet-item.svg');
+      width: $size;
+      height: $size;
+      position: absolute;
+      left: 0;
+      opacity: .2;
+    }
+
+  }
+
+}
