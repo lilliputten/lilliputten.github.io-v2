@@ -12,6 +12,7 @@
 - `.eslintrc.yml`
 - `src/config/__css/config__css.js`
 - `src/config/__site/config__site.js`
+- `src/config/__pages/config__pages.js`
 
 ## Core node modules
 

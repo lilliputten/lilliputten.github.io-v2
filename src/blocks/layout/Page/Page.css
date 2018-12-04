@@ -1,9 +1,18 @@
 /* vim: set ft=stylus: */
+
 body {
   margin: 0;
   padding: 0;
   @mixin defaultFont;
+}
 
+html,
+body,
+#root,
+.App {
+  height: 100%;
+  position: relative;
+  background-color: $(pageBgColor);
 }
 
 a {

@@ -5,6 +5,8 @@
   margin: $(containerPadding)px;
   position: relative;
 
+  min-height: 100%;
+
   code:not(.hljs) {
     display: inline-block;
     background-color: color($neutralColor alpha(.1));

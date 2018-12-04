@@ -35,7 +35,7 @@ export default class PageLoader {
         if (typeof source !== 'string' || source.startsWith('<!DOCTYPE') || source.startsWith('<html')) {
           // tslint:disable-next-line no-console
           console.error('PageLoader:loadPage error (invalid response content)', source);
-          debugger; // tslint:disable-line no-debugger
+          // debugger; // tslint:disable-line no-debugger
           throw new Error('Invalid response content (received html instead of markdown)');
         }
         // Precoess received data...
@@ -52,7 +52,7 @@ export default class PageLoader {
       .catch((err: any) => {
         // tslint:disable-next-line no-console
         console.error('PageLoader:loadPage error (promise catch)', err);
-        debugger; // tslint:disable-line no-debugger
+        // debugger; // tslint:disable-line no-debugger
         return Promise.reject({
           id, url,
           error: 'pageLoadError',

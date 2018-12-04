@@ -31,6 +31,14 @@
     galleryThumb: ({url, width, height}) => `${galleryRoot}c_thumb${width ? ',w_' + width : ''}${height ? ',h_' + height : ''},g_face/${galleryId}/${url}`,
     galleryImage: ({url}) => `${galleryRoot}${galleryId}/${url}`,
 
+    /** mainMenu ** {{{
+     */
+    mainMenu: [
+      { url: '/About', text: 'About' },
+      { url: '/Projects', text: 'Projects' },
+      { url: '/Contacts', text: 'Contacts' },
+    ],/*}}}*/
+
   };/*}}}*/
 
   /** Universal export... ** {{{ */

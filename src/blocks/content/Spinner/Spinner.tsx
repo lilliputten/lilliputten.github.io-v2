@@ -16,8 +16,7 @@ export default class Spinner<P extends ISpinnerProps> extends React.Component<P>
     return (
       <div className={cnSpinner()}>
         <div className={cnSpinner('Rotor')}>
-          <div className={cnSpinner('Circle')}>
-          </div>
+          <div className={cnSpinner('Circle')} />
         </div>
       </div>
     );
