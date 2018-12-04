@@ -17,6 +17,7 @@ const
     require('postcss-mixins')({
       mixinsDir: path.join(prjRoot, 'src', 'blocks', '!mixins'),
     }), // https://github.com/postcss/postcss-mixins
+    require('postcss-random'), // https://www.npmjs.com/package/postcss-random
     require('postcss-each'),
     require('postcss-for'),
     require('postcss-define-function'), // https://github.com/titancat/postcss-define-function

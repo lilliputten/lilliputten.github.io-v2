@@ -1,11 +1,92 @@
 /* vim: set ft=stylus: */
+
 .HomePage {
+
   min-height: 100%;
-  // NOTE: Backgeound for home page (move to `HomePage`?)
-  // background-color: color($neutralColor alpha(.5));
-  // background: linear-gradient(to top, color($neutralColor alpha(.5)), #0CD);
-  // background: linear-gradient( color($neutralColor alpha(.7)), color($neutralColor alpha(.4)));
-  background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
-          linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
-          linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+
+  background-color: color($neutralColor alpha(.5));
+
+  // Animated grandient background...
+  $angle1a: random(180,260,{round: true}); // 217;
+  $angle2a: random(80,160,{round: true}); // 127;
+  $angle3a: random(280,360,{round: true}); // 336;
+  $angle1b: random(180,260,{round: true}); // 217;
+  $angle2b: random(80,160,{round: true}); // 127;
+  $angle3b: random(280,360,{round: true}); // 336;
+  $color1a: rgba(255,0,0,.8);
+  $color1b: rgba(255,0,0,0);
+  $color2a: rgba(0,255,0,.8);
+  $color2b: rgba(0,255,0,0);
+  $color3a: rgba(0,0,255,.8);
+  $color3b: rgba(0,0,255,0);
+  $percent1a: random(50,100,{round: true});
+  $percent2a: random(50,100,{round: true});
+  $percent3a: random(50,100,{round: true});
+  $percent1b: random(50,100,{round: true});
+  $percent2b: random(50,100,{round: true});
+  $percent3b: random(50,100,{round: true});
+
+  background:
+    linear-gradient($(angle1a)deg, $color1a, $color2b $(percent1a)%),
+    linear-gradient($(angle2a)deg, $color2a, $color2b $(percent2a)%),
+    linear-gradient($(angle3a)deg, $color3a, $color2b $(percent3a)%);
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    left:   -50%;
+    right:  -50%;
+    top:    -50%;
+    bottom: -50%;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  &:before {
+    background:
+      linear-gradient($(angle1a)deg, $color1a, $color2b $(percent1a)%),
+      linear-gradient($(angle2a)deg, $color2a, $color2b $(percent2a)%),
+      linear-gradient($(angle3a)deg, $color3a, $color2b $(percent3a)%);
+    animation-name: HomePageBg1;
+    animation-duration: 15s;
+  }
+  &:after {
+    background:
+      linear-gradient($(angle1b)deg, $color1a, $color2b $(percent1b)%),
+      linear-gradient($(angle2b)deg, $color2a, $color2b $(percent2b)%),
+      linear-gradient($(angle3b)deg, $color3a, $color2b $(percent3b)%);
+    animation-name: HomePageBg2;
+    animation-duration: 20s;
+  }
+
+  @keyframes HomePageBg1 {
+    $opacity: .3;
+    0% {
+      opacity: $opacity;
+      transform: rotate(0deg);
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: $opacity;
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes HomePageBg2 {
+    $opacity: .8;
+    0% {
+      opacity: $opacity;
+      transform: rotate(0deg);
+    }
+    50% {
+      opacity: .3;
+    }
+    100% {
+      opacity: $opacity;
+      transform: rotate(-360deg);
+    }
+  }
+
 }

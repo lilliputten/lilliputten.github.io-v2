@@ -43,6 +43,7 @@
     "postcss-mixins": "^6.2.0",
     "postcss-nested": "^4.1.0",
     "postcss-nested-ancestors": "^2.0.0",
+    "postcss-random": "^1.0.9",
     "postcss-reporter": "^6.0.0",
     "postcss-scss": "^2.0.0",
     "postcss-simple-vars": "^5.0.1",
