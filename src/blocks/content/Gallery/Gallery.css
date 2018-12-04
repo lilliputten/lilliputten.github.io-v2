@@ -1,4 +1,8 @@
 /* vim: set ft=stylus: */
+
+$galleryAccentColor: $neutralColor;
+// $galleryAccentColor: $primaryColor;
+
 .Gallery {
 
   @mixin contentBlock;
@@ -7,8 +11,15 @@
 
     @mixin clearfix;
 
+    $border-radius: 3px;
+
     // Thumbnails...
     .tile {
+
+      &, .tile-overlay {
+        border-radius: $border-radius;
+        transition: all .25s;
+      }
 
       // Tags...
       .tile-bottom-bar div span {
@@ -17,11 +28,11 @@
         opacity: .7;
       }
 
-      // Hover effects...
-      transition: all .25s;
       &:hover {
-        box-shadow: 0 0 0 1px color($primaryColor alpha(.5));
-        opacity: .85;
+        .tile-overlay {
+          background-color: color(#000 alpha(.1)) !important;
+          box-shadow: 0 0 0 2px color(#000 alpha(.2));
+        }
       }
 
     }
@@ -44,13 +55,14 @@
   div[class^='thumbnail'] {
     transition: all .25s;
     &:hover {
-      opacity: .7;
+      opacity: .5;
     }
   }
 
   // Active thumbnail...
   div[class*='thumbnail__active'] {
-    box-shadow: 0 0 0 3px color($primaryColor alpha(1));
+    box-shadow: 0 0 0 2px color(#000 alpha(1));
+    opacity: .6;
   }
 
 }

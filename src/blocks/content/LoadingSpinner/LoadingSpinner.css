@@ -5,7 +5,8 @@
   @mixin contentBlock;
 
   $spinnerSize: $(loadingSpinnerSize)px;
-  $spinnerColor: $primaryColor; // $loadingSpinnerColor;
+  // $spinnerColor: $primaryColor;
+  $spinnerColor: $loadingSpinnerColor;
 
   position: relative;
 

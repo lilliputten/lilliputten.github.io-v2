@@ -14,6 +14,8 @@
 
   var textColor = '#333';
   var defaultFontSize = 16;
+  var primaryColor = '#c10';
+  var primaryLightColor = '#f10';
 
   /** configCss ** {{{
    */
@@ -22,13 +24,12 @@
     textColor: textColor,
     defaultTextColor: textColor,
 
-    primaryLightColor: '#7FA7C7',
-    primaryColor: '#00508F',
+    neutralColor: '#999',
 
-    // See XD prototypes...
-    primarySuperLightColor: '#E0EBF3',
-    primaryBrightColor: '#BCE0FD',
+    primaryColor,
+    primaryLightColor,
 
+    // ???
     secondaryColor: '#FFC06A',
 
     layoutBgColor: '#F0F0F0',
@@ -48,8 +49,6 @@
     titleFontSize: defaultFontSize + 12,
     defaultFontWeight: 400,
     defaultBemFontSize: defaultFontSize,
-
-    neutralColor: '#999',
 
     // Breakpoints (from bootstrap)
     breakpoint_xs: 0,
