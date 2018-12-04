@@ -1,9 +1,11 @@
 import * as React from 'react';
 
+import PageTools from 'lib/pages/PageTools';
+
 import CodeBlock from 'blocks/content/CodeBlock/CodeBlock';
 import Gallery from 'blocks/content/Gallery/Gallery';
 import List from 'blocks/content/List/List';
-import LoadingSpinner from 'blocks/content/LoadingSpinner/LoadingSpinner';
+import Spinner from 'blocks/content/Spinner/Spinner';
 
 /**
  * @see https://github.com/rexxars/react-markdown
@@ -23,6 +25,8 @@ export interface IParseProps {
 
 export default class MdReactParser {
 
+  private pageTools = new PageTools();
+
   /** plugins[] */
   private plugins: Array<any | null> = [
     [ remarkCustomComments ],
@@ -31,7 +35,7 @@ export default class MdReactParser {
   /** customTagHandlers */
   private customTagHandlers: { [id: string]: any } = {
     COMMENTS: null,
-    SPINNER: (props: any) => React.createElement(LoadingSpinner),
+    SPINNER: (props: any) => React.createElement(Spinner),
     GALLERY: (props: any) => React.createElement(Gallery, {...props.data, id: props.id}),
   };
 
@@ -54,7 +58,7 @@ export default class MdReactParser {
     /** text ** {{{
      */
     text: (props: any) => {
-      const text = (typeof props.children === 'string') ? this.smartypants(props.children) : props.children;
+      const text = (typeof props.children === 'string') ? this.pageTools.smartypants(props.children) : props.children;
       return text;
     },/*}}}*/
     /** code ** {{{
@@ -88,32 +92,6 @@ export default class MdReactParser {
       renderers,
     });
     return {frontmatter, content};
-  }/*}}}*/
-
-  /** smartypants ** {{{
-   */
-  private smartypants(text: string): string {
-    return text
-      /* adam-p: Adding some smart arrows */
-      .replace(/<-->/g, '\u2194')
-      .replace(/<--/g, '\u2190')
-      .replace(/-->/g, '\u2192')
-      .replace(/<==>/g, '\u21d4')
-      .replace(/<==/g, '\u21d0')
-      .replace(/==>/g, '\u21d2')
-
-      // em-dashes
-      .replace(/--/g, '\u2014')
-      // opening singles
-      .replace(/(^|[-\u2014/(\[{"\s])'/g, '$1\u2018')
-      // closing singles & apostrophes
-      .replace(/'/g, '\u2019')
-      // opening doubles
-      .replace(/(^|[-\u2014/(\[{\u2018\s])"/g, '$1\u00ab')
-      // closing doubles
-      .replace(/"/g, '\u00bb')
-      // ellipses
-      .replace(/\.{3}/g, '\u2026');
   }/*}}}*/
 
   /** parseFrontmatter() ** {{{

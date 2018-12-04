@@ -9,6 +9,32 @@ export type TPageContent = React.Component | string | null;
 
 export default class PageTools {
 
+  /** smartypants ** {{{ Typographic text
+   */
+  public smartypants(text: string): string {
+    return text
+      /* adam-p: Adding some smart arrows */
+      .replace(/<-->/g, '\u2194')
+      .replace(/<--/g, '\u2190')
+      .replace(/-->/g, '\u2192')
+      .replace(/<==>/g, '\u21d4')
+      .replace(/<==/g, '\u21d0')
+      .replace(/==>/g, '\u21d2')
+
+      // em-dashes
+      .replace(/--/g, '\u2014')
+      // opening singles
+      .replace(/(^|[-\u2014/(\[{"\s])'/g, '$1\u2018')
+      // closing singles & apostrophes
+      .replace(/'/g, '\u2019')
+      // opening doubles
+      .replace(/(^|[-\u2014/(\[{\u2018\s])"/g, '$1\u00ab')
+      // closing doubles
+      .replace(/"/g, '\u00bb')
+      // ellipses
+      .replace(/\.{3}/g, '\u2026');
+  }/*}}}*/
+
   /** delayPromise ** {{{ DEBUG: Timeout
    * @param {Number} [timeout=1000]
    * @param {*} [data]

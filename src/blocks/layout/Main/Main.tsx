@@ -4,7 +4,7 @@ import PageTools from 'lib/pages/PageTools';
 
 import PageAnim from 'blocks/layout/PageAnim/PageAnim';
 
-import LoadingSpinner from 'blocks/content/LoadingSpinner/LoadingSpinner';
+import Spinner from 'blocks/content/Spinner/Spinner';
 import LoadedPage from 'blocks/pages/LoadedPage/LoadedPage';
 import Error from 'blocks/content/Error/Error';
 
@@ -23,11 +23,11 @@ const cnMain = cn('Main');
 export type TContent = any; // JSX.Element | React.Component | string | null;
 export interface IMainProps /* extends IClassNameProps */ {
   loadingState?: string;
-  loadingContent?: TContent; // (<LoadingSpinner />);
+  loadingContent?: TContent; // (<Spinner />);
 }
 const defaultProps: IMainProps = {
   loadingState: 'loading',
-  loadingContent: React.createElement(LoadingSpinner), // (<LoadingSpinner />);
+  loadingContent: React.createElement(Spinner), // (<Spinner />);
 };
 export interface IMainState {
   id?: string; // Unique content id

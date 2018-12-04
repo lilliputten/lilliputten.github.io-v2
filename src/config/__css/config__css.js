@@ -24,6 +24,9 @@
     textColor: textColor,
     defaultTextColor: textColor,
 
+    defaultLinkColor: primaryColor,
+    defaultHoveredLinkColor: primaryLightColor,
+
     neutralColor: '#999',
 
     primaryColor,
@@ -98,8 +101,8 @@
     demoBorderRadius: 5,
 
     // Spinner
-    loadingSpinnerSize: 100,
-    loadingSpinnerColor: configCss.neutralColor,
+    spinnerSize: 100,
+    spinnerColor: configCss.neutralColor,
 
   });/*}}}*/
 

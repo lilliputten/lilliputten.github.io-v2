@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { cn } from '@bem-react/classname';
 
-import LoadingSpinner from 'blocks/content/LoadingSpinner/LoadingSpinner';
+import Spinner from 'blocks/content/Spinner/Spinner';
 
 import { css as cssConfig } from 'config';
 
@@ -18,7 +18,7 @@ interface IPageAnimProps {
   initialTimeout?: number; // Timeout before set `active` animation state
   // activeState?: string;
   loadingState?: string; // value for loading state ('loading')
-  loadingContent?: TContent; // (<LoadingSpinner />);
+  loadingContent?: TContent; // (<Spinner />);
   appear?: boolean; // Animate on appear
   id?: string | undefined; // Unique content id
   // content: TContent;
@@ -30,7 +30,7 @@ const defaultProps: IPageAnimProps = {
   initialTimeout: 50, // Timeout before set `active` animation state
   // activeState: 'active',
   loadingState: 'loading',
-  loadingContent: React.createElement(LoadingSpinner), // (<LoadingSpinner />);
+  loadingContent: React.createElement(Spinner), // (<Spinner />);
   appear: true,
   id: '',
   // children: '',

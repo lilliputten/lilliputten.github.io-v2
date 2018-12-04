@@ -7,6 +7,12 @@
   position: relative;
 
   & > li {
+
+    // Space between items
+    $margin-size: .5em;
+    margin-top: $margin-size;
+    margin-bottom: $margin-size;
+
     $size: 25px;
     $offset: 30px;
 

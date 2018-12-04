@@ -4,7 +4,7 @@
 // import { IClassNameProps } from '@bem-react/core';
 import * as React from 'react';
 
-import LoadingSpinner from '../../blocks/interface/LoadingSpinner/LoadingSpinner';
+import Spinner from '../../blocks/interface/Spinner/Spinner';
 
 // import Example from '../../blocks/demo/Example/Example';
 // import Example from 'blocks/demo/Example/Example';
@@ -17,7 +17,7 @@ const withLoading = <P extends object>(Component: React.ComponentType<P>) =>
   class WithLoading extends React.Component<P & IWithLoadingProps> {
     public render() {
       const { loading, ...props } = this.props as IWithLoadingProps;
-      return loading ? <LoadingSpinner /> : <Component {...props} />;
+      return loading ? <Spinner /> : <Component {...props} />;
     }
   };
 

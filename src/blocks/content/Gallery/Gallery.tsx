@@ -1,9 +1,11 @@
 import * as React from 'react';
 import { cn } from '@bem-react/classname';
 
+import PageTools from 'lib/pages/PageTools';
+
 import { site as siteConfig } from 'config';
 
-import LoadingSpinner from 'blocks/content/LoadingSpinner/LoadingSpinner';
+import Spinner from 'blocks/content/Spinner/Spinner';
 import Error from 'blocks/content/Error/Error';
 
 import './Gallery.css';
@@ -32,6 +34,8 @@ export interface IGalleryState {
 }
 
 export default class Gallery extends React.Component<IGalleryProps, IGalleryState> {
+
+  private pageTools = new PageTools();
 
   public block = 'Gallery';
 
@@ -114,7 +118,7 @@ export default class Gallery extends React.Component<IGalleryProps, IGalleryStat
    */
   private fetchImageDataPromise(itemProps: IGalleryItemProps) {
 
-    const {image, title: caption, tags, thumbWidth, thumbHeight} = itemProps;
+    const {image, title, tags, thumbWidth, thumbHeight} = itemProps;
     const {path} = this.props;
 
     const url = path + image;
@@ -126,7 +130,7 @@ export default class Gallery extends React.Component<IGalleryProps, IGalleryStat
     const tagsList = Array.isArray(tags) ? tags.map((tag) => ({value: tag, title: tag})) : undefined;
 
     const imageProps = {
-      caption,
+      caption: title && this.pageTools.smartypants(title),
       src,
       thumbnail,
       thumbnailWidth,
@@ -178,7 +182,7 @@ export default class Gallery extends React.Component<IGalleryProps, IGalleryStat
     const {id} = this.props;
     return (
       <div className={cnGallery({ id })}>
-        {this.state.content || (<LoadingSpinner />)}
+        {this.state.content || (<Spinner />)}
       </div>
     );
   }/*}}}*/

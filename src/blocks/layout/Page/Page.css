@@ -3,4 +3,18 @@ body {
   margin: 0;
   padding: 0;
   @mixin defaultFont;
+
 }
+
+a {
+  color: $(defaultLinkColor);
+  &:hover {
+      color: $(defaultHoveredLinkColor);
+  }
+  // ???
+  // &:visited {
+  //     // color: $(defaultHoveredLinkColor);
+  //     opacity: .8;
+  // }
+}
+
