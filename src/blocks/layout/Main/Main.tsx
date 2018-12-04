@@ -21,6 +21,7 @@ import InfoPage from 'blocks/pages/InfoPage/InfoPage';
 import TestPage from 'blocks/pages/TestPage/TestPage';
 
 import './Main.css';
+import './Content/Main-Content.css';
 
 const cnMain = cn('Main');
 
@@ -116,7 +117,7 @@ class Main extends React.Component<IMainProps, IMainState> {
     const {mode, prevMode} = this.props;
 
     return (
-      <PageAnim className={cnMain({ mode, prevMode })} id={id}>
+      <PageAnim className={cnMain({ mode, prevMode })} elemClassFunc={cnMain} elemClass="Content" id={id}>
         {content}
       </PageAnim>
     );

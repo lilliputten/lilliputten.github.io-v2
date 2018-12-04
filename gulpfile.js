@@ -4,6 +4,8 @@
 const gulp = require('gulp');
 const ghPages = require('gulp-gh-pages');
 const dateformat = require('dateformat');
+const through = require('gulp-through'); // https://www.npmjs.com/package/gulp-through
+const gulpDebug = true && require('gulp-debug') || through('noDebug', () => null);
 
 const now = new Date();
 // const dateTag = dateformat(now, 'yymmdd-HHMMss');
@@ -17,10 +19,11 @@ const ghOptions = {
 };
 
 gulp.task('publish', function() {
-  return gulp.src('./build/**/*')
+  return gulp.src([
+    './build/**/*',
+    '!**/.*',
+    '!**/*{_,-}',
+  ])
+    .pipe(gulpDebug({ title: 'publish <-' }))
     .pipe(ghPages(ghOptions));
 });
-
-// gulp.task('test', function() {
-//   console.log('ok');
-// });

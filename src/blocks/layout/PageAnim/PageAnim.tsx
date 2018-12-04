@@ -23,6 +23,8 @@ interface IPageAnimProps {
   id?: string | undefined; // Unique content id
   // content: TContent;
   children?: any; // Content
+  elemClass?: string;
+  elemClassFunc?: any;
 }
 const defaultProps: IPageAnimProps = {
   className: '',
@@ -108,12 +110,12 @@ export default class PageAnim extends React.Component<IPageAnimProps, IPageAnimS
 
     const showContent = [
       (prevId && prevChildren) && (
-        <div key="prev" className={cnPageAnim('Show', this.getAnimationProps(true))}>
+        <div key="prev" className={this.getElemClassName(true)}>
           {prevChildren}
         </div>
       ),
       (id && children) && (
-        <div key={id} className={cnPageAnim('Show', this.getAnimationProps(false))}>
+        <div key={id} className={this.getElemClassName(false)}>
           {children}
         </div>
       ),
@@ -137,20 +139,31 @@ export default class PageAnim extends React.Component<IPageAnimProps, IPageAnimS
 
   // Animations...
 
-  /** getAnimationProps ** {{{
+  /** getElemClassName ** {{{
    */
-  private getAnimationProps(isPrev: boolean) {
+  private getElemClassName(isPrev: boolean) {
+
     const {animating} = this.state;
     const id = (isPrev ? this.state.prevId : this.state.id) || '';
     const classKey = this.getPageClassId(id);
-    const className = isPrev ? 'exiting' : 'entering';
-    const classNameActive = className + 'Active';
+    const baseClassName = isPrev ? 'exiting' : 'entering';
+    const baseClassNameActive = baseClassName + 'Active';
     const obj = {
       key: classKey,
-      [className]: !!animating,
-      [classNameActive]: (animating === 'active'),
+      [baseClassName]: !!animating,
+      [baseClassNameActive]: (animating === 'active'),
     };
-    return obj;
+
+    // Generate classname...
+    let className = cnPageAnim('Show', obj);
+    let {elemClass, elemClassFunc} = this.props;
+    if (elemClass) {
+      if (typeof elemClassFunc === 'function') {
+        elemClass = elemClassFunc(elemClass, obj);
+      }
+      className = elemClass + ' ' + className;
+    }
+    return className;
   }/*}}}*/
 
   /** getPageClassId ** {{{

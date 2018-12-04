@@ -50,13 +50,13 @@ export default class MdReactParser {
       return (typeof result === 'function') ? result(props) : result;
     },
     /*}}}*/
-    /** heading ** {{{
-     */
-    heading: (props: any) => {
-      const inner = React.createElement('span', {className: 'inner'}, props.children);
-      return React.createElement('h'.concat(props.level), {}, inner);
-    },
-    /*}}}*/
+    // /** heading ** {{{ (SAMPLE!)
+    //  */
+    // heading: (props: any) => {
+    //   const inner = React.createElement('span', {className: 'inner'}, props.children);
+    //   return React.createElement('h'.concat(props.level), {}, inner);
+    // },
+    // /*}}}*/
     /** text ** {{{
      */
     text: (props: any) => {

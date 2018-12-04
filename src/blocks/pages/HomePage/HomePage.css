@@ -1,4 +1,11 @@
 /* vim: set ft=stylus: */
 .HomePage {
-    min-height: 100%;
+  min-height: 100%;
+  // NOTE: Backgeound for home page (move to `HomePage`?)
+  // background-color: color($neutralColor alpha(.5));
+  // background: linear-gradient(to top, color($neutralColor alpha(.5)), #0CD);
+  // background: linear-gradient( color($neutralColor alpha(.7)), color($neutralColor alpha(.4)));
+  background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+          linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+          linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
 }
