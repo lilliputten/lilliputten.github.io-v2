@@ -5,12 +5,7 @@ import './List.css';
 
 const cnList = cn('List');
 
-export interface IListProps {
-  // content: string;
-  // language: string;
-}
-
-export default class List extends React.Component<IListProps> {
+export default class List extends React.Component {
 
   public block = 'List';
 

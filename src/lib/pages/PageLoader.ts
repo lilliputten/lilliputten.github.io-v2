@@ -74,7 +74,7 @@ export default class PageLoader {
     return new Promise((resolve, reject) => {
       try {
         return fetch(url)
-          // .then((result) => this.pageTools.delayPromise(3000, result))
+          // .then((result) => this.pageTools.delayPromise(10000, result))
           .then((res: any) => {
             if (!res || res.status !== 200) {
               // tslint:disable-next-line no-console

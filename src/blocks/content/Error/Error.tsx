@@ -46,18 +46,20 @@ export default class Error<P extends IErrorProps> extends React.Component<P> {
    */
   private getErrorContent(err: any): any {
 
+    /** if ** {{{ Basic comparations...
+     */
     if (!err) {
       return 'Undefined (empty) error';
     } else if (Array.isArray(err)) {
       return err.map((errItem) => this.getErrorContent(errItem));
     } else if (typeof err !== 'object') {
       return String(err);
-    }
-
-    // If object...
+    }/*}}}*/
 
     let result;
 
+    /** if ** {{{ Object...
+     */
     if (err.message) {
       result = String(err.message);
     } else if (err instanceof Error) {
@@ -73,7 +75,7 @@ export default class Error<P extends IErrorProps> extends React.Component<P> {
     } else {
       // Try to fetch something...
       result = String(err.description || err.message || err.type || err.error || err);
-    }
+    }/*}}}*/
 
     result = (
       <div className={cnError('Error')}>
@@ -81,6 +83,8 @@ export default class Error<P extends IErrorProps> extends React.Component<P> {
       </div>
     );
 
+    /** if ** {{{ Details...
+     */
     if (err.details) {
       const details = this.getErrorContent(err.details);
       result = (
@@ -89,16 +93,17 @@ export default class Error<P extends IErrorProps> extends React.Component<P> {
           {details}
         </React.Fragment>
       );
-    }
+    }/*}}}*/
 
-    // Make buttons...
+    /** if ** {{{ Make buttons...
+     */
     if (err.allowHomeLink || err.allowReloadLink) {
       result = (
         <React.Fragment>
           {result}
           <div className={cnError('Actions')}>
             {err.allowReloadLink && (<div className={cnError('Button')}>
-              <Link onClick={(e) => this.fetchLink(err.url, e)} to={err.url}>Reload</Link>
+              <Link onClick={(e) => this.fetchLink(err.url, e)} to={err.id}>Reload</Link>
             </div>)}
             {err.allowHomeLink && (<div className={cnError('Button')}>
               <Link to="/">Home</Link>
@@ -106,7 +111,7 @@ export default class Error<P extends IErrorProps> extends React.Component<P> {
           </div>
         </React.Fragment>
       );
-    }
+    }/*}}}*/
 
     return result;
 

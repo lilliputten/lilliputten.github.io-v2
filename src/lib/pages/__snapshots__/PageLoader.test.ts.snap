@@ -18,6 +18,7 @@ Object {
         "code": [Function],
         "customComments": [Function],
         "heading": [Function],
+        "list": [Function],
         "text": [Function],
       }
     }

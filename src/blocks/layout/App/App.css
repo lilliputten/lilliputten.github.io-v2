@@ -2,17 +2,7 @@
 
 .App {
 
-  // text-align: center;
-
-  // DEMO: Config variable
-  // background-color: color($testColor alpha(20%));
-
-  &-Title {
-    font-size: 1.5em;
+  &_mode_home {
+    overflow: hidden;
   }
-
-  &-Intro {
-    font-size: large;
-  }
-
 }

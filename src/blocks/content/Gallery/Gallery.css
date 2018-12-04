@@ -43,6 +43,8 @@ $galleryAccentColor: $neutralColor;
 // Lightbox popup...
 #lightboxBackdrop {
 
+  padding: $(containerPadding)px;
+
   // Buttons (next, prev, close)
   button {
     transition: all .15s;

@@ -125,7 +125,8 @@ export default class PageAnim extends React.Component<IPageAnimProps, IPageAnimS
     // Set next animation state...
     this.iterateAnimState();
 
-    const className = cnPageAnim(null, [this.props.className]);
+    const {animating} = this.state;
+    const className = cnPageAnim({animating: !!animating}, [this.props.className]);
     return (
       <div className={className}>
         {showContent}

@@ -22,6 +22,8 @@ const cnMain = cn('Main');
 
 export type TContent = any; // JSX.Element | React.Component | string | null;
 export interface IMainProps /* extends IClassNameProps */ {
+  mode?: string;
+  prevMode?: string;
   loadingState?: string;
   loadingContent?: TContent; // (<Spinner />);
 }
@@ -107,9 +109,10 @@ class Main extends React.Component<IMainProps, IMainState> {
   public render() {
 
     const { id, content } = this.state;
+    const {mode, prevMode} = this.props;
 
     return (
-      <PageAnim className={cnMain()} id={id}>
+      <PageAnim className={cnMain({ mode, prevMode })} id={id}>
         {content}
       </PageAnim>
     );
@@ -184,7 +187,9 @@ class Main extends React.Component<IMainProps, IMainState> {
         content,
       });
       const pageType = id.startsWith('/') ? ((id === '/') ? 'home' : 'page') : id;
-      AppActions.setPageType(pageType);
+      setTimeout(() => {
+        AppActions.setPageType(pageType);
+      }, 0);
     }
   }/*}}}*/
 

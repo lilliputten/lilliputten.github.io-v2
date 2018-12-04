@@ -2,7 +2,8 @@
 
 .Spinner {
 
-  @mixin contentBlock;
+  // @mixin contentBlock;
+  // padding: 1em 0;
 
   $localSpinnerSize: $(spinnerSize)px;
   // $localSpinnerColor: $primaryColor;

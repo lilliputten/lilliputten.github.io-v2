@@ -2,10 +2,67 @@
 
 .Main {
 
-  margin: $(containerPadding)px;
-  position: relative;
+  @media (min-width: $(breakpoint_sm)px) {
+    transition: all $(pageEffectsTimeout)ms;
+    min-height: 100%;
+    position: relative;
+    .PageAnim-Show {
+      min-height: 100%;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  .PageAnim-Show_key_home {
+    height: 100%;
+  }
 
-  min-height: 100%;
+  // Home page (full screen)
+  &_mode_home {
+    border-top-width: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    // NOTE: Backgeound for home page (move to `HomePage`?)
+    background-color: color($neutralColor alpha(.5));
+  }
+
+  &.PageAnim_animating.Main_prevMode_home {
+    overflow: hidden;
+  }
+
+  .PageAnim-Show:not(.PageAnim-Show_key_home) {
+    // @mixin debug;
+    margin-right: auto;
+    margin-left: auto;
+    $pagePadding: calc($containerPadding * 2);
+    border: $(pagePadding)px solid transparent;
+    box-sizing: border-box;
+    @media (min-width: $(breakpoint_sm)px) {
+      max-width: calc($breakpoint_sm - $pagePadding * 2)px;
+      padding-top: calc($headerHeight)px;
+    }
+    @media (min-width: $(breakpoint_md)px) {
+      max-width: calc($breakpoint_md - $pagePadding * 2)px;
+    }
+    @media (min-width: $(breakpoint_lg)px) {
+      max-width: calc($breakpoint_lg - $pagePadding * 2)px;
+    }
+    @media (min-width: $(breakpoint_xl)px) {
+      max-width: calc($breakpoint_xl - $pagePadding * 2)px;
+    }
+  }
+  // Home Container
+  .PageAnim-Show_key_home.PageAnim-Show_exiting {
+    border: 1px solid green;
+    height: 100%;
+    @media (max-width: $(breakpoint_sm_pre)px) {
+      display: none;
+    }
+  }
+
+  // Content...
 
   code:not(.hljs) {
     display: inline-block;
@@ -25,7 +82,11 @@
   h1 {
     @mixin titleFont;
     font-size: 20px;
-    // margin: 0;
+    line-height: 1.2;
+    &:first-child {
+      margin-top: 0;
+      padding-top: 0;
+    }
   }
   h1 {
     font-size: 36px;

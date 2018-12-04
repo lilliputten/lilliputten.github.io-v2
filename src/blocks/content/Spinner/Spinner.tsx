@@ -5,10 +5,7 @@ import './Spinner.css';
 
 const cnSpinner = cn('Spinner');
 
-export interface ISpinnerProps {
-}
-
-export default class Spinner<P extends ISpinnerProps> extends React.Component<P> {
+export default class Spinner extends React.Component {
 
   public block = 'Spinner';
 

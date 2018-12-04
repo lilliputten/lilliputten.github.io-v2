@@ -1,4 +1,16 @@
 /* vim: set ft=stylus: */
 
 .Header-Menu {
+  a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 8px;
+    opacity: .85;
+    &:hover {
+      opacity: 1;
+      color: #fff;
+      text-decoration: underline;
+    }
+  }
 }

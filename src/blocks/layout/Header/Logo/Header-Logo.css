@@ -1,4 +1,22 @@
 /* vim: set ft=stylus: */
 
-.Header-Logo {
+.Header {
+  &-Logo {
+    $imgWidth: 300px;
+    &Img {
+      display: block;
+      max-height: $(headerLogoHeight)px;
+      width: $imgWidth;
+      max-width: 100%;
+      margin: 0 auto;
+      transition: opacity .15s;
+      opacity: .6;
+      .Header:not(.Header_mode_home) & {
+        cursor: pointer;
+        &:hover {
+          opacity: .85;
+        }
+      }
+    }
+  }
 }

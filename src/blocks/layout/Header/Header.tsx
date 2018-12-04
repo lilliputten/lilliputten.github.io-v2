@@ -2,6 +2,8 @@ import * as React from 'react';
 import { cn } from '@bem-react/classname';
 
 import AppStore from 'lib/flux/AppStore';
+import AppActions from 'lib/flux/AppActions';
+import PageTools from 'lib/pages/PageTools';
 
 import Logo from './Logo/Header-Logo';
 import Menu from './Menu/Header-Menu';
@@ -11,52 +13,35 @@ import './Header.css';
 const cnHeader = cn('Header');
 
 export interface IHeaderProps {
-}
-export interface IHeaderState {
-  pageType?: string;
+  mode?: string;
   loading?: boolean;
 }
 
-export default class Header extends React.Component<IHeaderProps, IHeaderState> {
+export default class Header extends React.Component<IHeaderProps> {
 
   public block = 'Header';
 
-  /** constructor ** {{{
-   */
-  constructor(props: IHeaderProps) {
-    super(props);
-    this.state = {
-    };
-  }/*}}}*/
-
-  /** componentDidMount ** {{{
-   */
-  public componentDidMount() {
-    AppStore.addListener('App_setPageType', this.onPageTypeChanged);
-  }/*}}}*/
+  private pageTools = new PageTools();
 
   /** render ** {{{
    */
   public render() {
-    const {pageType: mode, loading} = this.state;
+    const {mode, loading} = this.props;
     return (
       <div className={cnHeader({mode, loading})}>
-        <Logo mode={mode} />
-        <Menu mode={mode} />
+        <div className={cnHeader('Container')}>
+          <Logo onClick={this.onLogoClick} mode={mode} />
+          <Menu mode={mode} />
+        </div>
       </div>
     );
   }/*}}}*/
 
-  // Events...
-
-  /** onPageTypeChanged ** {{{
+  /** onLogoClick ** {{{
    */
-  private onPageTypeChanged = () => {
-    const pageType = AppStore.getPageType();
-    if (pageType === 'loading') {
-      this.setState({ loading: true });
-    } else {
-      this.setState({ pageType, loading: false });
+  private onLogoClick = (e: any) => {
+    if (this.props.mode !== 'home') {
+      this.pageTools.setUrlToWindow('/');
     }
   }/*}}}*/
 

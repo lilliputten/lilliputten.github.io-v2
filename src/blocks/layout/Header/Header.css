@@ -1,3 +1,91 @@
 /* vim: set ft=stylus: */
 .Header {
+  transition: all $(pageEffectsTimeout)ms;
+  z-index: 10;
+  border: 0px solid transparent;
+  // padding: 10px;
+  $containerSidePadding: 40px;
+  &-Container {
+    padding: 10px;
+    // margin: 0 10px;
+    background-color: $primaryColor;
+    text-align: center;
+  }
+  @media (min-width: $(breakpoint_sm)px) {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    // margin: 10px auto;
+    // padding: 0 10px;
+    border: $(containerPadding)px solid transparent;
+    box-sizing: border-box;
+    &-Container {
+      height: $(headerHeight - $containerPadding * 2)px;
+      margin: 0 auto;
+      display: table;
+      padding-left: $containerSidePadding;
+      padding-right: $containerSidePadding;
+      border-radius: calc($headerHeight / 2)px;
+    }
+    &-Logo,
+    &-Menu {
+      padding: 0 15px;
+      display: table-cell;
+      vertical-align: middle;
+    }
+    &-Logo {
+      height: $(headerLogoHeight)px;
+    }
+    &-Menu {
+      white-space: nowrap;
+    }
+  }
+  &:not(.Header_mode_home) &-Container {
+    $minusWidth: 120;
+    @media (min-width: $(breakpoint_sm)px) {
+      min-width: calc($breakpoint_sm - $minusWidth)px;
+    }
+    @media (min-width: $(breakpoint_md)px) {
+      min-width: calc($breakpoint_md - $minusWidth)px;
+    }
+    @media (min-width: $(breakpoint_lg)px) {
+      min-width: calc($breakpoint_lg - $minusWidth)px;
+    }
+    @media (min-width: $(breakpoint_xl)px) {
+      min-width: calc($breakpoint_xl - $minusWidth)px;
+    }
+  }
+
+  $opacity: .8;
+  opacity: $opacity;
+
+  // &:hover {
+  //   opacity: .9;
+  // }
+
+  // Home page (at middle)...
+  &_mode_home {
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    // opacity: .85;
+  }
+
+  animation-name: HeaderAppear;
+  animation-duration: calc($pageTransitionTimeout * 2)ms;
+
+  @keyframes HeaderAppear {
+    0% {
+      opacity: 0;
+    }
+    10% {
+      opacity: 0;
+    }
+    100% {
+      opacity: $opacity;
+    }
+  }
+
 }

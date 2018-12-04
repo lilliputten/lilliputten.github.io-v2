@@ -7,29 +7,27 @@ import { site as siteConfig } from 'config';
 
 import './Header-Menu.css';
 
-const cnAppMenu = cn('App', 'Menu');
+const cnHeaderMenu = cn('Header', 'Menu');
 
-export interface IAppMenuProps {
+export interface IHeaderMenuProps {
   mode?: string;
 }
 
-export interface IAppMenuState {
-}
+export default class HeaderMenu extends React.Component<IHeaderMenuProps> {
 
-export default class AppMenu extends React.Component<IAppMenuProps, IAppMenuState> {
-
-  public block = 'App';
+  public block = 'Header';
   public elem = 'Menu';
 
   /** render ** {{{
    */
   public render() {
     const menu = siteConfig.mainMenu;
-    const menuContent = menu.map(({url, text}: {url: string, text: string}) => (<Link to={url}>{text}</Link>));
+    const menuContent = menu.map(({url, text}: {url: string, text: string}) =>
+      (<Link key={url} to={url}>{text}</Link>));
     return (
-      <span className={cnAppMenu()}>
+      <div className={cnHeaderMenu()}>
       {menuContent}
-      </span>
+      </div>
     );
   }/*}}}*/
 

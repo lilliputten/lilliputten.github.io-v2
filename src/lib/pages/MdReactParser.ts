@@ -48,19 +48,22 @@ export default class MdReactParser {
     customComments: (props: any) => {
       const result = (props.tag && this.customTagHandlers[props.tag]) ? this.customTagHandlers[props.tag] : null;
       return (typeof result === 'function') ? result(props) : result;
-    },/*}}}*/
+    },
+    /*}}}*/
     /** heading ** {{{
      */
     heading: (props: any) => {
       const inner = React.createElement('span', {className: 'inner'}, props.children);
       return React.createElement('h'.concat(props.level), {}, inner);
-    },/*}}}*/
+    },
+    /*}}}*/
     /** text ** {{{
      */
     text: (props: any) => {
       const text = (typeof props.children === 'string') ? this.pageTools.smartypants(props.children) : props.children;
       return text;
-    },/*}}}*/
+    },
+    /*}}}*/
     /** code ** {{{
      */
     code: (props: any) => {
@@ -69,12 +72,14 @@ export default class MdReactParser {
         language: props.language,
       };
       return React.createElement(CodeBlock, codeProps, null);
-    },/*}}}*/
+    },
+    /*}}}*/
     /** list ** {{{
      */
     list: (props: any) => {
       return React.createElement(List, props, props.children);
-    },/*}}}*/
+    },
+    /*}}}*/
     // listItem: ListItem,
   };
   /*}}}*/

@@ -20,7 +20,7 @@ export interface IGalleryProps {
   id?: string;
   thumbWidth?: number;
   thumbHeight?: number;
-  items: Array<any>;
+  items: any[];
 }
 export interface IGalleryItemProps {
   image: string;
@@ -35,9 +35,9 @@ export interface IGalleryState {
 
 export default class Gallery extends React.Component<IGalleryProps, IGalleryState> {
 
-  private pageTools = new PageTools();
-
   public block = 'Gallery';
+
+  private pageTools = new PageTools();
 
   /** constructor ** {{{
    */
@@ -46,16 +46,63 @@ export default class Gallery extends React.Component<IGalleryProps, IGalleryStat
     this.state = {};
   }/*}}}*/
 
+  /** componentDidMount ** {{{
+   */
+  public componentDidMount() {
+
+    const {id, items} = this.props;
+
+    // Fetch all image thumb and their sizes
+    const imagePromises = items.map((props) => this.fetchImageDataPromise(props));
+
+    // Process all image properties or thrown error...
+    Promise.all(imagePromises)
+      .then((images) => {
+        // @see https://github.com/benhowell/react-grid-gallery#image-options
+        const imagesCount = images.length;
+        this.setState({ content: (
+          <ReactGridGallery
+            id={id}
+            enableImageSelection={false}
+            backdropClosesModal={true}
+            showLightboxThumbnails={imagesCount > 1}
+            images={images}
+          />
+        )});
+      })
+      .catch((err) => {
+        // tslint:disable-next-line no-console
+        console.error('Gallery image sizes loading error (promise catch)', err);
+        debugger; // tslint:disable-line no-debugger
+        this.setState({ content: (<Error  error={{ error: 'Gallery error', details: err }} />) });
+      })
+    ;
+
+  }/*}}}*/
+
+  /** render ** {{{
+   */
+  public render() {
+    const {id} = this.props;
+    return (
+      <div className={cnGallery({ id })}>
+        {this.state.content || (<Spinner />)}
+      </div>
+    );
+  }/*}}}*/
+
+  // Privates...
+
   /** getResponeThumbSizesPromise ** {{{
    */
-  getResponeThumbSizesPromise(res: any) {
+  private getResponeThumbSizesPromise(res: any) {
 
     if (!res || res.status !== 200) {
       // tslint:disable-next-line no-console
       console.error('Gallery:getResponeThumbSizesPromise error (invalid response status)', res);
       debugger; // tslint:disable-line no-debugger
-      // throw new Error(res);
-      return Promise.reject({ error: 'Invalid response status for image thumbnail (' + res.status + ')' /*  + res.url */, details: res });
+      return Promise.reject({ error:
+        'Invalid response status for image thumbnail (' + res.status + ')', details: res });
     }
 
     // Fetch buffer...
@@ -72,7 +119,7 @@ export default class Gallery extends React.Component<IGalleryProps, IGalleryStat
   }/*}}}*/
   /** fetchImageThumbSizesPromise ** {{{
    */
-  fetchImageThumbSizesPromise(imageProps: any) {
+  private fetchImageThumbSizesPromise(imageProps: any) {
 
     const {thumbnail, thumbnailWidth, thumbnailHeight} = imageProps;
 
@@ -140,51 +187,6 @@ export default class Gallery extends React.Component<IGalleryProps, IGalleryStat
 
     return this.fetchImageThumbSizesPromise(imageProps);
 
-  }/*}}}*/
-
-  /** componentDidMount ** {{{
-   */
-  public componentDidMount() {
-
-    const {id, items} = this.props;
-
-    // Fetch all image thumb and their sizes
-    const imagePromises = items.map((props) => this.fetchImageDataPromise(props));
-
-    // Process all image properties or thrown error...
-    Promise.all(imagePromises)
-      .then((images) => {
-        // @see https://github.com/benhowell/react-grid-gallery#image-options
-        const imagesCount = images.length;
-        this.setState({ content: (
-          <ReactGridGallery
-            id={id}
-            enableImageSelection={false}
-            backdropClosesModal={true}
-            showLightboxThumbnails={imagesCount > 1}
-            images={images}
-          />
-        )});
-      })
-      .catch((err) => {
-        // tslint:disable-next-line no-console
-        console.error('Gallery image sizes loading error (promise catch)', err);
-        debugger; // tslint:disable-line no-debugger
-        this.setState({ content: (<Error  error={{ error: 'Gallery error', details: err }} />) });
-      })
-    ;
-
-  }/*}}}*/
-
-  /** render ** {{{
-   */
-  public render() {
-    const {id} = this.props;
-    return (
-      <div className={cnGallery({ id })}>
-        {this.state.content || (<Spinner />)}
-      </div>
-    );
   }/*}}}*/
 
 }

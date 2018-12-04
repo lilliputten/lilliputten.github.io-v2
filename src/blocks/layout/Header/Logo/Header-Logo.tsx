@@ -4,29 +4,27 @@ import AppStore from 'lib/flux/AppStore';
 
 import './Header-Logo.css';
 
-const cnAppLogo = cn('App', 'Logo');
+const cnHeaderLogo = cn('Header', 'Logo');
 
-// const logoSvg = require('../Logo/App-Logo.svg');
+const logoSvg = require('./LogoW.svg');
 
-export interface IAppLogoProps {
+export interface IHeaderLogoProps {
   mode?: string;
+  onClick: (e: any) => void;
 }
 
-export interface IAppLogoState {
-}
+export default class HeaderLogo extends React.Component<IHeaderLogoProps> {
 
-export default class AppLogo extends React.Component<IAppLogoProps, IAppLogoState> {
-
-  public block = 'App';
+  public block = 'Header';
   public elem = 'Logo';
 
   /** render ** {{{
    */
   public render() {
     return (
-      <span className={cnAppLogo()}>
-        Logo
-      </span>
+      <div onClick={this.props.onClick} className={cnHeaderLogo()}>
+        <img className={cnHeaderLogo('LogoImg')} src={logoSvg} alt="Logo" />
+      </div>
     );
   }/*}}}*/
 

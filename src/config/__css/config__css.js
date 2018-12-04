@@ -14,8 +14,9 @@
 
   var textColor = '#333';
   var defaultFontSize = 16;
-  var primaryColor = '#c10';
-  var primaryLightColor = '#f10';
+  var primaryColor = '#c20';
+  // var topBgColor = '#f20'; // '#ff1d06';
+  var primaryLightColor = '#f20';
 
   /** configCss ** {{{
    */
@@ -39,6 +40,9 @@
     layoutLightBgColor: '#F7F7F7',
 
     layoutBorderColor: '#CCC',
+
+    headerLogoHeight: 60,
+    headerHeight: 100,
 
     defaultFont: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
 
@@ -67,6 +71,7 @@
     // Timeouts...
     animationTimeout: 250,
     pageTransitionTimeout: 1000,
+    pageEffectsTimeout: 500,
 
   };/*}}}*/
 
