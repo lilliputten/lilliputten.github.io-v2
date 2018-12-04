@@ -98,6 +98,10 @@
 
     demoBorderRadius: 5,
 
+    // Spinner
+    loadingSpinnerSize: 100,
+    loadingSpinnerColor: configCss.neutralColor,
+
   });/*}}}*/
 
   /** Universal export... ** {{{ */

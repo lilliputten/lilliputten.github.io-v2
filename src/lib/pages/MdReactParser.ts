@@ -3,6 +3,7 @@ import * as React from 'react';
 import CodeBlock from 'blocks/content/CodeBlock/CodeBlock';
 import Gallery from 'blocks/content/Gallery/Gallery';
 import List from 'blocks/content/List/List';
+import LoadingSpinner from 'blocks/content/LoadingSpinner/LoadingSpinner';
 
 /**
  * @see https://github.com/rexxars/react-markdown
@@ -30,6 +31,7 @@ export default class MdReactParser {
   /** customTagHandlers */
   private customTagHandlers: { [id: string]: any } = {
     COMMENTS: null,
+    SPINNER: (props: any) => React.createElement(LoadingSpinner),
     GALLERY: (props: any) => React.createElement(Gallery, {...props.data, id: props.id}),
   };
 

@@ -5,6 +5,8 @@ param: value
 
 <--COMMENTS comments -->
 
+<--SPINNER -->
+
 "Nice" text -- via `smartypants`.
 
 <a href="#/">home</a>
@@ -40,6 +42,8 @@ param: value
       image: 005.jpg
       title: Regular page
 -->
+
+text
 
 # try
 

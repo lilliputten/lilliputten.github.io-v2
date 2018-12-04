@@ -142,7 +142,7 @@ export default class Gallery extends React.Component<IGalleryProps, IGalleryStat
    */
   public componentDidMount() {
 
-    const {items} = this.props;
+    const {id, items} = this.props;
 
     // Fetch all image thumb and their sizes
     const imagePromises = items.map((props) => this.fetchImageDataPromise(props));
@@ -154,6 +154,7 @@ export default class Gallery extends React.Component<IGalleryProps, IGalleryStat
         const imagesCount = images.length;
         this.setState({ content: (
           <ReactGridGallery
+            id={id}
             enableImageSelection={false}
             backdropClosesModal={true}
             showLightboxThumbnails={imagesCount > 1}
@@ -176,9 +177,9 @@ export default class Gallery extends React.Component<IGalleryProps, IGalleryStat
   public render() {
     const {id} = this.props;
     return (
-      <p className={cnGallery({ id })}>
+      <div className={cnGallery({ id })}>
         {this.state.content || (<LoadingSpinner />)}
-      </p>
+      </div>
     );
   }/*}}}*/
 
