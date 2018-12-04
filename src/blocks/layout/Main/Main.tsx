@@ -4,12 +4,16 @@ import PageTools from 'lib/pages/PageTools';
 
 import PageAnim from 'blocks/layout/PageAnim/PageAnim';
 
+import { IPage } from 'lib/pages/PageLoader';
+
 import Spinner from 'blocks/content/Spinner/Spinner';
 import LoadedPage from 'blocks/pages/LoadedPage/LoadedPage';
 import Error from 'blocks/content/Error/Error';
 
 import AppActions from 'lib/flux/AppActions';
 import AppStore from 'lib/flux/AppStore';
+
+import { site as siteConfig } from 'config';
 
 // Pages
 import HomePage from 'blocks/pages/HomePage/HomePage';
@@ -40,10 +44,10 @@ class Main extends React.Component<IMainProps, IMainState> {
 
   /*{{{ Properties... */
 
-  public static staticRoutes: { [id: string]: { content: TContent } } = {
-    '/': { content: HomePage },
-    '/info': { content: InfoPage },
-    '/test': { content: TestPage },
+  public static staticRoutes: { [id: string]: { content: TContent, title?: string } } = {
+    '/': { content: HomePage, title: '' },
+    '/info': { content: InfoPage, title: 'Info (demo)' },
+    '/test': { content: TestPage, title: 'Test (demo)' },
   };
 
   /** Default component props */
@@ -145,14 +149,16 @@ class Main extends React.Component<IMainProps, IMainState> {
   /** onPageUpdated ** {{{
    */
   private onPageUpdated = () => {
-    const page = AppStore.getCurrentPage();
-    const id = AppStore.getCurrentPageId();
-    const content = (
-      <LoadedPage>
-        {page && page.content}
-      </LoadedPage>
-    );
-    this.changeState({ id, content });
+    const page = AppStore.getCurrentPage() as IPage;
+    if (page) {
+      const {id, title} = page;
+      const content = (
+        <LoadedPage>
+          {page && page.content}
+        </LoadedPage>
+      );
+      this.changeState({ id, content, title });
+    }
   }/*}}}*/
   /** onErrorThrown ** {{{
    */
@@ -165,7 +171,7 @@ class Main extends React.Component<IMainProps, IMainState> {
         <Error {...this.props} error={err} />
       </React.Fragment>
     );
-    this.changeState({ id, content });
+    this.changeState({ id, content, title: 'Error' });
   }/*}}}*/
 
   /** onHashChange ** {{{ Set page if hash changed */
@@ -180,17 +186,27 @@ class Main extends React.Component<IMainProps, IMainState> {
 
   /** changeState ** {{{
    */
-  private changeState({ id, content }: { id: string, content: TContent}) {
+  private changeState({ id, content, title }: { id: string, content: TContent, title?: string}) {
+
     if (id !== this.state.id) {
-      this.setState({
-        id,
-        content,
-      });
+
+      // Set page state (id, content)
+      this.setState({ id, content });
+
+      // Set page type (delayed -- due to AppDispatcher async error)
       const pageType = id.startsWith('/') ? ((id === '/') ? 'home' : 'page') : id;
       setTimeout(() => {
         AppActions.setPageType(pageType);
       }, 0);
+
+      // Set window title
+      if (title != null) {
+        document.title = [ title, siteConfig.siteName || null ]
+          .filter((s) => s).join(siteConfig.titleDelim || ' : ');
+      }
+
     }
+
   }/*}}}*/
 
   /** setLoadingState ** {{{
@@ -204,11 +220,15 @@ class Main extends React.Component<IMainProps, IMainState> {
   /** showStaticPage ** {{{
    */
   private showStaticPage({ id }: { id: string }) {
-    let {content} = Main.staticRoutes[id];
-    if (typeof content === 'function') {
-      content = React.createElement(content);
+    const route = Main.staticRoutes[id];
+    if (route) {
+      let {content} = route;
+      const {title} = route;
+      if (typeof content === 'function') {
+        content = React.createElement(content);
+      }
+      this.changeState({ id, content, title });
     }
-    this.changeState({ id, content });
   }/*}}}*/
 
   /** fetchPage ** {{{

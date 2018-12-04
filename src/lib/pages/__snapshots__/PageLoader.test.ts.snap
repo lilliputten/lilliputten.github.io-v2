@@ -43,6 +43,7 @@ frontmatter: value
 
 text
 ",
+  "title": "success",
   "url": "/site/success.md",
 }
 `;

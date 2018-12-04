@@ -12,6 +12,7 @@ export default class PageTools {
   /** smartypants ** {{{ Typographic text
    */
   public smartypants(text: string): string {
+    // debugger;
     return text
       /* adam-p: Adding some smart arrows */
       .replace(/<-->/g, '\u2194')
@@ -28,7 +29,9 @@ export default class PageTools {
       // closing singles & apostrophes
       .replace(/'/g, '\u2019')
       // opening doubles
-      .replace(/(^|[-\u2014/(\[{\u2018\s])"/g, '$1\u00ab')
+      // .replace(/(^|[-\u2014/(\[{\u2018\s])"/g, '$1\u00ab')
+      .replace(/(^|[-\u2014/(\[{\u2018\s])"([^\s]|$)/g, '$1\u00ab$2')
+      // TODO: Test cases for opening closing quotes around tags
       // closing doubles
       .replace(/"/g, '\u00bb')
       // ellipses

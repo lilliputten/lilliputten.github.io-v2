@@ -86,7 +86,7 @@ export default class MdReactParser {
 
   /** parse() ** {{{
    */
-  public parse(props: IParseProps): {frontmatter: object, content: React.ReactElement<any>} {
+    public parse(props: IParseProps): {frontmatter: any, content: React.ReactElement<any>} {
     const {plugins, renderers} = this;
     const {frontmatter, source} = this.parseFrontmatter(props.source);
     const content = React.createElement(ReactMarkdown, {
@@ -104,11 +104,11 @@ export default class MdReactParser {
     private parseFrontmatter(source: string): {frontmatter: object, source: string} {
       let frontmatter = {};
       // Has frontmatter data?
-      const match = source.match(/^\s*---\s*\n([\s\S]*)---\s*\n\s*\n/m);
+      const match = source.match(/^\s*(---|\+\+\+)\s*\n([\s\S]*)\1\s*\n\s*\n/m);
       // Parse frontmatter if found...
       if (match) {
         const found = match[0];
-        const frontmatterSrc = match[1];
+        const frontmatterSrc = match[2];
         frontmatter = yaml.safeLoad(frontmatterSrc);
         if (!frontmatter || typeof frontmatter !== 'object') {
           throw new Error('Cannot parse frontmatter data for ""' + frontmatterSrc + '"');

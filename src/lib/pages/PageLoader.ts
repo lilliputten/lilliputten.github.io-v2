@@ -5,6 +5,7 @@ export { TPageId, TPagePathname, TPageUrl, TPageContent };
 
 export interface IPage {
   id: TPageId;
+  title: string;
   url: TPageUrl;
   source?: string;
   frontmatter: object;
@@ -35,13 +36,16 @@ export default class PageLoader {
         if (typeof source !== 'string' || source.startsWith('<!DOCTYPE') || source.startsWith('<html')) {
           // tslint:disable-next-line no-console
           console.error('PageLoader:loadPage error (invalid response content)', source);
-          // debugger; // tslint:disable-line no-debugger
+          debugger; // tslint:disable-line no-debugger
           throw new Error('Invalid response content (received html instead of markdown)');
         }
         // Precoess received data...
         const {frontmatter, content} = this.mdReactParser.parse({ source });
+        const title = frontmatter.title || this.fetchTitle(source)
+          || id.replace(/\//g, ' ').replace(/\s\s+/g, ' ').trim();
         return {
           id,
+          title,
           url,
           source,
           frontmatter,
@@ -66,6 +70,20 @@ export default class PageLoader {
 
     return promise;
 
+  }/*}}}*/
+
+  /** fetchTitle ** {{{
+   */
+  private fetchTitle(source: string): string | null {
+    const match = source.match(/(?:^\n*|\n\n)# ([\s\S]*?)\n\n/m) || source.match(/(?:^\n*|\n\n)([\s\S]*?)\n==+\n\n/m);
+    if (match) {
+      const title = match[1]
+        .replace(/[\n\t]/g, ' ')
+        .replace(/\s\s+/g, ' ')
+      .trim();
+      return title;
+    }
+    return null;
   }/*}}}*/
 
   /** fetchUrl ** {{{

@@ -3,6 +3,7 @@
 ## Config files
 
 - `package.json`
+- `gulpfile.js`
 - `.bemrc.js`
 - `config-overrides.js`
 - `jest.config.js`

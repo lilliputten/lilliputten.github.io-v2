@@ -10,9 +10,10 @@
       max-width: 100%;
       margin: 0 auto;
       transition: opacity .15s;
-      opacity: .6;
+      opacity: .75;
       .Header:not(.Header_mode_home) & {
         cursor: pointer;
+        opacity: .6;
         &:hover {
           opacity: .85;
         }

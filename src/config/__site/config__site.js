@@ -13,19 +13,23 @@
 
   var galleryRoot = 'https://res.cloudinary.com/lilliputten/image/upload/';
   var galleryId = 'v1542040058';
+  var siteName = 'Lilliputten & Noble';
 
   /** configSite ** {{{ */
   var configSite = /** @lends config__site.prototype */ {
 
-    headerTitle: 'Project name',
+    headerTitle: siteName,
     // headerLogo: '/img/Logo/itu-logo-white.svg',
     headerLink: '/',
 
-    siteName: 'Site name',
+    titleDelim: ' — ',
+
+    siteName: siteName,
 
     siteAddr: siteAddr,
     siteUrl: 'http://' + siteAddr,
 
+    // Gallery...
     galleryRoot,
     galleryId,
     galleryThumb: ({url, width, height}) => `${galleryRoot}c_thumb${width ? ',w_' + width : ''}${height ? ',h_' + height : ''},g_face/${galleryId}/${url}`,

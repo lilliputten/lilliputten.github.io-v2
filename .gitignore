@@ -10,6 +10,7 @@ zia*
 *~
 \!ARC*
 *.session
+.publish/
 
 # Include special jest files/folders
 !__mocks__
