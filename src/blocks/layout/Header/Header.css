@@ -48,12 +48,12 @@
     @media (min-width: $(breakpoint_md)px) {
       min-width: calc($breakpoint_md - $minusWidth)px;
     }
-    @media (min-width: $(breakpoint_lg)px) {
-      min-width: calc($breakpoint_lg - $minusWidth)px;
-    }
-    @media (min-width: $(breakpoint_xl)px) {
-      min-width: calc($breakpoint_xl - $minusWidth)px;
-    }
+    // @media (min-width: $(breakpoint_lg)px) {
+    //   min-width: calc($breakpoint_lg - $minusWidth)px;
+    // }
+    // @media (min-width: $(breakpoint_xl)px) {
+    //   min-width: calc($breakpoint_xl - $minusWidth)px;
+    // }
   }
 
   $opacity: .8;

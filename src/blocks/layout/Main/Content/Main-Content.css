@@ -14,11 +14,11 @@
       border-radius: 50%;
       width: 120px;
       height: 120px;
-      @media (min-width: $(breakpoint_md)px) {
+      @media (min-width: $(breakpoint_sm)px) {
         width: 160px;
         height: 160px;
       }
-      @media (min-width: $(breakpoint_xl)px) {
+      @media (min-width: $(breakpoint_md)px) {
         width: 200px;
         height: 200px;
       }

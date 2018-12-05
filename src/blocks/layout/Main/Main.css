@@ -44,12 +44,12 @@
     @media (min-width: $(breakpoint_md)px) {
       max-width: calc($breakpoint_md - $pagePadding * 2)px;
     }
-    @media (min-width: $(breakpoint_lg)px) {
-      max-width: calc($breakpoint_lg - $pagePadding * 2)px;
-    }
-    @media (min-width: $(breakpoint_xl)px) {
-      max-width: calc($breakpoint_xl - $pagePadding * 2)px;
-    }
+    // @media (min-width: $(breakpoint_lg)px) {
+    //   max-width: calc($breakpoint_lg - $pagePadding * 2)px;
+    // }
+    // @media (min-width: $(breakpoint_xl)px) {
+    //   max-width: calc($breakpoint_xl - $pagePadding * 2)px;
+    // }
   }
   // Home Container
   .PageAnim-Show_key_home.PageAnim-Show_exiting {

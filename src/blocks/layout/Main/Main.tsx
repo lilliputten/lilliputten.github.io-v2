@@ -206,6 +206,12 @@ class Main extends React.Component<IMainProps, IMainState> {
           .filter((s) => s).join(siteConfig.titleDelim || ' : ');
       }
 
+      // Scroll to top of page
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+
     }
 
   }/*}}}*/
