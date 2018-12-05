@@ -2,6 +2,19 @@
 
 Below are a few selected projects.
 
-- Vector Element GIS monitoring and control system (in progress).
-- [ExDentis web site](#/Projects/Web/1308-ExDentis) (2013)
-- [TehComputer web site](#/Projects/Web/1702-tehcomputer) (2017)
+## Web Projects
+
+- "Element": Online GIS Monitoring and Control System (2016-2018, in progress)
+- [BoogieManMusic Vinyl Boutique Site](#/Projects/Web/15xx-boogiemanmusic) (2013-2015)
+- [TehComputer Service Provider Site](#/Projects/Web/1702-tehcomputer) (2017)
+- [ExDentis Dental Equipment Site](#/Projects/Web/1308-ExDentis) (2013)
+
+## Other
+
+- [This site "pet project"](https://github.com/lilliputten/lilliputten.github.io-v2) (external github repository link, 2018)
+
+## See also
+
+- [About section](#/About)
+- [Contacts section](#/Contacts)
+

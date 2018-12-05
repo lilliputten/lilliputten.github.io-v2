@@ -6,26 +6,32 @@ About
 =====
 
 <div class="Facepalm">
-  <img src="/images/facepalm/BikerFaceX.jpg" />
+  <img src="/images/facepalm/BrownCBG-sm.jpg" />
 </div>
 
-**Brief:** Frontend developer, designer, imposer and so on.
+**Name:** Igor
 
 **Location:** Moscow, Russia.
 
+**Birth date:** 1974.
+
+**Brief:** Middle-junior frontend developer, designer, imposer and&nbsp;so&nbsp;on.
+
+**Current status:** Now working as freelancer.
+
 ## Skills
 
-**Development:** JavaScript, TypeScript, NodeJS, i-bem, bem-xjst, React.
+**Development:** JavaScript, TypeScript, NodeJS, i-bem, bem-xjst (bem-html), React.
 
-**Imposing:** Adobe XD, Photoshop, Illustrator, InDesign.
+**Imposing/prototyping/typesetting:** Adobe XD, Photoshop, Illustrator, InDesign.
 
-**Design/layout:** HTML5, CSS3, Stylus, PostCSS.
+**Design/layout/tamplating:** HTML5, CSS3, Stylus, PostCSS.
 
 **Programming:** JavaScript, PHP, Python.
 
-**Applied programming:** Python, JavaScript, PHP, Unix Shell.
+**Applied:** Python, JavaScript, PHP, Unix Shell.
 
-**Dev. tools:** Webpack, Gulp, npm, git, svn.
+**Dev. tools:** Webpack, Gulp, npm, git, svn, misc NodeJS instruments.
 
 ## Misc
 
@@ -34,7 +40,7 @@ facility).
 
 **Languages:** English (technical), Russian (native).
 
-**Interests**: Music (blues harp, slide guitar, CBG), sports, biking, hiking,
+**Interests**: Music (blues harp, slide guitar, CBG), painting, sports, biking, hiking,
 programming, IT, science, loneliness.
 
 ## See also:

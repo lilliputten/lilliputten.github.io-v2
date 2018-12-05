@@ -111,7 +111,7 @@
     "test": "echo --Run tests-- && jest",
     "tests": "echo --Run all lintings and tests-- && npm-run-all lint test",
     "make-build": "echo --Make production build-- && react-app-rewired build",
-    "publish-build": "echo --Publish build to gitpages (using gulp-gh-pages)-- && gulp publish",
+    "publish-build": "echo --Publish build to gitpages (using gulp-gh-pages, buggy)-- && gulp publish",
     "commit-build": "echo --Commit build to gitpages (using scripts)-- && cd .publish && rm -Rf && cp -Rfu ../build/* . && git add . -Av && git commit -am \"auto-commit\" && git push && cd ..",
     "serve-build": "echo --Run static server for build-- && serve -s build",
     "pack-build": "echo --Pack build for demo server-- && rm -f build-pack.zip && zip -rq build-pack.zip build",

@@ -6,6 +6,8 @@ tags:
   - design
   - programming
   - i-bem
+  - javascript
+  - nodejs
   - bem-xjst
   - bem-html
   - template
@@ -15,7 +17,7 @@ tags:
   - twig
 +++
 
-# TehComputer web site
+# TehComputer Service Provider Site
 
 Landing site for sysadmin/sysmanager service provider.
 
@@ -34,8 +36,8 @@ Landing site for sysadmin/sysmanager service provider.
 
 ## Tasks performed:
 
-- Graphic design.
-- HTML/CSS maketing.
+- Graphic design (including logo design and several different page makets).
+- HTML/CSS maketing (using NodeJS environment and tools; see below).
 - Frontend JS coding.
 - Postprocessing for using on PHP CMS with twig template engine.
 
