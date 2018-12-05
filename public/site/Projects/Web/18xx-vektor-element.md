@@ -26,6 +26,8 @@ tags:
 
 Online GIS monitoring and control system.
 
+(Description is in progress.)
+
 ## System screenshots
 
 ### Logon/logout screens
