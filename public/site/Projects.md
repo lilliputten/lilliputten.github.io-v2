@@ -4,7 +4,7 @@ Below are a few selected projects.
 
 ## Web Projects
 
-- "Element": Online GIS Monitoring and Control System (2016-2018, in progress)
+- ["Element": Online GIS Monitoring and Control System](#/Projects/Web/18xx-vektor-element) (2016-2018)
 - [BoogieManMusic Vinyl Boutique Site](#/Projects/Web/15xx-boogiemanmusic) (2013-2015)
 - [TehComputer Service Provider Site](#/Projects/Web/1702-tehcomputer) (2017)
 - [ExDentis Dental Equipment Site](#/Projects/Web/1308-ExDentis) (2013)
