@@ -21,7 +21,7 @@ export default class HomePage extends React.Component<{}, IHomePageState> {
    */
   private onResize = (e: any) => {
     this.setState((state) => {
-      const size = this.getMaxWindowSize();
+      const size = this.getWindowGapSize();
       if (size !== state.size) {
         return { ...state, size };
       }
@@ -43,7 +43,7 @@ export default class HomePage extends React.Component<{}, IHomePageState> {
 
     setTimeout(() => this.setState({
       ready: true,
-      size: this.getMaxWindowSize(),
+      size: this.getWindowGapSize(),
       backgrounds: [ '', this.createRandomBackground(1),this.createRandomBackground(2) ],
     }), 1100);
 
@@ -91,10 +91,10 @@ export default class HomePage extends React.Component<{}, IHomePageState> {
     );
   }/*}}}*/
 
-  /** getMaxWindowSize ** {{{
+  /** getWindowGapSize ** {{{
    */
-  private getMaxWindowSize(): number {
-    return Math.max(window.innerWidth, window.innerHeight);
+  private getWindowGapSize(): number {
+    return Math.round(Math.max(window.innerWidth, window.innerHeight) / 2);
   }/*}}}*/
 
   /** randomIntRange ** {{{
