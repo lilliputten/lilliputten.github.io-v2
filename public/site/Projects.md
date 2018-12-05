@@ -11,7 +11,8 @@ Below are a few selected projects.
 
 ## Other
 
-- [This site "pet project"](https://github.com/lilliputten/lilliputten.github.io-v2) (external github repository link, 2018)
+- [This portfolio "pet project"](https://github.com/lilliputten/lilliputten.github.io-v2) (external github repository link, 2018)
+- Old personal portfolio site: [lilliputten.ru](http://lilliputten.ru) (2000-2016, in Russian, external link)
 
 ## See also
 

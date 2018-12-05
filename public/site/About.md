@@ -43,8 +43,12 @@ facility).
 **Interests**: Music (blues harp, slide guitar, CBG), painting, sports, biking, hiking,
 programming, IT, science, loneliness.
 
-## See also:
+## Links
+
+- Old personal portfolio site: [lilliputten.ru](http://lilliputten.ru) (2000-2016, in Russian)
+
+## See also
 
 - [Projects section](#/Projects)
 - [Contacts section](#/Contacts)
-- Old personal site (2000-2016, in Russian, external link): [lilliputten.ru](http://lilliputten.ru)
+

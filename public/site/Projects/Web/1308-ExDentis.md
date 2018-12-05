@@ -1,16 +1,17 @@
 +++
 tags:
   - 2013
-  - web
-  - site
   - design
+  - exdentis
+  - site
+  - web
 +++
 
 # ExDentis Dental Equipment Site
 
 The site was developed for the Moscow-based company "[Ex-Dentis LLC](http://www.exdentis.ru/)" (external link) in 2013.
 
-<--GALLERY:default
+<--GALLERY
   path: Projects/Web/130803-ExDentis/
   thumbWidth: 200
   # thumbHeight: 200

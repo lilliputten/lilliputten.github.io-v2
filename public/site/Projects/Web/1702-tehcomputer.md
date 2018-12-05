@@ -1,20 +1,21 @@
 +++
 tags:
   - 2017
-  - web
-  - site
+  - bem-html
+  - bem-xjst
+  - borschik
   - design
-  - programming
+  - gulp
   - i-bem
   - javascript
   - nodejs
-  - bem-xjst
-  - bem-html
+  - programming
+  - site
+  - tehcomputer
   - template
-  - borschik
-  - gulp
   - templates-parser
   - twig
+  - web
 +++
 
 # TehComputer Service Provider Site

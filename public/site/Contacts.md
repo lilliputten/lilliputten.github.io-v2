@@ -10,7 +10,7 @@ Use any of the following methods:
 - Github: [github.com/lilliputten](https://github.com/lilliputten)
 - LinkedIn: [linkedin.com/in/lilliputten](http://linkedin.com/in/lilliputten)
 - Facebook: [facebook.com/igor.lilliputten](https://facebook.com/igor.lilliputten)
-- Instagram: [](https://instagram.com/igorlilliputten)
+- Instagram: [instagram.com/igorlilliputten](https://instagram.com/igorlilliputten)
 
 ## Online summaries (in Russian)
 
@@ -19,7 +19,7 @@ Use any of the following methods:
 
 ## Other
 
-- Old personal site: [lilliputten.ru](http://lilliputten.ru) (2000-2016, in Russian)
+- Old personal portfolio site: [lilliputten.ru](http://lilliputten.ru) (2000-2016, in Russian)
 - E-mail: [igor@lilliputten.ru](mailto:igor@lilliputten.ru?subject=Hi%20Igor!) (preferred contacts method)
 
 ## See also

@@ -3,9 +3,10 @@ tags:
   - 2013
   - 2014
   - 2015
-  - web
-  - site
+  - boogiemanmusic
   - design
+  - site
+  - web
 +++
 
 # BoogieManMusic Vinyl Boutique Site
