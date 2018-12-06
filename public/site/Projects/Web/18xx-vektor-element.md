@@ -128,20 +128,20 @@ Online GIS monitoring and control system.
       image: interface-details-event-highlights.png
       title: Received events (via sockets data) highlighting changed data in real-time
     -
-      image: intreface-details-detailed-section.jpg
-      title: Opened section with editable fields
-    -
       image: intreface-details-sections.png
       title: Opened section with detailed object data
+    -
+      image: intreface-details-detailed-section.jpg
+      title: Opened section with editable fields
     -
       image: intreface-details-tableview.png
       title: Table control with sorting, filtering and columns resizing
     -
-      image: intreface-peleng-details-editable-cr.jpg
-      title: Object bearings with editable complex fields
-    -
       image: intreface-pelengs.png
       title: Object bearings in minimized mode
+    -
+      image: intreface-peleng-details-editable-cr.jpg
+      title: Object bearings with editable complex fields
     -
       image: intreface-snippets-inputs-editable.png
       title: Demo component snippets -- editable fields
@@ -152,7 +152,7 @@ Online GIS monitoring and control system.
 
 ## Links
 
-- See documentation on web part of the system: [lilliputten/vector-docs](https://github.com/lilliputten/vector-docs)
-- See some code examples (for hired employees): [lilliputten/vektor-element-sample-exposures](https://github.com/lilliputten/vektor-element-sample-exposures):
+- See the documentation written when the job was given to the employer: [lilliputten/vector-docs](https://github.com/lilliputten/vector-docs)
+- See some code examples (for employees hiring): [lilliputten/vektor-element-sample-exposures](https://github.com/lilliputten/vektor-element-sample-exposures):
 
 
