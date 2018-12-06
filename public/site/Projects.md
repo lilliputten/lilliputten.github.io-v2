@@ -9,13 +9,7 @@ Below are a few selected projects.
 - [TehComputer Service Provider Site](#/Projects/Web/1702-tehcomputer) (2017)
 - [ExDentis Dental Equipment Site](#/Projects/Web/1308-ExDentis) (2013)
 
-## Other
+## See also
 
 - [This portfolio "pet project"](https://github.com/lilliputten/lilliputten.github.io-v2) (external github repository link, 2018)
 - Old personal portfolio site: [lilliputten.ru](http://lilliputten.ru) (2000-2016, in Russian, external link)
-
-## See also
-
-- [About section](#/About)
-- [Contacts section](#/Contacts)
-

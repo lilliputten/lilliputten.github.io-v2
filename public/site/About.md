@@ -40,12 +40,10 @@ facility).
 
 **Languages:** English (technical), Russian (native).
 
-**Interests**: Music (blues harp, slide guitar, CBG), painting, sports, biking, hiking,
+**Interests**: Music (blues harp, CBG), painting, sports, biking, hiking,
 programming, IT, science, loneliness.
 
 ## See also
 
 - Old personal portfolio site: [lilliputten.ru](http://lilliputten.ru) (2000-2016, in Russian)
-- [Projects section](#/Projects)
-- [Contacts section](#/Contacts)
 

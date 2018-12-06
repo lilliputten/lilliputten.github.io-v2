@@ -21,9 +21,3 @@ Use any of the following methods:
 
 - Old personal portfolio site: [lilliputten.ru](http://lilliputten.ru) (2000-2016, in Russian)
 - E-mail: [igor@lilliputten.ru](mailto:igor@lilliputten.ru?subject=Hi%20Igor!) (preferred contacts method)
-
-## See also
-
-- [About section](#/About)
-- [Projects section](#/Projects)
-
