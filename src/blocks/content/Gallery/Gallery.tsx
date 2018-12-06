@@ -93,13 +93,13 @@ export default class Gallery extends React.Component<IGalleryProps, IGalleryStat
 
   // Privates...
 
-  /** getResponeThumbSizesPromise ** {{{
+  /** getResponseThumbSizesPromise ** {{{
    */
-  private getResponeThumbSizesPromise(res: any) {
+  private getResponseThumbSizesPromise(res: any) {
 
     if (!res || res.status !== 200) {
       // tslint:disable-next-line no-console
-      console.error('Gallery:getResponeThumbSizesPromise error (invalid response status)', res);
+      console.error('Gallery:getResponseThumbSizesPromise error (invalid response status)', res);
       debugger; // tslint:disable-line no-debugger
       return Promise.reject({ error:
         'Invalid response status for image thumbnail (' + res.status + ')', details: res });
@@ -109,7 +109,8 @@ export default class Gallery extends React.Component<IGalleryProps, IGalleryStat
     return res.arrayBuffer()
       .then((data: any) => {
         // Create buffer
-        const buf = new Buffer(data, 'binary');
+        // const buf = new Buffer(data, 'binary'); // NOTE: DEPRECATED!
+        const buf = Buffer.from(data);
         // Try to get sizes
         const sizes = imageSize(buf);
         return sizes;
@@ -140,7 +141,7 @@ export default class Gallery extends React.Component<IGalleryProps, IGalleryStat
       // Prefetch images and resolve image sizes...
       fetch(thumbnail)
         .then((res) => {
-          this.getResponeThumbSizesPromise(res)
+          this.getResponseThumbSizesPromise(res)
             .then((sizes: any) => {
               return resolve({...imageProps,
                 thumbnailWidth: sizes.width,
