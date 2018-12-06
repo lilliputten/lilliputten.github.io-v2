@@ -106,9 +106,9 @@ Online GIS monitoring and control system.
     -
       image: generalisation-details2.jpg
       title: Object labels non-overlaping location
-    -
-      image: generalisation-view1.png
-      title: Object labels are not overlapped
+    #-
+    #  image: generalisation-view1.png
+    #  title: Object labels are not overlapped
     -
       image: generalisation-view1-cr.png
       title: Collision of finding non-overlapping label positions (white mark)
