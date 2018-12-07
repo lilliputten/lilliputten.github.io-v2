@@ -146,7 +146,7 @@ export default class HomePage extends React.Component<{}, IHomePageState> {
       top: -size,
       bottom: -size,
       background: backgrounds[id],
-      animationDuration: this.randomIntRange(10, 60) + 's',
+      animationDuration: this.randomIntRange(10, 30) + 's',
     };
 
     return style;
