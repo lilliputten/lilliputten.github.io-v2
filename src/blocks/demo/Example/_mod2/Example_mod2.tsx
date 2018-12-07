@@ -12,7 +12,7 @@ export interface IExampleMod1Props extends IExampleProps {
   // mod2?: true;
 }
 
-const ExampleMod1 = withBemMod<IExampleMod1Props>(cnExample(), { mod2: true }, (Base, props) => {
+const ExampleMod1 = withBemMod<IExampleMod1Props>(cnExample(), { mod2: true }, (Base: any, props: any) => {
 
   const text = props.text || (Example.defaultProps && Example.defaultProps.text) || '';
 

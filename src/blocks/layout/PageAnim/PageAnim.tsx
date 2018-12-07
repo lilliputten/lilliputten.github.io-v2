@@ -156,7 +156,8 @@ export default class PageAnim extends React.Component<IPageAnimProps, IPageAnimS
 
     // Generate classname...
     let className = cnPageAnim('Show', obj);
-    let {elemClass, elemClassFunc} = this.props;
+    const {elemClassFunc} = this.props;
+    let {elemClass} = this.props;
     if (elemClass) {
       if (typeof elemClassFunc === 'function') {
         elemClass = elemClassFunc(elemClass, obj);
