@@ -51,8 +51,3 @@ used...` set to true/false next strings in `tsconfig.json`:
 }
 ```
 
-## Docs & samples
-
-- [A Simple React Router v4 Tutorial – Paul Sherman – Medium](https://medium.com/@pshrmn/a-simple-react-router-v4-tutorial-7f23ff27adf)
-- [React Router v4 <Route> Tester](https://pshrmn.github.io/route-tester/)
-
