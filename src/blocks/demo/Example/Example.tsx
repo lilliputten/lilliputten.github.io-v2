@@ -1,32 +1,34 @@
-import { cn } from '@bem-react/classname';
-import { IClassNameProps } from '@bem-react/core';
 import * as React from 'react';
+import { cn } from '@bem-react/classname';
+import { compose, IClassNameProps } from '@bem-react/core';
+import { ExampleMod1, IExampleMod1Props } from './_mod1/Example_mod1';
+import { ExampleMod2, IExampleMod2Props } from './_mod2/Example_mod2';
 
 const cnExample = cn('Example');
 
-export interface IExampleProps extends IClassNameProps {
-  text?: string;
+export interface IExampleProps extends
+  IExampleMod1Props,
+  IExampleMod2Props,
+  IClassNameProps {
+    text?: string;
+    children?: React.ReactNode;
 }
 
-export default class Example<P extends IExampleProps> extends React.Component<P> {
-
-  public static defaultProps = {
-    text: 'Example: default',
-    className: cnExample(),
-  };
+class Example<P extends IExampleProps> extends React.Component<P> {
 
   public block = 'Example';
 
-  // protected abstract attrs: () => React.DOMAttributes;
-
   public render() {
-      // <div className={cnExample(this.state)} {...this.attrs()}>
-      // <div className={cnExample(this.state)}>
-      // <div className={this.props.className}>
+    const { children } = this.props;
     return (
-      <div className={this.props.className}>
-      {this.props.text}
+      <div className={cnExample()}>
+        {children}
       </div>
     );
   }
 }
+
+export default compose.apply(null, [
+  ExampleMod1,
+  ExampleMod2,
+])(Example);

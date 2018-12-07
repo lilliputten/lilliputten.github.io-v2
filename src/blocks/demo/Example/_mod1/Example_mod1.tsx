@@ -2,33 +2,16 @@ import * as React from 'react';
 import { cn } from '@bem-react/classname';
 import { withBemMod } from '@bem-react/core';
 
-import Example from '../Example';
 import { IExampleProps } from '../Example';
 
 const cnExample = cn('Example');
 
-export interface IExampleMod1Props extends IExampleProps {
+export interface IExampleMod1Props /* extends IExampleProps */ {
   mod1?: boolean;
-  // mod1?: true;
 }
 
-const ExampleMod1 = withBemMod<IExampleMod1Props>(cnExample(), { mod1: true }, (Base, props) => {
-
-  const text = props.text || (Example.defaultProps && Example.defaultProps.text) || '';
-
-  const newProps = Object.assign({}, props, {
-
-    text: text + ' mod1',
-
-    // onClick: () => {
-    //   console.log('onClick', props);
-    //   // props.onClick && props.onClick();
-    // },
-
-  });
-
-  return <Base {...newProps} />;
-
-});
-
-export default ExampleMod1;
+const mod: any = (Example: React.ComponentType<IExampleProps>, props: IExampleProps) => {
+  const { children, ...propsWithoutChildren } = props;
+  return <Example {...props}>{children} mod1</Example>;
+};
+export const ExampleMod1 = withBemMod<IExampleProps>(cnExample(), { mod1: true }, mod);
