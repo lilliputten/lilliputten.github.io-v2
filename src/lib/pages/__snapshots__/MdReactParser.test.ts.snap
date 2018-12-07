@@ -5,11 +5,7 @@ exports[`MdReactParser parse method returned object content property should be r
   className="markdown"
 >
   <h1>
-    <span
-      className="inner"
-    >
-      title
-    </span>
+    title
   </h1>
   <p>
     text
