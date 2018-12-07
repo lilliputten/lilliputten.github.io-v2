@@ -103,7 +103,7 @@
   },
   "scripts": {
     "postinstall-patches": "cd \"!Patches\" && pwd && sh ./patch-tool-apply-all && cd ..",
-    "postinstall-publish-dir": "( test ! -d build || git rm -f build ) && git submodule add -f git@github.com:lilliputten/lilliputten.github.io.git .publish",
+    "postinstall-publish-dir": "( test ! -d .publish || git rm -f .publish ) && git submodule add -f git@github.com:lilliputten/lilliputten.github.io.git .publish",
     "postinstall-build-SAMPLE": "( test ! -d build || git rm -f build ) && git submodule add <repoPath> build",
     "postinstall": "echo --Run postinstall tasks-- && npm-run-all postinstall-patches postinstall-publish-dir",
     "start": "react-app-rewired start",
