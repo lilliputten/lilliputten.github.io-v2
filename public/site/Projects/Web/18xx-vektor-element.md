@@ -75,7 +75,7 @@ The application was developed during 2016-2018 for the "Vector" engeneering bure
   pages/screens rendering, events managing etc).
 - Reports generator (generic logic/data overriding for specific reports) with
   async (sockets-based) cancelable data loading capability.
-- `MapView` module (actually -- a group of modules loaded when needed) based on
+- `MapView` module (actually -- a group of modules loaded when map functionality needed) based on
   [Openlayers](https://openlayers.org) amp engine (loaded on-demand too).
 - Main application layout (menu, system/page titles, system/user menu, events
   displaying, progressbars and splash screens support).
@@ -90,7 +90,7 @@ in the summer of 2018 after two years of development.
 ## Links
 
 - Documentation written at the time of project delivering: [lilliputten/vector-docs](https://github.com/lilliputten/vector-docs)
-- Code excerpts (made for future employees hiring): [lilliputten/vektor-element-sample-exposures](https://github.com/lilliputten/vektor-element-sample-exposures):
+- Code excerpts (made for future devlopers hiring): [lilliputten/vektor-element-sample-exposures](https://github.com/lilliputten/vektor-element-sample-exposures):
 
 ## System screenshots
 
