@@ -1,6 +1,7 @@
 /* vim: set ft=stylus: */
 .Keywords {
   display: table;
+  width: 100%;
   margin-top: 1em;
   margin-bottom: 1em;
   &-Title,

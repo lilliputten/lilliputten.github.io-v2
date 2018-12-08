@@ -45,5 +45,5 @@ programming, IT, science, loneliness.
 
 ## See also
 
-- Old personal portfolio site: [lilliputten.ru](http://lilliputten.ru) (2000-2016, in Russian)
+- Old personal portfolio site (2000-2016, in Russian): [lilliputten.ru](http://lilliputten.ru)
 

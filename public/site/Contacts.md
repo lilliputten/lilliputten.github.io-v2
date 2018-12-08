@@ -19,5 +19,5 @@ Use any of the following methods:
 
 ## Other
 
-- Old personal portfolio site: [lilliputten.ru](http://lilliputten.ru) (2000-2016, in Russian)
+- Old personal portfolio site (2000-2016, in Russian, external link): [lilliputten.ru](http://lilliputten.ru)
 - E-mail: [igor@lilliputten.ru](mailto:igor@lilliputten.ru?subject=Hi%20Igor!) (preferred contacts method)

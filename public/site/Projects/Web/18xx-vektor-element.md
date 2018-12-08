@@ -5,9 +5,11 @@ tags:
   - 2018
   - bem-html
   - bem-xjst
+  - bemhint
   - borschik
   - design
   - element
+  - enb
   - gis
   - gulp
   - i-bem
@@ -15,6 +17,7 @@ tags:
   - intranet
   - javascript
   - nodejs
+  - npm
   - programming
   - security
   - spa
@@ -26,7 +29,68 @@ tags:
 
 Online GIS monitoring and control system.
 
-(Description is in progress.)
+The application was developed during 2016-2018 for the "Vector" engeneering bureau.
+
+### The SPA architecture is implemented on the technology stack consists&nbsp;of:
+
+- Client-side JavaScript: [i-bem.js](https://en.bem.info/technologies/classic/i-bem/).
+- Templates engine: [BEMHTML/BEMTREE](https://en.bem.info/technologies/classic/bem-xjst/8/),
+  [BEMJSON](https://en.bem.info/technologies/classic/bemjson/).
+- CSS Preprocessing: [Stylus](http://stylus-lang.com/).
+
+### Tools used:
+
+- Confgiuration: [bem-config](https://en.bem.info/toolbox/sdk/bem-config/).
+- Catalogues/modules maintenance: [bem-tools](https://en.bem.info/toolbox/bem-tools/).
+- Linting: [bemhint](https://en.bem.info/toolbox/bemhint/).
+- Assembling: Gulp, [enb](https://en.bem.info/toolbox/enb/),
+  [enb-borschik](https://ru.bem.info/toolbox/enb/packages/enb-borschik/api/).
+- System level: NodeJS, NPM, Shell/Cmd automation.
+
+### Server-side software:
+
+- Phalcon/PHP (Middleware server).
+- Nginx (Frontend server).
+- NodeJS (application server).
+
+### Tasks performed:
+
+- SPA architecture/enviroment design & development.
+- Interface engine development.
+- Interface components/guidelines design.
+- Participation in the development of the authorization system.
+- Frontend development environment design (including server/live data
+  emulation, remote deploy, local/remote production bundle generation).
+- Interface components development (see below).
+- Server-side programming (partial: some middleware level modules -- response
+  interface for client requests).
+
+### Frontend components and features:
+
+- Configuration delivery/extending system.
+- App bootstraping system.
+- Authorization system (particpated).
+- Core system module (`App`: loading and caching of resources, loading of
+  system code/templates/styles packages on-demand -- "code splitting feature",
+  pages/screens rendering, events managing etc).
+- Reports generator (generic logic/data overriding for specific reports) with
+  async (sockets-based) cancelable data loading capability.
+- `MapView` module (actually -- a group of modules loaded when needed) based on
+  [Openlayers](https://openlayers.org) amp engine (loaded on-demand too).
+- Main application layout (menu, system/page titles, system/user menu, events
+  displaying, progressbars and splash screens support).
+- Progress and current processing tasks displaying.
+- Design components demo collections/snippets (for easy navigation, testing and preview).
+- Easy templates customization possibility (using general config/design resources replacements).
+- Brief documentation for frontend part of the system.
+
+The project was handed over to the employer with the accompanying documentation
+in the summer of 2018 after two years of development.
+
+## Links
+
+- Documentation written at the time of project delivering: [lilliputten/vector-docs](https://github.com/lilliputten/vector-docs)
+- Code excerpts (made for future employees hiring): [lilliputten/vektor-element-sample-exposures](https://github.com/lilliputten/vektor-element-sample-exposures):
 
 ## System screenshots
 
@@ -149,10 +213,4 @@ Online GIS monitoring and control system.
       image: intreface-snippets-inputs-view.png
       title: Demo component snippets -- fields in view mode
 -->
-
-## Links
-
-- See the documentation written when the job was given to the employer: [lilliputten/vector-docs](https://github.com/lilliputten/vector-docs)
-- See some code examples (for employees hiring): [lilliputten/vektor-element-sample-exposures](https://github.com/lilliputten/vektor-element-sample-exposures):
-
 
