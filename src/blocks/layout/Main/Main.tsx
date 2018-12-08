@@ -151,10 +151,11 @@ class Main extends React.Component<IMainProps, IMainState> {
    */
   private onPageUpdated = () => {
     const page = AppStore.getCurrentPage() as IPage;
+    const {tags} = page;
     if (page) {
       const {id, title} = page;
       const content = (
-        <LoadedPage>
+        <LoadedPage tags={tags}>
           {page && page.content}
         </LoadedPage>
       );

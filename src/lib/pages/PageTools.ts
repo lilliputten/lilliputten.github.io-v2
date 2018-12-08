@@ -1,11 +1,12 @@
 
 import { pages as pagesConfig } from 'config';
+import { ReactElement } from 'react';
 
 export type TPageId = string;
 export type TPageKey = string;
 export type TPagePathname = string;
 export type TPageUrl = string;
-export type TPageContent = React.Component | string | null;
+export type TPageContent = React.Component | React.ReactElement<any> | string | null;
 
 export default class PageTools {
 

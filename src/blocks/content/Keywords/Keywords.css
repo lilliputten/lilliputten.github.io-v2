@@ -1,0 +1,23 @@
+/* vim: set ft=stylus: */
+.Keywords {
+  display: table;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  &-Title,
+  &-List {
+    display: table-cell;
+  }
+  &-Title {
+    white-space: nowrap;
+    opacity: .5;
+    &:after {
+      display: inline-block;
+      content: ': ';
+    }
+  }
+  &-List {
+    list-style-type: none;
+    padding-left: 10px;
+    margin: 0;
+  }
+}

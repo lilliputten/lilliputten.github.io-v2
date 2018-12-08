@@ -8,8 +8,9 @@ export interface IPage {
   title: string;
   url: TPageUrl;
   source?: string;
+  content?: TPageContent;
   frontmatter: object;
-  content: TPageContent;
+  tags?: string[];
 }
 
 export default class PageLoader {
@@ -39,7 +40,7 @@ export default class PageLoader {
           debugger; // tslint:disable-line no-debugger
           throw new Error('Invalid response content (received html instead of markdown)');
         }
-        // Precoess received data...
+        // Process received data...
         const {frontmatter, content} = this.mdReactParser.parse({ source });
         const title = frontmatter.title || this.fetchTitle(source)
           || id.replace(/\//g, ' ').replace(/\s\s+/g, ' ').trim();
@@ -48,8 +49,9 @@ export default class PageLoader {
           title,
           url,
           source,
-          frontmatter,
           content,
+          frontmatter,
+          tags: frontmatter && frontmatter.tags,
         };
       })
       // Error?

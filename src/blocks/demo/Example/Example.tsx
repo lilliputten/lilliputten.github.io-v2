@@ -1,6 +1,10 @@
 import * as React from 'react';
 import { cn } from '@bem-react/classname';
 import { compose, IClassNameProps } from '@bem-react/core';
+
+// NOTE: Import own styles before mods (if any)!
+// import './Example.css';
+
 import { ExampleMod1, IExampleMod1Props } from './_mod1/Example_mod1';
 import { ExampleMod2, IExampleMod2Props } from './_mod2/Example_mod2';
 
