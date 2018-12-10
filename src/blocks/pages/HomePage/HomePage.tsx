@@ -5,10 +5,15 @@ import Link from 'lib/pages/PageLink'; // 'react-router-dom';
 
 import './HomePage.css';
 
+// Elems...
+import HomePageCanvas from './-Canvas/HomePage-Canvas';
+
 const cnHomePage = cn('HomePage');
 
 interface IHomePageState {
   ready?: boolean;
+  width?: number;
+  height?: number;
   size?: number;
   backgrounds?: string[];
 }
@@ -29,11 +34,12 @@ export default class HomePage extends React.Component<{}, IHomePageState> {
    */
   public componentDidMount() {
 
-    setTimeout(() => this.setState({
+    const sizes = this.getWindowSizes();
+    const state = Object.assign({
       ready: true,
-      size: this.getWindowGapSize(),
       backgrounds: [ '', this.createRandomBackground(1), this.createRandomBackground(2) ],
-    }), 1100);
+    }, sizes);
+    setTimeout(() => this.setState(state), 1100);
 
     window.addEventListener('resize', this.onResize);
 
@@ -68,10 +74,11 @@ export default class HomePage extends React.Component<{}, IHomePageState> {
   /** render ** {{{
    */
   public render() {
-    const {ready} = this.state;
+    const {ready, width, height} = this.state;
     return (
       <div className={cnHomePage({ready})}>
         <div className={cnHomePage('Effects', {ready})}>
+          <HomePageCanvas ready={ready} width={width} height={height} />
           <div className={cnHomePage('Effect', {1: true, ready})} style={this.getEffectStyle(1)} />
           <div className={cnHomePage('Effect', {2: true, ready})} style={this.getEffectStyle(2)} />
         </div>
@@ -85,18 +92,21 @@ export default class HomePage extends React.Component<{}, IHomePageState> {
    */
   private onResize = (e: any) => {
     this.setState((state) => {
-      const size = this.getWindowGapSize();
-      if (size !== state.size) {
-        return { ...state, size };
+      const sizes = this.getWindowSizes();
+      if (sizes.size !== state.size || sizes.width !== state.width || sizes.height !== state.height) {
+        return { ...state, ...sizes };
       }
       return state;
     });
   }/*}}}*/
 
-  /** getWindowGapSize ** {{{
+  /** getWindowSizes ** {{{
    */
-  private getWindowGapSize(): number {
-    return Math.round(Math.max(window.innerWidth, window.innerHeight) / 2);
+  private getWindowSizes(): {width: number, height: number, size: number} {
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+    const size = Math.round(Math.max(width, height) / 2);
+    return {width, height, size};
   }/*}}}*/
 
   /** randomIntRange ** {{{
@@ -147,6 +157,8 @@ export default class HomePage extends React.Component<{}, IHomePageState> {
       bottom: -size,
       background: backgrounds[id],
       animationDuration: this.randomIntRange(10, 30) + 's',
+      // // https://css-tricks.com/basics-css-blend-modes/
+      // backgroundBlendMode: 'screen',
     };
 
     return style;

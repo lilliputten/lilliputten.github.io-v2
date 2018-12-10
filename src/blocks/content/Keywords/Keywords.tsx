@@ -5,10 +5,11 @@ import { compose, IClassNameProps } from '@bem-react/core';
 // NOTE: Import own styles before mods!
 import './Keywords.css';
 
+// Mods...
 import { KeywordsDelimited, IKeywordsDelimitedProps } from './_delimited/Keywords_delimited';
 
+// Elems...
 import KeywordsItem from './-Item/Keywords-Item';
-
 
 const cnKeywords = cn('Keywords');
 
