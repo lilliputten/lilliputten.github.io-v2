@@ -29,7 +29,8 @@ tags:
 
 Online GIS monitoring and control system.
 
-The application was developed during 2016-2018 for the "Vector" engeneering bureau.
+The application was developed during 2016-2018 for the ["Vector" engeneering
+bureau](http://sokb-vektor.ru) (external link, in Russian).
 
 ### The SPA architecture is implemented on the technology stack consists&nbsp;of:
 
@@ -93,30 +94,6 @@ in the summer of 2018 after two years of development.
 - Code excerpts (made for future devlopers hiring): [lilliputten/vektor-element-sample-exposures](https://github.com/lilliputten/vektor-element-sample-exposures):
 
 ## System screenshots
-
-### Logon/logout screens
-
-<--GALLERY:intro
-  path: Projects/Web/18xx-vektor-element/
-  # thumbWidth: 200
-  thumbHeight: 180
-  items:
-    -
-      image: intro-screen-1-auth-type.png
-      title: Select authorisation type
-    -
-      image: intro-screen-2-auth-login.png
-      title: Enter your login/password
-    #-
-    #  image: intro-screen-loader-details1.png
-    #  title:
-    -
-      image: intro-screen-loader-details2.png
-      title: Loader progressbar with detailed tasks panel opened
-    -
-      image: intro-logout.png
-      title: Logout screen
--->
 
 ### Map screens
 
@@ -212,5 +189,29 @@ in the summer of 2018 after two years of development.
     -
       image: intreface-snippets-inputs-view.png
       title: Demo component snippets -- fields in view mode
+-->
+
+### Logon/logout screens
+
+<--GALLERY:intro
+  path: Projects/Web/18xx-vektor-element/
+  # thumbWidth: 200
+  thumbHeight: 180
+  items:
+    -
+      image: intro-screen-1-auth-type.png
+      title: Select authorisation type
+    -
+      image: intro-screen-2-auth-login.png
+      title: Enter your login/password
+    #-
+    #  image: intro-screen-loader-details1.png
+    #  title:
+    -
+      image: intro-screen-loader-details2.png
+      title: Loader progressbar with detailed tasks panel opened
+    -
+      image: intro-logout.png
+      title: Logout screen
 -->
 
