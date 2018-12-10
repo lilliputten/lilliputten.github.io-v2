@@ -11,6 +11,7 @@
 
   var siteAddr = 'https://lilliputten.github.io';
 
+  // Sample url: https://res.cloudinary.com/lilliputten/image/upload/v1544482091/Projects/Printing/1411-Bonjour/pages-07-08.jpg
   var galleryRoot = 'https://res.cloudinary.com/lilliputten/image/upload/';
   var galleryId = 'v1542040058';
   var siteName = 'Lilliputten & Noble';

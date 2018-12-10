@@ -13,26 +13,27 @@
 
     &_ready {
       opacity: 1;
-      // animation-name: HomePageCanvas;
-      // animation-duration: 40s;
-      animation-timing-function: linear;
-      animation-iteration-count: infinite;
     }
 
-    @keyframes HomePageCanvas {
-      $opacity: .2;
-      0% {
-        opacity: $opacity;
-        transform: rotate(0deg);
-      }
-      50% {
-        opacity: .7;
-      }
-      100% {
-        opacity: $opacity;
-        transform: rotate(-360deg);
-      }
-    }
+    // animation-name: HomePageCanvas;
+    // animation-duration: 40s;
+    // animation-timing-function: linear;
+    // animation-iteration-count: infinite;
+    //
+    // @keyframes HomePageCanvas {
+    //   $opacity: .2;
+    //   0% {
+    //     opacity: $opacity;
+    //     transform: rotate(0deg);
+    //   }
+    //   50% {
+    //     opacity: .7;
+    //   }
+    //   100% {
+    //     opacity: $opacity;
+    //     transform: rotate(-360deg);
+    //   }
+    // }
 
   }
 }

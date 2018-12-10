@@ -113,7 +113,7 @@ class Main extends React.Component<IMainProps, IMainState> {
    */
   public render() {
 
-    const { id, content } = this.state;
+    const {id, content} = this.state;
     const {mode, prevMode} = this.props;
 
     return (

@@ -4,7 +4,8 @@
 
   padding-bottom: 20px;
 
-  &:after {
+  // Main-Content_key_loading
+  &:not(&_key_loading):after {
     display: block;
     content: '';
     position: absolute;
@@ -34,6 +35,14 @@
         width: 200px;
         height: 200px;
       }
+    }
+  }
+
+  .FrontImage {
+    // border: 1px solid red;
+    img {
+      display: block;
+      width: 100%;
     }
   }
 

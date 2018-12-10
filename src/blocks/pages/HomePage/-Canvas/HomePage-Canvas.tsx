@@ -132,7 +132,7 @@ export default class HomePageCanvas extends React.Component<IHomePageCanvasProps
       z: .1,
       xStep: this.randomAbsRange(.001, .01),
       yStep: this.randomAbsRange(.001, .01),
-      step: this.randomRange(.02, .0001),
+      step: this.randomRange(.01, .0001),
       waveDegree: this.randomRange(-90,90),
       color: 0,
     };
