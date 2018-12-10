@@ -208,10 +208,11 @@ class Main extends React.Component<IMainProps, IMainState> {
       }
 
       // Scroll to top of page
-      window.scrollTo && window.scrollTo({
-        top: 0,
-        behavior: 'smooth',
-      });
+      window.scrollTo && window.scrollTo(0, 0);
+      // window.scrollTo && window.scrollTo({
+      //   top: 0,
+      //   behavior: 'smooth',
+      // });
 
     }
 
