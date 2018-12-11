@@ -32,6 +32,12 @@ Online GIS monitoring and control system.
 The application was developed during 2016-2018 for the ["Vector" engeneering
 bureau](http://sokb-vektor.ru) (external link, in Russian).
 
+## Typical system display view
+
+<div class="FrontImage">
+  <img src="https://res.cloudinary.com/lilliputten/image/upload/v1544482091/Projects/Web/18xx-vektor-element/report-map-zones-menu.png" />
+</div>
+
 ### The SPA architecture is implemented on the technology stack consists&nbsp;of:
 
 - Client-side JavaScript: [i-bem.js](https://en.bem.info/technologies/classic/i-bem/).
