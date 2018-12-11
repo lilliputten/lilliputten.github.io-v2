@@ -3,7 +3,8 @@ tags:
   - 2014
   - art
   - design
-  - painting
+  - drawing
+  - artistic
   - printing
 +++
 
@@ -11,7 +12,7 @@ tags:
 
 All illustrations are drawn specially for this book. You can see other pictures
 drawn by me on the [drawings section](http://lilliputten.ru/Handarbeit/) on the
-old site.
+old site. I think it might be called "naive art".
 
 See the author's page on the [russian writers
 website](https://www.chitalnya.ru/users/Mouse/) (external link, in Russian).
@@ -41,9 +42,6 @@ website](https://www.chitalnya.ru/users/Mouse/) (external link, in Russian).
     #-
     #  image: covers-outer-layout.jpg
     #  title: Outer cover layout
-    -
-      image: covers-inner-layout.jpg
-      title: Inner cover layout
     -
       image: pages-03-04.jpg
       title: Pages layout 3-4
@@ -83,5 +81,8 @@ website](https://www.chitalnya.ru/users/Mouse/) (external link, in Russian).
     -
       image: pages-27-28.jpg
       title: Pages layout 27-28
+    -
+      image: covers-inner-layout.jpg
+      title: First and last frontispieces
 -->
 

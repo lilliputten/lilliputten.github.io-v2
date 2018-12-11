@@ -1,6 +1,8 @@
 +++
 tags:
   - 2018
+  - automation
+  - gui
   - interface
   - javascript
   - nodejs
