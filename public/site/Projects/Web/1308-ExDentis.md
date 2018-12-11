@@ -9,7 +9,7 @@ tags:
 
 # ExDentis Dental Equipment Site
 
-The site was developed for the Moscow-based company "[Ex-Dentis LLC](http://www.exdentis.ru/)" (external link) in 2013.
+The site was developed for the Moscow-based company "[Ex-Dentis LLC](http://www.exdentis.ru/)" (external link) in&nbsp;2013.
 
 ## Main page layout
 
