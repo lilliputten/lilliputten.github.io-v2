@@ -21,6 +21,7 @@ Below are a few selected projects.
 ## Design & printing
 
 - [Artistically designed book of poems](#/Projects/Printing/1411-Bonjour) (2014)
+- [INION book cover design](#/Projects/Printing/1403-kuraishity-book) (2014)
 
 ## Identity
 

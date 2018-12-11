@@ -14,7 +14,7 @@ The site was developed for the Moscow-based company "[Ex-Dentis LLC](http://www.
 ## Main page layout
 
 <div class="FrontImage">
-  <img src="https://res.cloudinary.com/lilliputten/image/upload/v1544482091/Projects/Web/130803-ExDentis/001.jpg" />
+  <img src="https://res.cloudinary.com/lilliputten/image/upload/c_thumb,w_648,g_face/v1542040058/Projects/Web/130803-ExDentis/001.jpg" />
 </div>
 
 ## Other pages

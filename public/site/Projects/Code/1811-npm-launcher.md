@@ -15,6 +15,14 @@ tags:
 
 # NPM-Launcher -- scripts running GUI utility
 
+## Typical display (on Windows system)
+
+<div class="FrontImage">
+  <img src="https://res.cloudinary.com/lilliputten/image/upload/v1544482091/Projects/Code/1811-npm-launcher/03-lint-done.png" />
+</div>
+
+## Description (from Github README)
+
 GUI interface for common **npm scripts** commands (using
 [npm-package-user-scripts-list](https://github.com/lilliputten/npm-package-user-scripts-list)
 package).
@@ -112,12 +120,6 @@ All options are optional. :)
 <!-- options end -->
 
 ## Screenshots
-
-Initial screen:
-
-![Initial screen](screenshots/01-initial-screen.png "Initial screen")
-
-Running command:
 
 <--GALLERY:screenshots
   path: Projects/Code/1811-npm-launcher/

@@ -18,13 +18,13 @@ Only design & html/css makets for template engine and some frontend coding.
 ## Main page header
 
 <div class="FrontImage">
-  <img src="https://res.cloudinary.com/lilliputten/image/upload/v1544482091/Projects/Web/15xx-boogiemanmusic/main-page-header.jpg" />
+  <img src="https://res.cloudinary.com/lilliputten/image/upload/c_thumb,w_648,g_face/v1542040058/Projects/Web/15xx-boogiemanmusic/main-page-header.jpg" />
 </div>
 
 ## Regular page layout
 
 <div class="FrontImage">
-  <img src="https://res.cloudinary.com/lilliputten/image/upload/v1544482091/Projects/Web/15xx-boogiemanmusic/regular-page.jpg" />
+  <img src="https://res.cloudinary.com/lilliputten/image/upload/c_thumb,w_648,g_face/v1542040058/Projects/Web/15xx-boogiemanmusic/regular-page.jpg" />
 </div>
 
 ## Design layouts
@@ -34,12 +34,12 @@ Only design & html/css makets for template engine and some frontend coding.
   # thumbWidth: 200
   thumbHeight: 180
   items:
-    #-
-    #  image: main-page-header.jpg
-    #  title: Main page header view
-    #-
-    #  image: regular-page.jpg
-    #  title: Regular page layout view
+    -
+      image: main-page-header.jpg
+      title: Main page header view
+    -
+      image: regular-page.jpg
+      title: Regular page layout view
     -
       image: catalogue.jpg
       title: Catalogue. Rubric page

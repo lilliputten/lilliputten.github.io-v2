@@ -22,6 +22,14 @@ tags:
 
 Landing site for sysadmin/sysmanager service provider.
 
+## Main page view
+
+<div class="FrontImage">
+  <img src="https://res.cloudinary.com/lilliputten/image/upload/c_thumb,w_648,h_900,g_face/v1542040058/Projects/Web/1702-tehcomputer/Main.png" />
+</div>
+
+## All page designs
+
 <--GALLERY
   path: Projects/Web/1702-tehcomputer/
   thumbWidth: 200
