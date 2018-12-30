@@ -30,7 +30,7 @@ tags:
 Online GIS monitoring and control system.
 
 The application was developed during 2016-2018 for the ["Vector" engeneering
-bureau](http://sokb-vektor.ru) (external link, in Russian).
+bureau LLC](http://sokb-vektor.ru) (external link, in Russian).
 
 ## Typical display view
 
@@ -47,12 +47,12 @@ bureau](http://sokb-vektor.ru) (external link, in Russian).
 
 ### Tools used:
 
-- Confgiuration: [bem-config](https://en.bem.info/toolbox/sdk/bem-config/).
+- Configuration: [bem-config](https://en.bem.info/toolbox/sdk/bem-config/).
 - Catalogues/modules maintenance: [bem-tools](https://en.bem.info/toolbox/bem-tools/).
 - Linting: [bemhint](https://en.bem.info/toolbox/bemhint/).
 - Assembling: Gulp, [enb](https://en.bem.info/toolbox/enb/),
   [enb-borschik](https://ru.bem.info/toolbox/enb/packages/enb-borschik/api/).
-- System level: NodeJS, NPM, Shell/Cmd automation.
+- System level: NodeJS, NPM, Bower, Shell/Cmd automation.
 
 ### Server-side software:
 
@@ -75,18 +75,18 @@ bureau](http://sokb-vektor.ru) (external link, in Russian).
 ### Frontend components and features:
 
 - Configuration delivery/extending system.
-- App bootstraping system.
 - Authorization system (particpated).
 - Core system module (`App`: loading and caching of resources, loading of
   system code/templates/styles packages on-demand -- "code splitting feature",
-  pages/screens rendering, events managing etc).
+  pages/screens rendering, events managing etc). (Refactoring needed -- it looks like to "god object".)
 - Reports generator (generic logic/data overriding for specific reports) with
   async (sockets-based) cancelable data loading capability.
 - `MapView` module (actually -- a group of modules loaded when map functionality needed) based on
   [Openlayers](https://openlayers.org) amp engine (loaded on-demand too).
-- Main application layout (menu, system/page titles, system/user menu, events
-  displaying, progressbars and splash screens support).
-- Progress and current processing tasks displaying.
+- Map objects representation ("generalization") engine: non-overlapping labels, different icon types, clustering, problems indication.
+- Map tools: moving object tracks, speed vectors displaying, distance bearings, areas displaying.
+- Main application layout (menu, system/page titles, system/user menu, incoming messages/problems indicators, progressbars and splash screens support).
+- Progress and current processing tasks (canceable if possible) displaying.
 - Design components demo collections/snippets (for easy navigation, testing and preview).
 - Easy templates customization possibility (using general config/design resources replacements).
 - Brief documentation for frontend part of the system.
@@ -96,8 +96,8 @@ in the summer of 2018 after two years of development.
 
 ## Links
 
-- Documentation written at the time of project delivering: [lilliputten/vector-docs](https://github.com/lilliputten/vector-docs)
-- Code excerpts (made for future devlopers hiring): [lilliputten/vektor-element-sample-exposures](https://github.com/lilliputten/vektor-element-sample-exposures):
+- Documentation written at the time of project delivering: [lilliputten/vector-docs](https://github.com/lilliputten/vector-docs).
+- Code excerpts (made for future devlopers hiring): [lilliputten/vektor-element-sample-exposures](https://github.com/lilliputten/vektor-element-sample-exposures).
 
 ## System screenshots
 
@@ -143,9 +143,9 @@ in the summer of 2018 after two years of development.
       title: Async data loading (progressbar & cancel button)
 -->
 
-### Map generalisation samples
+### Map generalization samples
 
-<--GALLERY:generalisation
+<--GALLERY:generalization
   path: Projects/Web/18xx-vektor-element/
   # thumbWidth: 200
   thumbHeight: 180
@@ -220,4 +220,3 @@ in the summer of 2018 after two years of development.
       image: intro-logout.png
       title: Logout screen
 -->
-

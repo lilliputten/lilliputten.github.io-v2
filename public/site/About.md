@@ -21,11 +21,11 @@ About
 
 ## Skills
 
-**Development:** JavaScript, TypeScript, NodeJS, i-bem, bem-xjst (bem-html), React.
+**Development:** JavaScript, TypeScript, NodeJS, i-bem, bem-xjst (bem-html), React, jquery, AJAX, WebSocket.
 
 **Imposing/prototyping/typesetting:** Adobe XD, Photoshop, Illustrator, InDesign.
 
-**Design/layout/tamplating:** HTML5, CSS3, Stylus, PostCSS.
+**Design/layout/tamplating:** HTML5, CSS3, Stylus, LESS, PostCSS.
 
 **Programming:** JavaScript, PHP, Python.
 

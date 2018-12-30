@@ -22,6 +22,8 @@ tags:
 
 Landing site for sysadmin/sysmanager service provider.
 
+Was located on address [tehcomputer.ru](https://tehcomputer.ru/).
+
 ## Main page view
 
 <div class="FrontImage">
