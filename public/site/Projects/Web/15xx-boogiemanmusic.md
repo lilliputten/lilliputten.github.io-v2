@@ -27,9 +27,9 @@ Only design & html/css makets for template engine and some frontend coding.
   <img src="https://res.cloudinary.com/lilliputten/image/upload/c_thumb,w_648,g_face/v1542040058/Projects/Web/15xx-boogiemanmusic/regular-page.jpg" />
 </div>
 
-## Design layouts
+## Basic pages
 
-<--GALLERY
+<--GALLERY:pages
   path: Projects/Web/15xx-boogiemanmusic/
   # thumbWidth: 200
   thumbHeight: 180
@@ -40,6 +40,33 @@ Only design & html/css makets for template engine and some frontend coding.
     -
       image: regular-page.jpg
       title: Regular page layout view
+    -
+      image: static-about.jpg
+      title: About page
+    -
+      image: static-contacts.jpg
+      title: Contacts
+    -
+      image: static-login.jpg
+      title: User login
+    -
+      image: static-profile.jpg
+      title: User profile
+    -
+      image: static-registration.jpg
+      title: Registration
+    -
+      image: static-welcome.jpg
+      title: Welcome
+-->
+
+## Catalogue levels
+
+<--GALLERY:pages
+  path: Projects/Web/15xx-boogiemanmusic/
+  # thumbWidth: 200
+  thumbHeight: 180
+  items:
     -
       image: catalogue.jpg
       title: Catalogue. Rubric page
@@ -64,6 +91,15 @@ Only design & html/css makets for template engine and some frontend coding.
     -
       image: catalogue-genres-list.jpg
       title: Catalogue. Genres list
+-->
+
+# Shopping cart interfaces
+
+<--GALLERY:pages
+  path: Projects/Web/15xx-boogiemanmusic/
+  # thumbWidth: 200
+  thumbHeight: 180
+  items:
     -
       image: order-1-items-list.jpg
       title: Order step 1. Orders list/status
@@ -82,24 +118,6 @@ Only design & html/css makets for template engine and some frontend coding.
     -
       image: order-6-finish.jpg
       title: Order step 6. Finish
-    -
-      image: static-about.jpg
-      title: About page
-    -
-      image: static-contacts.jpg
-      title: Contacts
-    -
-      image: static-login.jpg
-      title: User login
-    -
-      image: static-profile.jpg
-      title: User profile
-    -
-      image: static-registration.jpg
-      title: Registration
-    -
-      image: static-welcome.jpg
-      title: Welcome
 -->
 
 ## Links
