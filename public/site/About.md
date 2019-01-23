@@ -41,7 +41,7 @@ facility).
 **Languages:** English (technical), Russian (native).
 
 **Interests**: Music (blues harp, CBG), painting, sports, biking, hiking,
-programming, IT, science, loneliness.
+programming, IT, science.
 
 ## See also
 
