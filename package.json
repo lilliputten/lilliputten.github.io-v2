@@ -103,8 +103,9 @@
   },
   "scripts": {
     "postinstall-patches": "cd \"!Patches\" && pwd && sh ./patch-tool-apply-all && cd ..",
-    "postinstall-publish-dir": "( test ! -d .publish || git rm -f .publish ) && git submodule add -f git@github.com:lilliputten/lilliputten.github.io.git .publish",
-    "postinstall": "echo --Run postinstall tasks-- && npm-run-all postinstall-patches postinstall-publish-dir",
+    "postinstall-publish-dir": "echo --Install publish submodule-- && ( test ! -d .publish || git rm -rf .publish ) && git submodule add -f git@github.com:lilliputten/lilliputten.github.io.git .publish",
+    "postinstall-templates": "echo --Install bem/templates submodule-- && ( test ! -d .bem/templates || git rm -rf .bem/templates ) && git submodule add -f git@github.com:lilliputten/bem-templates-react-ts-v1.git .bem/templates",
+    "postinstall": "echo --Run postinstall tasks-- && npm-run-all postinstall-patches postinstall-templates postinstall-publish-dir",
     "start": "react-app-rewired start",
     "server": "echo --Start developer server-- && react-app-rewired start",
     "eslint": "echo --JS source code linting-- && eslint . --ext .js && echo No JS problems found",
