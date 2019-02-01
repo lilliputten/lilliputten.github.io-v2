@@ -7,3 +7,6 @@ let g:ale_linters = {
 " variants:
 " \   'typescript': [ 'tslint' ],
 " \   'typescript': [ 'tsserver' ],
+
+let g:ale_css_stylelint_options = '--syntax scss'
+let g:ale_stylus_stylelint_options = '--syntax scss'

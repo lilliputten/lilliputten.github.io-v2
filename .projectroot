@@ -15,6 +15,7 @@
 - `tsconfig.json` (set/reset `noUnusedLocals`, `noUnusedParameters` for production/development)
 - `tslint.yaml`
 - `.eslintrc.yml`
+- '.stylelintrc.yml'
 - `src/config/__css/config__css.js`
 - `src/config/__site/config__site.js`
 - `src/config/__pages/config__pages.js`
