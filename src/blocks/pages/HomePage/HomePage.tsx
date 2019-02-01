@@ -14,7 +14,7 @@ interface IHomePageState {
   ready?: boolean;
   width?: number;
   height?: number;
-  size?: number;
+  gap?: number;
   backgrounds?: string[];
 }
 
@@ -75,12 +75,14 @@ export default class HomePage extends React.Component<{}, IHomePageState> {
    */
   public render() {
     const {ready, width, height} = this.state;
+          // <div className={cnHomePage('Effect', {2: true, ready})} style={this.getEffectStyle(2)} />
+          // <div className={cnHomePage('Effect', {1: true, ready})} style={this.getEffectStyle(1)} />
     return (
       <div className={cnHomePage({ready})}>
         <div className={cnHomePage('Effects', {ready})}>
           <HomePageCanvas ready={ready} width={width} height={height} />
-          <div className={cnHomePage('Effect', {1: true, ready})} style={this.getEffectStyle(1)} />
           <div className={cnHomePage('Effect', {2: true, ready})} style={this.getEffectStyle(2)} />
+          <div className={cnHomePage('Effect', {1: true, ready})} style={this.getEffectStyle(1)} />
         </div>
       </div>
     );
@@ -93,7 +95,7 @@ export default class HomePage extends React.Component<{}, IHomePageState> {
   private onResize = (e: any) => {
     this.setState((state) => {
       const sizes = this.getWindowSizes();
-      if (sizes.size !== state.size || sizes.width !== state.width || sizes.height !== state.height) {
+      if (sizes.gap !== state.gap || sizes.width !== state.width || sizes.height !== state.height) {
         return { ...state, ...sizes };
       }
       return state;
@@ -102,11 +104,11 @@ export default class HomePage extends React.Component<{}, IHomePageState> {
 
   /** getWindowSizes ** {{{
    */
-  private getWindowSizes(): {width: number, height: number, size: number} {
+  private getWindowSizes(): {width: number, height: number, gap: number} {
     const width = window.innerWidth;
     const height = window.innerHeight;
-    const size = Math.round(Math.max(width, height) / 2);
-    return {width, height, size};
+    const gap = 0; // Math.round(Math.max(width, height));
+    return {width, height, gap};
   }/*}}}*/
 
   /** randomIntRange ** {{{
@@ -144,17 +146,17 @@ export default class HomePage extends React.Component<{}, IHomePageState> {
    */
   private getEffectStyle(id: number): React.CSSProperties {
 
-    const {ready, size, backgrounds} = this.state;
+    const {ready, gap, backgrounds} = this.state;
 
-    if (!ready || !size || !backgrounds) {
+    if (gap == null || !ready || !backgrounds) {
       return {};
     }
 
     const style = {
-      left: -size,
-      right: -size,
-      top: -size,
-      bottom: -size,
+      left: -gap,
+      right: -gap,
+      top: -gap,
+      bottom: -gap,
       background: backgrounds[id],
       animationDuration: this.randomIntRange(10, 30) + 's',
       // // https://css-tricks.com/basics-css-blend-modes/
