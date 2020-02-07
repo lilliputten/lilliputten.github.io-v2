@@ -11,6 +11,7 @@ zia*
 \!ARC*
 *.session
 .publish/
+.gitmodules
 
 # Include special jest files/folders
 !__mocks__

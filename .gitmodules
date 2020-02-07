@@ -1,6 +1,0 @@
-[submodule ".publish"]
-	path = .publish
-	url = git@github.com:lilliputten/lilliputten.github.io.git
-[submodule ".bem/templates"]
-	path = .bem/templates
-	url = git@github.com:lilliputten/bem-templates-react-ts-v1.git

@@ -20,4 +20,9 @@ Use any of the following methods:
 ## Other
 
 - Old personal portfolio site (2000-2016, in Russian, external link): [lilliputten.ru](http://lilliputten.ru)
+- Telegram: [lilliputten](https://t.me/lilliputten)
 - E-mail: [igor@lilliputten.ru](mailto:igor@lilliputten.ru?subject=Hi%20Igor!) (preferred contacts method)
+
+<!--
+ @changed 2020.02.07, 12:41
+-->
