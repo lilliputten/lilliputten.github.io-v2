@@ -15,7 +15,8 @@ About
 
 **Birth date:** 1974.
 
-**Brief:** Middle-junior frontend developer, designer, imposer and&nbsp;so&nbsp;on.
+**Brief:** Middle-junior programmer, frontend developer, designer and&nbsp;so&nbsp;on.
+Last few years have been specializing mainly in JavaScript development.
 
 **Current status:** Now working as freelancer.
 
