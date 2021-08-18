@@ -1,22 +1,12 @@
 # Projects
 
+## Selected projects
+
 Below are a few of current or finished projects.
-
-## Current project
-
-For Moscow-based company "[GK ARTI](http://arti.ru/company/en/about-company.php)" (PrintXpert division):
-
-- Development of embedded interfaces (for limited functionality browsers like ANT Galio, WebKit) for print management terminals.
-- R&D of new browsers/devices, support for unified universal code.
-- Implemented own minimal and universal i-bem-like interface engine (uses templates, webpack/babel based infrastructure of component objects associated with dom tree elements).
-- Support for the development environment (build, tests, automation, dev server, demo modes for R&D).
-- Development and support of a middleware server (node js) with support for the client interface (entrypoint, passing configuration parameters, session parameters, processing media requests, scanning-copy device requests for transferring scanned images to the application server).
-- Participation in the development of react-based web client for the administration system (react/redux/saga).
-
-## Other selected projects
 
 ### Interfaces
 
+- [Embedded interface, Web administration console, middleware NodeJS server](#/Projects/Interfaces/19xx-21xx-arti-printxpert) (from 2019, current project)
 - [Online GIS Monitoring and Control System](#/Projects/Interfaces/18xx-vektor-element) (2016-2018)
 
 ### Web sites
@@ -47,5 +37,5 @@ For Moscow-based company "[GK ARTI](http://arti.ru/company/en/about-company.php)
 - (Old) Personal portfolio site (2000-2016, in Russian, external link): [lilliputten.ru](http://lilliputten.ru)
 
 <!--
- @changed 2020.02.07, 13:03
+ @changed 2021.08.18, 20:13
 -->

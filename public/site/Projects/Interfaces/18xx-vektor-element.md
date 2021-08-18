@@ -30,7 +30,7 @@ tags:
 Online GIS monitoring and control system.
 
 The application was developed during 2016-2018 for the ["Vector" engeneering
-bureau LLC](http://sokb-vektor.ru) (external link, in Russian).
+bureau LLC](http://sokb-vektor.ru) (external link, in Russian, inactive as on autumn 2021).
 
 ## Typical display view
 
