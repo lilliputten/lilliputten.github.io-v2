@@ -28,7 +28,7 @@ tags:
 
 All projects are developed For Moscow-based company "[GK
 ARTI](http://arti.ru/)" (PrintXpert division,
-[ASUPIM](https://arti.ru/management/) project) in 2019-2021 years.
+[ASUPIM](https://arti.ru/management/) project, 2019-2021 yy).
 
 ## View of the demonstration stand in the exhibition pavilion
 
@@ -125,5 +125,5 @@ ARTI](http://arti.ru/)" (PrintXpert division,
 -->
 
 <!--
- @changed 2021.08.18, 20:53
+ @changed 2021.08.18, 22:36
 -->
