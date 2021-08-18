@@ -1,5 +1,9 @@
 # TODO
 
+- 2021.08.18, 22:13 -- Include `babelify-node_modules.sh` to postinstall?
+
+## Old (irrelevant?) tasks (as is on 2021.08.18):
+
 - 2019.01.09, 23:11 -- `Main` css: `padding-top: padding100`?
 - 2018.12.04, 19:21 -- Test cases for opening closing quotes around tags (in `PageTools.smartypants`).
 - 2018.12.04, 10:24 -- Cache received image sizes.
