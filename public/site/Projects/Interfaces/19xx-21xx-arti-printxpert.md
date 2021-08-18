@@ -28,7 +28,15 @@ tags:
 
 All projects are developed For Moscow-based company "[GK
 ARTI](http://arti.ru/)" (PrintXpert division,
-[ASUPIM](https://arti.ru/management/) project) in 2019-2021:
+[ASUPIM](https://arti.ru/management/) project) in 2019-2021 years.
+
+## View of the demonstration stand in the exhibition pavilion
+
+<div class="FrontImage">
+  <img src="https://res.cloudinary.com/lilliputten/image/upload/c_thumb,w_648,g_face/v1542040058/Projects/Web/19xx-arti-printxpert/general/210512-exhibition-stand.jpg" />
+</div>
+
+## Projects overview
 
 - Development of embedded interfaces (for limited functionality browsers like
   ANT Galio, WebKit; designed for different resolutions, from minimalistic
