@@ -130,9 +130,6 @@ ARTI](http://arti.ru/)" (PrintXpert division,
   # thumbWidth: 200
   thumbHeight: 180
   items:
-    # -
-    #   image:
-    #   title:
     -
       image: 001-login-testui.png
       title: Login testui
@@ -211,6 +208,18 @@ ARTI](http://arti.ru/)" (PrintXpert division,
     -
       image: rules-modal-filter-window.png
       title: Rules modal filter window
+    -
+      image: work-log.png
+      title: Work log
+    -
+      image: security-audit-log.png
+      title: Security audit log
+    -
+      image: technical-audit-log.png
+      title: Technical audit log
+    # -
+    #   image:
+    #   title:
 -->
 
 ## Interface components library

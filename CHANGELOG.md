@@ -1,5 +1,6 @@
 # Changelog
 
+- 2021.08.25, 13:55 -- Added work, audit, techical security log screenshots.
 - 2021.08.25, 13:38 -- Added rule management screenshots.
 - 2021.08.18, 22:18 -- Added `19xx-21xx-arti-printxpert.md` content page (ARTI projects, 2019-2021).
 - 2021.08.18, 22:14 -- Added `babelify-node_modules.sh` script for processing (at least, as on 2021.08.18) `node_modules/lowlight/node_modules/highlight.js/lib/core.js` file. Updated dependencies & npm scripts.
@@ -12,5 +13,5 @@
 - 2018.11.29, 08:29 -- Real page sources fetching.
 
 <!--
-@changed 2021.08.25, 13:39
+@changed 2021.08.25, 13:55
 -->
