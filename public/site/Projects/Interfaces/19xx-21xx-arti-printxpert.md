@@ -58,6 +58,71 @@ ARTI](http://arti.ru/)" (PrintXpert division,
 - Projecting, development and support of components library for web
   administration client.
 
+## Embedded MFU interface
+
+### System start
+
+<--GALLERY:map
+  path: Projects/Web/19xx-arti-printxpert/terminal-interface/
+  # thumbWidth: 200
+  thumbHeight: 180
+  items:
+    -
+      image: 001-start2.png
+      title: Interface starting, initial stage, with dev panel
+    -
+      image: 002-start.png
+      title: Interface starting, final stage, with dev panel & bunch of diagnostic messages (specific for development mode)
+    -
+      image: 101-main-menu.png
+      title: Main system menu loaded
+    -
+      image: 101-login-with-pin.png
+      title: Login screen (waiting for card access or PIN code entering)
+    -
+      image: 101-entering.png
+      title: Entering to system (loading data)
+    -
+      image: 101-entering-2.png
+      title: Entering to internal page (loading data)
+-->
+
+### Internal pages
+
+<--GALLERY:map
+  path: Projects/Web/19xx-arti-printxpert/terminal-interface/
+  # thumbWidth: 200
+  thumbHeight: 180
+  items:
+    -
+      image: 201-copy-page-1.png
+      title: Copy page / Screen 1
+    -
+      image: 201-copy-page-2.png
+      title: Copy page / Screen 2
+    -
+      image: 201-copy-page-3.png
+      title: Copy page / Screen 3
+    -
+      image: 202-copy-page-numeric-option.png
+      title: Copy page / Entering numeric parameter
+    -
+      image: 202-copy-page-settings.png
+      title: Copy page / Selecting copy options
+    -
+      image: 301-print-page.png
+      title: Print page (just entered)
+    -
+      image: 301-print-page-selected.png
+      title: Print page (with active selection)
+    -
+      image: 302-print-page-printing.png
+      title: Printing active jobs (waiting for print process finishing)
+    -
+      image: 401-scan-page-settings.png
+      title: Scan page (fragment of long settings screen)
+-->
+
 ## Web administration client
 
 <--GALLERY:map
@@ -65,6 +130,9 @@ ARTI](http://arti.ru/)" (PrintXpert division,
   # thumbWidth: 200
   thumbHeight: 180
   items:
+    # -
+    #   image:
+    #   title:
     -
       image: 001-login-testui.png
       title: Login testui
@@ -131,76 +199,23 @@ ARTI](http://arti.ru/)" (PrintXpert division,
     -
       image: user-account-reports-history.png
       title: User account reports history
+    -
+      image: rules-list.png
+      title: Rules list
+    -
+      image: rule-creation.png
+      title: Rule creation
+    -
+      image: rule-editing.png
+      title: Rule editing
+    -
+      image: rules-modal-filter-window.png
+      title: Rules modal filter window
 -->
 
 ## Interface components library
 
 (in progress)
-
-## Embedded MFU interface
-
-### System start
-
-<--GALLERY:map
-  path: Projects/Web/19xx-arti-printxpert/terminal-interface/
-  # thumbWidth: 200
-  thumbHeight: 180
-  items:
-    -
-      image: 001-start2.png
-      title: Interface starting, initial stage, with dev panel
-    -
-      image: 002-start.png
-      title: Interface starting, final stage, with dev panel & bunch of diagnostic messages (specific for development mode)
-    -
-      image: 101-main-menu.png
-      title: Main system menu loaded
-    -
-      image: 101-login-with-pin.png
-      title: Login screen (waiting for card access or PIN code entering)
-    -
-      image: 101-entering.png
-      title: Entering to system (loading data)
-    -
-      image: 101-entering-2.png
-      title: Entering to internal page (loading data)
--->
-
-### Internal pages
-
-<--GALLERY:map
-  path: Projects/Web/19xx-arti-printxpert/terminal-interface/
-  # thumbWidth: 200
-  thumbHeight: 180
-  items:
-    -
-      image: 201-copy-page-1.png
-      title: Copy page / Screen 1
-    -
-      image: 201-copy-page-2.png
-      title: Copy page / Screen 2
-    -
-      image: 201-copy-page-3.png
-      title: Copy page / Screen 3
-    -
-      image: 202-copy-page-numeric-option.png
-      title: Copy page / Entering numeric parameter
-    -
-      image: 202-copy-page-settings.png
-      title: Copy page / Selecting copy options
-    -
-      image: 301-print-page.png
-      title: Print page (just entered)
-    -
-      image: 301-print-page-selected.png
-      title: Print page (with active selection)
-    -
-      image: 302-print-page-printing.png
-      title: Printing active jobs (waiting for print process finishing)
-    -
-      image: 401-scan-page-settings.png
-      title: Scan page (fragment of long settings screen)
--->
 
 ## NodeJS middleware server
 
