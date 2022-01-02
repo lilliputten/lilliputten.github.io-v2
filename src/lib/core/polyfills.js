@@ -1,3 +1,4 @@
+// NOTEL Module unused. See polyfills sectin in root index (`src/index.tsx`)
 /* eslint-disable no-unused-vars, no-extend-native */
 /**
  * @module polyfills

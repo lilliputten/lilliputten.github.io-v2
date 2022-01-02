@@ -1,0 +1,60 @@
+/* eslint-env commonjs, browser, node */
+/**
+ * @module config
+ * @author lilliputten <lilliputten@yandex.ru>
+ * @since 2018.09.26, 23:11
+ * @version 2018.11.29, 01:29
+ *
+ */
+
+/** List of used submodules */
+var __submodules = [
+  'css',
+  'site',
+  'pages',
+]
+
+/** makeConfig ** {{{ Make config object from modules list
+ * @param {Array} submodules
+ * @return {Object}
+ */
+function makeConfig (submodules) {
+
+  var config = {}
+
+  submodules.map(function(module, i){
+    var id = __submodules[i]
+    return config[id] = module
+  })
+
+  // Export to global scope
+  __global.config = config
+
+  return config
+}/*}}}*/
+
+/** submodules ** {{{ Make config modules list
+ */
+var submodules = __submodules.map(function(id){
+
+  // require commonjs module...
+  try {
+    var data = require('./__' + id + '/config__' + id + '.js')
+  }
+  catch(err) {
+    var msg = 'Cannot load config module \'' + id + '\': '
+    console.error(msg, err) // eslint-disable-line no-console
+    debugger // eslint-disable-line no-debugger
+    throw new Error(msg + (err.message || err))
+  }
+
+  // Export indiviudual __submodules...
+  module.exports[id] = data
+
+  return data
+
+})/*}}}*/
+
+// Make config object & store to global scope
+module.exports = makeConfig(submodules)
+module.exports.__submodules = __submodules

@@ -6,54 +6,41 @@
  * @version 2018.11.17, 06:57
  */
 
-(function(){
+const siteAddr = 'https://lilliputten.github.io'
 
-  var siteAddr = 'https://lilliputten.github.io'
+// Sample url: https://res.cloudinary.com/lilliputten/image/upload/v1544482091/Projects/Printing/1411-Bonjour/pages-07-08.jpg
+const galleryRoot = 'https://res.cloudinary.com/lilliputten/image/upload/'
+const galleryId = 'v1542040058'
+const siteName = 'Lilliputten & Noble'
 
-  // Sample url: https://res.cloudinary.com/lilliputten/image/upload/v1544482091/Projects/Printing/1411-Bonjour/pages-07-08.jpg
-  var galleryRoot = 'https://res.cloudinary.com/lilliputten/image/upload/'
-  var galleryId = 'v1542040058'
-  var siteName = 'Lilliputten & Noble'
+/** configSite ** {{{ */
+const configSite = /** @lends config__site.prototype */ {
 
-  /** configSite ** {{{ */
-  var configSite = /** @lends config__site.prototype */ {
+  headerTitle: siteName,
+  // headerLogo: '/img/Logo/itu-logo-white.svg',
+  headerLink: '/',
 
-    headerTitle: siteName,
-    // headerLogo: '/img/Logo/itu-logo-white.svg',
-    headerLink: '/',
+  titleDelim: ' — ',
 
-    titleDelim: ' — ',
+  siteName: siteName,
 
-    siteName: siteName,
+  siteAddr: siteAddr,
+  siteUrl: 'http://' + siteAddr,
 
-    siteAddr: siteAddr,
-    siteUrl: 'http://' + siteAddr,
+  // Gallery...
+  galleryRoot,
+  galleryId,
+  galleryThumb: ({url, width, height}) => `${galleryRoot}c_thumb${width ? ',w_' + width : ''}${height ? ',h_' + height : ''},g_face/${galleryId}/${url}`,
+  galleryImage: ({url}) => `${galleryRoot}${galleryId}/${url}`,
 
-    // Gallery...
-    galleryRoot,
-    galleryId,
-    galleryThumb: ({url, width, height}) => `${galleryRoot}c_thumb${width ? ',w_' + width : ''}${height ? ',h_' + height : ''},g_face/${galleryId}/${url}`,
-    galleryImage: ({url}) => `${galleryRoot}${galleryId}/${url}`,
+  /** mainMenu ** {{{
+   */
+  mainMenu: [
+    { url: '/About', text: 'About' },
+    { url: '/Projects', text: 'Projects' },
+    { url: '/Contacts', text: 'Contacts' },
+  ],/*}}}*/
 
-    /** mainMenu ** {{{
-     */
-    mainMenu: [
-      { url: '/About', text: 'About' },
-      { url: '/Projects', text: 'Projects' },
-      { url: '/Contacts', text: 'Contacts' },
-    ],/*}}}*/
+}/*}}}*/
 
-  }/*}}}*/
-
-  /** Universal export... ** {{{ */
-  if (typeof module === 'object' && typeof module.exports === 'object') {
-    module.exports = configSite
-  }/*}}}*/
-  /** YM export... ** {{{ */
-  if (typeof modules === 'object' && typeof modules.define === 'function') {
-    modules.define('config__site', [], function(provide) {
-      provide(configSite)
-    })
-  }/*}}}*/
-
-})()
+module.exports = configSite

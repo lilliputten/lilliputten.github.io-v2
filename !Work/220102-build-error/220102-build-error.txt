@@ -1,0 +1,9 @@
+Failed to compile.
+
+./src/lib/pages/remark-custom-comments.js
+
+Module build failed: Error [ERR_PACKAGE_PATH_NOT_EXPORTED]:
+Package subpath './lib/rules/no-unused-expressions' is not defined by "exports"
+in node_modules/eslint/package.json
+
+Referenced from:

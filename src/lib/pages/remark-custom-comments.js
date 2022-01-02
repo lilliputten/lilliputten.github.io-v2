@@ -2,6 +2,7 @@
 /* eslint-disable no-console, no-debugger */
 
 const yaml = require('js-yaml')
+// import yaml from 'js-yaml'
 
 /** customCommentsPlugin ** {{{
  */
