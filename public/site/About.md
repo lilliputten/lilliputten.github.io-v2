@@ -9,38 +9,38 @@ About
   <img src="/images/facepalm/BrownCBG-sm.jpg" />
 </div>
 
-**Name:** Igor
+__Name:__ Igor
 
-**Location:** Moscow, Russia.
+__Location:__ Moscow, Russia.
 
-**Birth date:** 1974.
+__Birth date:__ 1974.
 
-**Brief:** Middle-junior programmer, frontend developer, designer and&nbsp;so&nbsp;on.
+__Brief:__ Middle-junior programmer, frontend developer, designer and&nbsp;so&nbsp;on.
 Last few years have been specializing mainly in JavaScript development.
 
-**Current status:** Now working as freelancer.
+__Current status:__ Now working as freelancer.
 
 ## Skills
 
-**Development:** JavaScript, TypeScript, NodeJS, i-bem, bem-xjst (bem-html), React, redux, saga, jquery, AJAX, WebSocket.
+__Development:__ JavaScript, TypeScript, NodeJS, React, NextJS, mobx, redux, saga, i-bem, bem-xjst (bem-html), jquery.
 
-**Imposing/prototyping/typesetting:** Adobe XD, Photoshop, Illustrator, InDesign.
+__Imposing/prototyping/typesetting:__ Adobe XD, Photoshop, Illustrator, InDesign.
 
-**Design/layout/tamplating:** HTML5, CSS3, Stylus, LESS, PostCSS, Adaptive/Responsive.
+__Design/layout/tamplating:__ HTML5, CSS3, Stylus, LESS, SCSS, PostCSS, Adaptive/Responsive.
 
-**Programming:** JavaScript (Web, NodeJS), PHP, Python, C++ (sometimes).
+__Programming:__ JavaScript (Web, NodeJS), PHP, Python, C++ (sometimes).
 
-**Applied:** Python, JavaScript, PHP, Unix Shell.
+__Applied:__ Python, JavaScript, PHP, Unix Shell, Powershell.
 
-**Dev. tools:** Webpack, Gulp, npm, git, svn, misc NodeJS instruments.
+__Dev. tools:__ Webpack, Gulp, npm, git, svn, other NodeJS instruments.
 
 ## Misc
 
-**Education:** None (incomplete higher education, Moscow State University, CS facility).
+__Education:__ None (incomplete higher education, Moscow State University, CS facility).
 
-**Languages:** English (technical), Russian (native).
+__Languages:__ English (technical), Russian (native).
 
-**Interests**: Music (blues harp, CBG), painting, sports, biking, hiking, programming, IT, science.
+__Interests__: Music (blues harp, CBG), painting, sports, biking, hiking, programming, IT, science.
 
 ## See also
 
@@ -48,10 +48,18 @@ Last few years have been specializing mainly in JavaScript development.
 
 ## Info for HR/potential employers
 
-Looking for a new job (in "background" mode). Basically, I consider options
-with step-by-step accessibility from home (Moscow city center, Sukharevskaya,
-Krasnye Vorota etc) or with the possibility of remote work.
+Yes, I'm really looking for an interesting new job right now. Basically, I
+consider options with step-by-step accessibility from home (the center of
+Moscow) or with the possibility of remote work (permanently or partially).
+
+Please do not offer: blockchain, fintech, work in banks, bettingand other strange stuff.
+
+The most interesting projects would be related to IoT, high-tech devices developing, etc.
+
+I am also considering options with relocation (despite my not very good
+English skills: they're great for reading documentation or texting, but not enough good
+for oral communication).
 
 <!--
- @changed 2020.02.07, 13:03
+ @changed 2022.01.03, 01:22
 -->

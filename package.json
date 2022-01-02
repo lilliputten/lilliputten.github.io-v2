@@ -119,7 +119,7 @@
     "postinstall-templates": "echo --Install bem/templates submodule-- && ( test ! -d .bem/templates || git rm -rf .bem/templates ) && git submodule add -f git@github.com:lilliputten/bem-templates-react-ts-v1.git .bem/templates",
     "postinstall": "echo --Run postinstall tasks-- && npm-run-all postinstall-patches postinstall-templates postinstall-publish-dir",
     "start": "react-app-rewired start",
-    "server": "echo --Start developer server-- && react-app-rewired start",
+    "dev": "echo --Start developer server-- && react-app-rewired start",
     "eslint": "echo --JS source code linting-- && eslint . --ext .js && echo No JS problems found",
     "tslint": "echo --TS source code linting-- && tslint -p . --exclude \"**/*.{js,jsx}\" && echo No TS problems found",
     "lint": "echo --Lint all source code-- && npm-run-all eslint tslint",

@@ -9,6 +9,7 @@
     padding: 10px;
     // margin: 0 10px;
     background-color: $primaryColor;
+    mix-blend-mode: overlay;
     text-align: center;
   }
   @media (min-width: $(breakpoint_sm)px) {

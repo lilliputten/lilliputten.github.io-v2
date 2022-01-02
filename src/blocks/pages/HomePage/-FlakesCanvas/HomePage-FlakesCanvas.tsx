@@ -2,23 +2,23 @@ import * as React from 'react';
 import { cn } from '@bem-react/classname';
 
 // CSS... (Import first!)
-import './HomePage-Canvas.css';
+import './HomePage-FlakesCanvas.css';
 
-const cnHomePageCanvas = cn('HomePage', 'Canvas');
+const cnHomePageFlakesCanvas = cn('HomePage', 'FlakesCanvas');
 
-export interface IHomePageCanvasProps {
+export interface IHomePageFlakesCanvasProps {
   ready?: boolean;
   width?: number;
   height?: number;
 }
 
-export interface IHomePageCanvasProps {
+export interface IHomePageFlakesCanvasProps {
   ready?: boolean;
   width?: number;
   height?: number;
 }
 
-export interface IHomePageCanvasState {
+export interface IHomePageFlakesCanvasState {
   ready?: boolean;
   width?: number;
   height?: number;
@@ -36,7 +36,7 @@ type TDot = {
   waveDegree: number;
 };
 
-export default class HomePageCanvas extends React.Component<IHomePageCanvasProps, IHomePageCanvasState> {
+export default class HomePageFlakesCanvas extends React.Component<IHomePageFlakesCanvasProps, IHomePageFlakesCanvasState> {
 
   private canvasRef = React.createRef<HTMLCanvasElement>();
   private canvas: HTMLCanvasElement | null;
@@ -66,12 +66,12 @@ export default class HomePageCanvas extends React.Component<IHomePageCanvasProps
   // private waveFreq = 10;
 
   public block = 'HomePage';
-  public elem = 'Canvas';
+  public elem = 'FlakesCanvas';
 
   /** componentDidMount ** {{{
    */
   public componentDidMount() {
-    this.initCanvas();
+    this.initFlakesCanvas();
     if (this.timeout && typeof window === 'object' && window.setInterval) {
       this.timer = window.setInterval(() => this.oneStep(), this.timeout);
     }
@@ -223,9 +223,9 @@ export default class HomePageCanvas extends React.Component<IHomePageCanvasProps
     return v * range + min * sign;
   }/*}}}*/
 
-  /** initCanvas ** {{{
+  /** initFlakesCanvas ** {{{
    */
-  private initCanvas() {
+  private initFlakesCanvas() {
     this.canvas = this.canvasRef.current;
     if (this.canvas) {
       this.canvasCtx = this.canvas && this.canvas.getContext('2d');
@@ -241,7 +241,7 @@ export default class HomePageCanvas extends React.Component<IHomePageCanvasProps
   public render() {
     const {ready} = this.state;
     return (
-      <canvas ref={this.canvasRef} className={cnHomePageCanvas('Canvas', {ready})} >
+      <canvas ref={this.canvasRef} className={cnHomePageFlakesCanvas('FlakesCanvas', {ready})} >
         Ready: {ready}
       </canvas>
     );

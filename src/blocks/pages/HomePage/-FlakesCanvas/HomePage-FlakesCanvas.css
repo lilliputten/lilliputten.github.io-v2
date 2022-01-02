@@ -1,6 +1,6 @@
 /* vim: set ft=stylus: */
 .HomePage {
-  &-Canvas {
+  &-FlakesCanvas {
     position: absolute;
     left:   0;
     right:  0;
@@ -15,12 +15,12 @@
       opacity: 1;
     }
 
-    // animation-name: HomePageCanvas;
+    // animation-name: HomePageFlakesCanvas;
     // animation-duration: 40s;
     // animation-timing-function: linear;
     // animation-iteration-count: infinite;
     //
-    // @keyframes HomePageCanvas {
+    // @keyframes HomePageFlakesCanvas {
     //   $opacity: .2;
     //   0% {
     //     opacity: $opacity;
@@ -37,4 +37,3 @@
 
   }
 }
-
