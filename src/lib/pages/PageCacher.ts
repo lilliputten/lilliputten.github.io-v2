@@ -1,7 +1,7 @@
-import { TPageId, TPagePathname, TPageUrl, TPageContent } from 'lib/pages/PageTools';
-import { IPage } from 'lib/pages/PageLoader';
+import { TPageId, TPagePathname, TPageUrl, TPageContent } from 'lib/pages/PageTools'
+import { IPage } from 'lib/pages/PageLoader'
 
-export { TPageId, TPagePathname, TPageUrl, TPageContent };
+export { TPageId, TPagePathname, TPageUrl, TPageContent }
 
 export interface IPageStore {
   [id: string]: IPage;
@@ -11,7 +11,7 @@ export default class PageCacher {
 
   // private pageTools: PageTools = PageTools();
 
-  private pageStore: IPageStore = {};
+  private pageStore: IPageStore = {}
 
   /** constructor ** {{{ */
   constructor() {
@@ -21,34 +21,34 @@ export default class PageCacher {
   /** getAllPages ** {{{
    */
   public getAllPages() {
-    return this.pageStore;
+    return this.pageStore
   }/*}}}*/
 
   /** isPageCached ** {{{
    */
   public isPageCached(id: TPageId): boolean {
-    return !!(this.pageStore[id]);
+    return !!(this.pageStore[id])
   }/*}}}*/
 
   /** fetchPage ** {{{
    */
   public fetchPage(id: TPageId): IPage | null {
-    return this.pageStore[id];
+    return this.pageStore[id]
   }/*}}}*/
 
   /** savePage ** {{{
    */
   public savePage(page: IPage) {
-    const id = page && page.id;
+    const id = page && page.id
     if (id) {
-      this.pageStore[id] = page;
+      this.pageStore[id] = page
     }
   }/*}}}*/
 
   /** removePage ** {{{
    */
   public removePage(id: TPageId) {
-    delete this.pageStore[id];
+    delete this.pageStore[id]
   }/*}}}*/
 
 }

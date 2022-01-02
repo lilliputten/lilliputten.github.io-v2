@@ -1,16 +1,16 @@
-import * as React from 'react';
-import { cn } from '@bem-react/classname';
+import * as React from 'react'
+import { cn } from '@bem-react/classname'
 
-import Spinner from 'blocks/content/Spinner/Spinner';
+import Spinner from 'blocks/content/Spinner/Spinner'
 
-import { css as cssConfig } from 'config';
+import { css as cssConfig } from 'config'
 
-import './PageAnim.css';
+import './PageAnim.css'
 
 type TAnimState = string | boolean | undefined;
 export type TContent = any; // JSX.Element | React.Component | string | null;
 
-const cnPageAnim = cn('PageAnim');
+const cnPageAnim = cn('PageAnim')
 
 interface IPageAnimProps {
   className?: string; // Component class name
@@ -36,7 +36,7 @@ const defaultProps: IPageAnimProps = {
   appear: true,
   id: '',
   // children: '',
-};
+}
 interface IPageAnimState {
   animating?: TAnimState; // Animation status: true (initial), 'active' (finished)
   id?: string;
@@ -48,40 +48,40 @@ interface IPageAnimState {
 export default class PageAnim extends React.Component<IPageAnimProps, IPageAnimState> {
 
   /** Default props */
-  public static defaultProps = defaultProps;
+  public static defaultProps = defaultProps
 
   /** lifecycle:getDerivedStateFromProps ** {{{
    */
   public static getDerivedStateFromProps(props: IPageAnimProps, state: IPageAnimState) {
-    const prevId = state.id;
-    const id = props.id;
-    const isIdChanged = (id && id !== prevId);
+    const prevId = state.id
+    const id = props.id
+    const isIdChanged = (id && id !== prevId)
     if (isIdChanged) {
       const nextState = Object.assign({}, state, {
         animating: true,
         id,
         children: props.children,
-      });
+      })
       // If not animating now...
       if (!state.animating) {
         // Set prev content...
         Object.assign(nextState, {
           prevId,
           prevChildren: state.children,
-        });
+        })
       }
-      return nextState;
+      return nextState
     }
-    return state;
+    return state
   }/*}}}*/
 
   /*{{{ Properties... */
 
   /** block name */
-  public block = 'PageAnim';
+  public block = 'PageAnim'
 
   /** Animation timer */
-  private animTimer: any;
+  private animTimer: any
 
   /* ...Properties }}}*/
 
@@ -91,13 +91,13 @@ export default class PageAnim extends React.Component<IPageAnimProps, IPageAnimS
    */
   constructor(props: IPageAnimProps) {
 
-    super(props);
+    super(props)
 
     this.state = {
       id: this.props.loadingState || '',
       children: this.props.loadingContent,
       animating: this.props.appear,
-    };
+    }
 
   }/*}}}*/
 
@@ -105,8 +105,8 @@ export default class PageAnim extends React.Component<IPageAnimProps, IPageAnimS
    */
   public render() {
 
-    const { prevId, prevChildren } = this.state;
-    const { id, children } = this.state;
+    const { prevId, prevChildren } = this.state
+    const { id, children } = this.state
 
     const showContent = [
       (prevId && prevChildren) && (
@@ -119,21 +119,21 @@ export default class PageAnim extends React.Component<IPageAnimProps, IPageAnimS
           {children}
         </div>
       ),
-    ];
+    ]
 
     // console.log('PageAnim render', this.state.animating, id, prevId?'<- '+prevId:'');
     // debugger;
 
     // Set next animation state...
-    this.iterateAnimState();
+    this.iterateAnimState()
 
-    const {animating} = this.state;
-    const className = cnPageAnim({animating: !!animating}, [this.props.className]);
+    const {animating} = this.state
+    const className = cnPageAnim({animating: !!animating}, [this.props.className])
     return (
       <div className={className}>
         {showContent}
       </div>
-    );
+    )
 
   }/*}}}*/
 
@@ -143,62 +143,62 @@ export default class PageAnim extends React.Component<IPageAnimProps, IPageAnimS
    */
   private getElemClassName(isPrev: boolean) {
 
-    const {animating} = this.state;
-    const id = (isPrev ? this.state.prevId : this.state.id) || '';
-    const classKey = this.getPageClassId(id);
-    const baseClassName = isPrev ? 'exiting' : 'entering';
-    const baseClassNameActive = baseClassName + 'Active';
+    const {animating} = this.state
+    const id = (isPrev ? this.state.prevId : this.state.id) || ''
+    const classKey = this.getPageClassId(id)
+    const baseClassName = isPrev ? 'exiting' : 'entering'
+    const baseClassNameActive = baseClassName + 'Active'
     const obj = {
       key: classKey,
       [baseClassName]: !!animating,
       [baseClassNameActive]: (animating === 'active'),
-    };
+    }
 
     // Generate classname...
-    let className = cnPageAnim('Show', obj);
-    const {elemClassFunc} = this.props;
-    let {elemClass} = this.props;
+    let className = cnPageAnim('Show', obj)
+    const {elemClassFunc} = this.props
+    let {elemClass} = this.props
     if (elemClass) {
       if (typeof elemClassFunc === 'function') {
-        elemClass = elemClassFunc(elemClass, obj);
+        elemClass = elemClassFunc(elemClass, obj)
       }
-      className = elemClass + ' ' + className;
+      className = elemClass + ' ' + className
     }
-    return className;
+    return className
   }/*}}}*/
 
   /** getPageClassId ** {{{
    */
   private getPageClassId(id: string): string {
-    id = String(id || '').replace(/\W+/g, ' ').trim().replace(/ /g, '_') || 'home';
-    return id;
+    id = String(id || '').replace(/\W+/g, ' ').trim().replace(/ /g, '_') || 'home'
+    return id
   }/*}}}*/
 
   /** iterateAnimState ** {{{
    */
   private iterateAnimState() {
-    const {animating} = this.state;
+    const {animating} = this.state
     if (animating) {
-      const isJustStarted = (animating === true);
-      const nextAnimState = isJustStarted ? 'active' : false;
-      const timeout = isJustStarted ? this.props.initialTimeout : this.props.timeout;
+      const isJustStarted = (animating === true)
+      const nextAnimState = isJustStarted ? 'active' : false
+      const timeout = isJustStarted ? this.props.initialTimeout : this.props.timeout
       if (this.animTimer) {
-        clearTimeout(this.animTimer);
+        clearTimeout(this.animTimer)
       }
-      this.animTimer = setTimeout(() => this.animTimerDone(nextAnimState), timeout);
+      this.animTimer = setTimeout(() => this.animTimerDone(nextAnimState), timeout)
     }
   }/*}}}*/
   /** animTimerDone ** {{{
    */
   private animTimerDone(animating: TAnimState) {
-    this.animTimer = null;
+    this.animTimer = null
     if (animating !== this.state.animating) {
-      const nextState = { animating };
+      const nextState = { animating }
       // Animation end...
       if (!animating) {
-        Object.assign(nextState, { prevId: undefined, prevChildren: undefined });
+        Object.assign(nextState, { prevId: undefined, prevChildren: undefined })
       }
-      this.setState(nextState);
+      this.setState(nextState)
     }
   }/*}}}*/
 

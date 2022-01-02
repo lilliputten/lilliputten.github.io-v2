@@ -12,11 +12,11 @@
 
 (function(){
 
-  var textColor = '#333';
-  var defaultFontSize = 16;
-  var primaryColor = '#c20';
+  var textColor = '#333'
+  var defaultFontSize = 16
+  var primaryColor = '#c20'
   // var topBgColor = '#f20'; // '#ff1d06';
-  var primaryLightColor = '#f20';
+  var primaryLightColor = '#f20'
 
   /** configCss ** {{{
    */
@@ -73,7 +73,7 @@
     pageTransitionTimeout: 1000,
     pageEffectsTimeout: 500,
 
-  };/*}}}*/
+  }/*}}}*/
 
   /** extend configCss ** {{{
    */
@@ -109,17 +109,17 @@
     spinnerSize: 100,
     spinnerColor: configCss.neutralColor,
 
-  });/*}}}*/
+  })/*}}}*/
 
   /** Universal export... ** {{{ */
   if (typeof module === 'object' && typeof module.exports === 'object') {
-    module.exports = configCss;
+    module.exports = configCss
   }/*}}}*/
   /** YM export... ** {{{ */
   if (typeof modules === 'object' && typeof modules.define === 'function') {
     modules.define('config__css', [], function(provide) {
-      provide(configCss);
-    });
+      provide(configCss)
+    })
   }/*}}}*/
 
-})();
+})()

@@ -17,17 +17,17 @@
     indexName: 'index',
     extension: '.md',
 
-  };/*}}}*/
+  }/*}}}*/
 
   /** Universal export... ** {{{ */
   if (typeof module === 'object' && typeof module.exports === 'object') {
-    module.exports = pages;
+    module.exports = pages
   }/*}}}*/
   /** YM export... ** {{{ */
   if (typeof modules === 'object' && typeof modules.define === 'function') {
     modules.define('config__pages', [], function(provide) {
-      provide(pages);
-    });
+      provide(pages)
+    })
   }/*}}}*/
 
-})();
+})()

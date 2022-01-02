@@ -1,6 +1,6 @@
 
-import { pages as pagesConfig } from 'config';
-import { ReactElement } from 'react';
+import { pages as pagesConfig } from 'config'
+import { ReactElement } from 'react'
 
 export type TPageId = string;
 export type TPageKey = string;
@@ -36,7 +36,7 @@ export default class PageTools {
       // closing doubles
       .replace(/"/g, '\u00bb')
       // ellipses
-      .replace(/\.{3}/g, '\u2026');
+      .replace(/\.{3}/g, '\u2026')
   }/*}}}*/
 
   /** delayPromise ** {{{ DEBUG: Timeout
@@ -44,19 +44,19 @@ export default class PageTools {
    * @param {*} [data]
    * @return {Promise}
    */
-  public delayPromise(timeout: number = 1000, data: any = null): Promise<any> {
+  public delayPromise(timeout = 1000, data: any = null): Promise<any> {
     return new Promise((resolve) => setTimeout(() => {
-        resolve(data);
+        resolve(data)
       }, timeout)
-    );
+    )
   }/*}}}*/
 
   /** getUrlFromWindow ** {{{ Get hash from window location */
   public getUrlFromWindow(): string {
     if (typeof window === 'object' && window.location && window.location.hash) {
-      return window.location.hash.substr(1);
+      return window.location.hash.substr(1)
     }
-    return '';
+    return ''
   }/*}}}*/
 
   /** setUrlToWindow ** {{{ Set hash to window location
@@ -64,53 +64,53 @@ export default class PageTools {
    */
   public setUrlToWindow(hash: string) {
     if (!hash.startsWith('#')) {
-      hash = '#' + hash;
+      hash = '#' + hash
     }
     if ( typeof window === 'object' && window.location ) {
-      window.location.hash = hash;
+      window.location.hash = hash
     }
   }/*}}}*/
 
   /** normalizeUrl ** {{{
    */
   public normalizeUrl(pathname: TPagePathname): TPageUrl {
-    let url = pathname;
+    let url = pathname
     if (!url.startsWith('/')) {
-      url = '/' + url;
+      url = '/' + url
     }
     if (!url.startsWith(pagesConfig.urlPrefix)) {
-      url = pagesConfig.urlPrefix + url;
+      url = pagesConfig.urlPrefix + url
     }
     if (url.endsWith('/')) {
-      url += pagesConfig.indexName;
+      url += pagesConfig.indexName
     }
     if (!url.endsWith(pagesConfig.extension)) {
-      url += pagesConfig.extension;
+      url += pagesConfig.extension
     }
-    return url;
+    return url
   }/*}}}*/
 
   /** normalizeKey ** {{{
    */
   public normalizeKey(pathname: TPagePathname): TPageKey {
-    const key = pathname;
-    return key.replace(/\W+/g, '_');
+    const key = pathname
+    return key.replace(/\W+/g, '_')
   }/*}}}*/
 
   /** normalizeId ** {{{
    */
   public normalizeId(url: TPageUrl): TPageId {
-    let id = url;
+    let id = url
     if (id.startsWith(pagesConfig.urlPrefix)) {
-      id = id.substr(pagesConfig.urlPrefix.length);
+      id = id.substr(pagesConfig.urlPrefix.length)
     }
     if (id.endsWith(pagesConfig.extension)) {
-      id = id.substr(0, id.length - pagesConfig.extension.length);
+      id = id.substr(0, id.length - pagesConfig.extension.length)
     }
     if (id.endsWith(pagesConfig.indexName)) {
-      id = id.substr(0, id.length - pagesConfig.indexName.length);
+      id = id.substr(0, id.length - pagesConfig.indexName.length)
     }
-    return id;
+    return id
   }/*}}}*/
 
 }

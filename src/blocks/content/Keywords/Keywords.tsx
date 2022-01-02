@@ -1,19 +1,19 @@
-import * as React from 'react';
-import { classnames, cn } from '@bem-react/classname';
-import { compose, IClassNameProps } from '@bem-react/core';
+import * as React from 'react'
+import { classnames, cn } from '@bem-react/classname'
+import { compose, IClassNameProps } from '@bem-react/core'
 
 // NOTE: Import own styles before mods!
-import './Keywords.css';
+import './Keywords.css'
 
 // Mods...
-import { KeywordsDelimited, IKeywordsDelimitedProps } from './_delimited/Keywords_delimited';
+import { KeywordsDelimited, IKeywordsDelimitedProps } from './_delimited/Keywords_delimited'
 
 // Elems...
-import KeywordsItem from './-Item/Keywords-Item';
+import KeywordsItem from './-Item/Keywords-Item'
 
-const cnKeywords = cn('Keywords');
+const cnKeywords = cn('Keywords')
 
-export {cnKeywords};
+export {cnKeywords}
 
 export interface IKeywordsProps extends IKeywordsDelimitedProps, IClassNameProps {
   tags?: string[];
@@ -23,14 +23,14 @@ export interface IKeywordsProps extends IKeywordsDelimitedProps, IClassNameProps
 
 class Keywords<P extends IKeywordsProps> extends React.Component<P> {
 
-  public block = 'Keywords';
+  public block = 'Keywords'
 
   /** render ** {{{
    */
   public render() {
-    const {tags, title} = this.props;
-    const list = Array.isArray(tags) && tags.map((tag) => <KeywordsItem key={tag} name={tag} />);
-    const className = classnames(cnKeywords(), this.props.className);
+    const {tags, title} = this.props
+    const list = Array.isArray(tags) && tags.map((tag) => <KeywordsItem key={tag} name={tag} />)
+    const className = classnames(cnKeywords(), this.props.className)
     return (
       <div className={className}>
         {title && (<span className={cnKeywords('Title')}>
@@ -40,12 +40,12 @@ class Keywords<P extends IKeywordsProps> extends React.Component<P> {
           {list}
         </ul>)}
       </div>
-    );
+    )
   }/*}}}*/
 
 }
 
 export default compose.apply(null, [
   KeywordsDelimited,
-])(Keywords);
+])(Keywords)
 

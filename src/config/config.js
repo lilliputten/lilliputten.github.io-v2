@@ -15,7 +15,7 @@
     'css',
     'site',
     'pages',
-  ];
+  ]
 
   /** makeConfig ** {{{ Make config object from modules list
    * @param {Array} submodules
@@ -23,17 +23,17 @@
    */
   function makeConfig (submodules) {
 
-    var config = {};
+    var config = {}
 
     submodules.map(function(module, i){
-      var id = __submodules[i];
-      return config[id] = module;
-    });
+      var id = __submodules[i]
+      return config[id] = module
+    })
 
     // Export to global scope
-    __global.config = config;
+    __global.config = config
 
-    return config;
+    return config
   }/*}}}*/
 
   // /** modules ** {{{ DEBUG: Fake modules object
@@ -58,41 +58,41 @@
 
       // require commonjs module...
       try {
-        var data = require('./__' + id + '/config__' + id + '.js');
+        var data = require('./__' + id + '/config__' + id + '.js')
       }
       catch(err) {
-        var msg = 'Cannot load config module \'' + id + '\': ';
-        console.error(msg, err); // eslint-disable-line no-console
-        debugger; // eslint-disable-line no-debugger
-        throw new Error(msg + (err.message || err));
+        var msg = 'Cannot load config module \'' + id + '\': '
+        console.error(msg, err) // eslint-disable-line no-console
+        debugger // eslint-disable-line no-debugger
+        throw new Error(msg + (err.message || err))
       }
 
       // Export indiviudual __submodules...
-      module.exports[id] = data;
+      module.exports[id] = data
 
-      return data;
+      return data
 
-    });/*}}}*/
+    })/*}}}*/
 
     // Make config object & store to global scope
-    module.exports = makeConfig(submodules);
-    module.exports.__submodules = __submodules;
+    module.exports = makeConfig(submodules)
+    module.exports.__submodules = __submodules
 
   }/*}}}*/
   /** YM export... ** {{{ */
   if (typeof modules === 'object' && typeof modules.define === 'function') {
 
-    var configModuleNames = __submodules.map(function(id){ return 'config__' + id; });
+    var configModuleNames = __submodules.map(function(id){ return 'config__' + id })
 
     modules.define('config', configModuleNames, function(provide /*, modules... */) {
 
       // Make config modules list from passed in arguments
-      var submodules = Array.from(arguments).splice(1);
+      var submodules = Array.from(arguments).splice(1)
 
       // Make config object & store to global scope
-      provide(makeConfig(submodules));
+      provide(makeConfig(submodules))
 
-    });
+    })
   }/*}}}*/
 
-})(typeof global !== 'undefined' ? global : typeof module !== 'undefined' ? module : typeof window !== 'undefined' ? window : this);
+})(typeof global !== 'undefined' ? global : typeof module !== 'undefined' ? module : typeof window !== 'undefined' ? window : this)

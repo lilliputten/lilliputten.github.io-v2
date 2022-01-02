@@ -1,13 +1,13 @@
 // NOTE: Sample, template!
-import { cn } from '@bem-react/classname';
-import { IClassNameProps } from '@bem-react/core';
-import * as React from 'react';
-import Link from 'lib/pages/PageLink'; // 'react-router-dom';
-import AppActions from 'lib/flux/AppActions';
+import { cn } from '@bem-react/classname'
+import { IClassNameProps } from '@bem-react/core'
+import * as React from 'react'
+import Link from 'lib/pages/PageLink' // 'react-router-dom';
+import AppActions from 'lib/flux/AppActions'
 
-import './Error.css';
+import './Error.css'
 
-const cnError = cn('Error');
+const cnError = cn('Error')
 
 export interface IErrorProps extends IClassNameProps {
   error: any;
@@ -16,30 +16,30 @@ export interface IErrorProps extends IClassNameProps {
 
 export default class Error<P extends IErrorProps> extends React.Component<P> {
 
-  public block = 'Error';
+  public block = 'Error'
 
   /** render ** {{{
    */
   public render() {
-    const {error} = this.props;
-    const errorContent = this.getErrorContent(error);
+    const {error} = this.props
+    const errorContent = this.getErrorContent(error)
     return (
       <div className={cnError()}>
         <div className={cnError('Message')}>
           {errorContent}
         </div>
       </div>
-    );
+    )
   }/*}}}*/
 
   /** fetchLink ** {{{
    */
   private fetchLink(url: string, e: any) {
     if (e) {
-      e.preventDefault();
-      e.stopPropagation();
+      e.preventDefault()
+      e.stopPropagation()
     }
-    AppActions.fetchPage(url);
+    AppActions.fetchPage(url)
   }/*}}}*/
 
   /** getErrorContent ** {{{
@@ -49,50 +49,50 @@ export default class Error<P extends IErrorProps> extends React.Component<P> {
     /** if ** {{{ Basic comparations...
      */
     if (!err) {
-      return 'Undefined (empty) error';
+      return 'Undefined (empty) error'
     } else if (Array.isArray(err)) {
-      return err.map((errItem) => this.getErrorContent(errItem));
+      return err.map((errItem) => this.getErrorContent(errItem))
     } else if (typeof err !== 'object') {
-      return String(err);
+      return String(err)
     }/*}}}*/
 
-    let result;
+    let result
 
     /** if ** {{{ Object...
      */
     if (err.message) {
-      result = String(err.message);
+      result = String(err.message)
     } else if (err instanceof Error) {
       // ???
       // return String(err.message || err.stack || err);
-      result = String(err);
+      result = String(err)
     // } else if (typeof err.status === 'number') {
     } else if (err instanceof Response) {
-      result = err.statusText || 'Unknown network error';
+      result = err.statusText || 'Unknown network error'
       if (err.status) {
-        result += ` (${err.status})`;
+        result += ` (${err.status})`
       }
     } else {
       // Try to fetch something...
-      result = String(err.description || err.message || err.type || err.error || err);
+      result = String(err.description || err.message || err.type || err.error || err)
     }/*}}}*/
 
     result = (
       <div className={cnError('Error')}>
         {result}
       </div>
-    );
+    )
 
     /** if ** {{{ Details...
      */
     if (err.details) {
-      const details = this.getErrorContent(err.details);
+      const details = this.getErrorContent(err.details)
       result = (
         <React.Fragment>
           {result}
           {details}
         </React.Fragment>
-      );
+      )
     }/*}}}*/
 
     /** if ** {{{ Make buttons...
@@ -110,10 +110,10 @@ export default class Error<P extends IErrorProps> extends React.Component<P> {
             </div>)}
           </div>
         </React.Fragment>
-      );
+      )
     }/*}}}*/
 
-    return result;
+    return result
 
   }/*}}}*/
 

@@ -1,10 +1,10 @@
-import AppDispatcher from './AppDispatcher';
-import { EventEmitter } from 'events';
-import PageLoader from 'lib/pages/PageLoader';
-import PageCacher from 'lib/pages/PageCacher';
-import PageTools from 'lib/pages/PageTools';
-import { TPageId, TPageKey, TPagePathname } from 'lib/pages/PageTools';
-import { IPage } from 'lib/pages/PageLoader';
+import AppDispatcher from './AppDispatcher'
+import { EventEmitter } from 'events'
+import PageLoader from 'lib/pages/PageLoader'
+import PageCacher from 'lib/pages/PageCacher'
+import PageTools from 'lib/pages/PageTools'
+import { TPageId, TPageKey, TPagePathname } from 'lib/pages/PageTools'
+import { IPage } from 'lib/pages/PageLoader'
 
 // type TEventName = string | symbol;
 // type TEventListener = (...args: any[]) => void;
@@ -12,29 +12,29 @@ import { IPage } from 'lib/pages/PageLoader';
 // @see https://nodejs.org/api/events.html#events_class_eventemitter
 export class AppStoreClass extends EventEmitter {
 
-  private dispatchToken: string; // tslint:disable-line no-unused-vars
+  private dispatchToken: string // tslint:disable-line no-unused-vars
 
-  private pageLoader: PageLoader;
-  private pageCacher: PageCacher;
-  private pageTools: PageTools;
+  private pageLoader: PageLoader
+  private pageCacher: PageCacher
+  private pageTools: PageTools
 
-  private pageType: string;
-  private pageId: string;
+  private pageType: string
+  private pageId: string
 
-  private error: any;
+  private error: any
 
   /** constructor ** {{{
    */
   constructor() {
 
-    super();
+    super()
 
     // Flux actions dispatcher
-    this.dispatchToken = AppDispatcher.register(this.dispatcherCallback.bind(this));
+    this.dispatchToken = AppDispatcher.register(this.dispatcherCallback.bind(this))
 
-    this.pageLoader = new PageLoader();
-    this.pageCacher = new PageCacher();
-    this.pageTools = new PageTools();
+    this.pageLoader = new PageLoader()
+    this.pageCacher = new PageCacher()
+    this.pageTools = new PageTools()
 
   }/*}}}*/
 
@@ -57,98 +57,98 @@ export class AppStoreClass extends EventEmitter {
   /** getAllPages ** {{{
    */
   public getAllPages() {
-    return this.pageCacher.getAllPages();
+    return this.pageCacher.getAllPages()
   }/*}}}*/
   /** isPageCached ** {{{
    */
   public isPageCached(id: TPageId): boolean {
-    return id ? this.pageCacher.isPageCached(id) : false;
+    return id ? this.pageCacher.isPageCached(id) : false
   }/*}}}*/
   /** isPageExists ** {{{
    */
   public isPageExists(id: TPageId): boolean {
-    return this.isPageCached(id);
+    return this.isPageCached(id)
   }/*}}}*/
   /** getPage ** {{{
    */
   public getPage(id: TPageId): IPage | null {
-    return this.isPageCached(id) ? this.pageCacher.fetchPage(id) : null;
+    return this.isPageCached(id) ? this.pageCacher.fetchPage(id) : null
   }/*}}}*/
   /** getDispatchToken ** {{{
    */
   public getDispatchToken() {
-    return this.dispatchToken;
+    return this.dispatchToken
   }/*}}}*/
   /** getPageType ** {{{
    */
   public getPageType() {
-    return this.pageType;
+    return this.pageType
   }/*}}}*/
   /** getCurrentPageKey ** {{{
    */
   public getCurrentPageKey(): TPageKey {
-    return String(this.pageId).replace(/\W+/g, '_');
+    return String(this.pageId).replace(/\W+/g, '_')
   }/*}}}*/
   /** getCurrentPageId ** {{{
    */
   public getCurrentPageId(): TPageId {
-    return this.pageId;
+    return this.pageId
   }/*}}}*/
   /** getCurrentPage ** {{{
    */
   public getCurrentPage(): IPage | null {
-    return this.getPage(this.pageId);
+    return this.getPage(this.pageId)
   }/*}}}*/
 
   /** getError ** {{{
    */
   public getError(): any {
-    return this.error;
+    return this.error
   }/*}}}*/
 
   /** setPageType ** {{{
    */
   private setPageType(pageType: string) {
-    this.pageType = pageType;
+    this.pageType = pageType
   }/*}}}*/
 
   /** pageUpdated ** {{{
    */
   private pageUpdated(id: TPageId) {
-    this.pageId = id;
-    this.emit('pageUpdated');
+    this.pageId = id
+    this.emit('pageUpdated')
   }/*}}}*/
 
   /** errorThrown ** {{{
    */
   private errorThrown(err: any) {
-    this.error = err;
-    this.emit('errorThrown');
+    this.error = err
+    this.emit('errorThrown')
   }/*}}}*/
 
   /** getOrLoadPage ** {{{
    */
   private getOrLoadPage(pathname: TPagePathname): Promise<IPage> {
-    const id = this.pageTools.normalizeId(pathname);
+    const id = this.pageTools.normalizeId(pathname)
     if (this.pageCacher.isPageCached(id)) {
       return new Promise((resolve, reject) => {
-        const page = this.pageCacher.fetchPage(id);
+        const page = this.pageCacher.fetchPage(id)
         if (!page) {
-          const err = new Error(`Cannot fetch page '${id} from PageCacher'`);
-          console.error('AppStore:getOrLoadPage error (empty page object)', err); // tslint:disable-line no-console
+          const err = new Error(`Cannot fetch page '${id} from PageCacher'`)
+          console.error('AppStore:getOrLoadPage error (empty page object)', err) // tslint:disable-line no-console
           // /*DEBUG*/debugger; // tslint:disable-line no-debugger
-          reject(err);
+          reject(err)
         } else {
-          resolve(page);
+          resolve(page)
         }
-      });
+      })
     } else {
       return this.pageLoader.loadPage(pathname)
         .then((page: IPage) => {
-          this.pageCacher.savePage(page);
-          return page;
+          this.pageCacher.savePage(page)
+          return page
         })
-      ;
+      
     }
   }/*}}}*/
   /** fetchPage ** {{{
@@ -156,14 +156,14 @@ export class AppStoreClass extends EventEmitter {
   private fetchPage(pathname: TPagePathname) {
     this.getOrLoadPage(pathname)
       .then((page) => {
-        this.pageUpdated(page.id);
+        this.pageUpdated(page.id)
       })
       .catch((err) => {
-        console.error('AppStore:fetchPage error (promise catch)', err); // tslint:disable-line no-console
+        console.error('AppStore:fetchPage error (promise catch)', err) // tslint:disable-line no-console
         // /*DEBUG*/debugger; // tslint:disable-line no-debugger
-        this.errorThrown(err);
+        this.errorThrown(err)
       })
-    ;
+    
   }/*}}}*/
 
   // /** removePage ** {{{
@@ -180,19 +180,19 @@ export class AppStoreClass extends EventEmitter {
 
     switch (action.actionType) {
       case 'setPageType':
-        this.setPageType(action.value);
-        break;
+        this.setPageType(action.value)
+        break
       case 'fetchPage':
-        this.fetchPage(action.value);
-        break;
+        this.fetchPage(action.value)
+        break
     }
 
-    this.emit('App_' + action.actionType); // ???
+    this.emit('App_' + action.actionType) // ???
 
-    return true;
+    return true
 
   }/*}}}*/
 
 }
 
-export default new AppStoreClass();
+export default new AppStoreClass()

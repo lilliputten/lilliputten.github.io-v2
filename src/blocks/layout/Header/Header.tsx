@@ -1,16 +1,16 @@
-import * as React from 'react';
-import { cn } from '@bem-react/classname';
+import * as React from 'react'
+import { cn } from '@bem-react/classname'
 
-import AppStore from 'lib/flux/AppStore';
-import AppActions from 'lib/flux/AppActions';
-import PageTools from 'lib/pages/PageTools';
+import AppStore from 'lib/flux/AppStore'
+import AppActions from 'lib/flux/AppActions'
+import PageTools from 'lib/pages/PageTools'
 
-import Logo from './Logo/Header-Logo';
-import Menu from './Menu/Header-Menu';
+import Logo from './Logo/Header-Logo'
+import Menu from './Menu/Header-Menu'
 
-import './Header.css';
+import './Header.css'
 
-const cnHeader = cn('Header');
+const cnHeader = cn('Header')
 
 export interface IHeaderProps {
   mode?: string;
@@ -19,14 +19,14 @@ export interface IHeaderProps {
 
 export default class Header extends React.Component<IHeaderProps> {
 
-  public block = 'Header';
+  public block = 'Header'
 
-  private pageTools = new PageTools();
+  private pageTools = new PageTools()
 
   /** render ** {{{
    */
   public render() {
-    const {mode, loading} = this.props;
+    const {mode, loading} = this.props
     return (
       <div className={cnHeader({mode, loading})}>
         <div className={cnHeader('Container')}>
@@ -34,14 +34,14 @@ export default class Header extends React.Component<IHeaderProps> {
           <Menu mode={mode} />
         </div>
       </div>
-    );
+    )
   }/*}}}*/
 
   /** onLogoClick ** {{{
    */
   private onLogoClick = (e: any) => {
     if (this.props.mode !== 'home') {
-      this.pageTools.setUrlToWindow('/');
+      this.pageTools.setUrlToWindow('/')
     }
   }/*}}}*/
 

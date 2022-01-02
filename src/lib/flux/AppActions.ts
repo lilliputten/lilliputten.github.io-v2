@@ -1,4 +1,4 @@
-import AppDispatcher from './AppDispatcher';
+import AppDispatcher from './AppDispatcher'
 
 class AppActions {
 
@@ -6,16 +6,16 @@ class AppActions {
     AppDispatcher.dispatch({
       actionType: 'fetchPage',
       value: pathname,
-    });
+    })
   }
 
   public setPageType(pageType: string) {
     AppDispatcher.dispatch({
       actionType: 'setPageType',
       value: pageType,
-    });
+    })
   }
 
 }
 
-export default new AppActions();
+export default new AppActions()

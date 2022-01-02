@@ -1,10 +1,10 @@
-import * as React from 'react';
-import { cn } from '@bem-react/classname';
+import * as React from 'react'
+import { cn } from '@bem-react/classname'
 
-import './CodeBlock.css';
-import 'highlight.js/styles/solarized-dark.css';
+import './CodeBlock.css'
+import 'highlight.js/styles/solarized-dark.css'
 
-const Lowlight = require('react-lowlight');
+const Lowlight = require('react-lowlight')
 
 // Used languages list
 const usedLanguages: { [id: string]: any } = {
@@ -13,16 +13,16 @@ const usedLanguages: { [id: string]: any } = {
   'sh,bash': require('highlight.js/lib/languages/shell'),
   'html,xml': require('highlight.js/lib/languages/xml'),
   'css': require('highlight.js/lib/languages/css'),
-};
+}
 
 // Init languages...
 Object.keys(usedLanguages).map((names) => {
   names.split(',').map((name) => {
-    Lowlight.registerLanguage(name, usedLanguages[names]);
-  });
-});
+    Lowlight.registerLanguage(name, usedLanguages[names])
+  })
+})
 
-const cnCodeBlock = cn('CodeBlock');
+const cnCodeBlock = cn('CodeBlock')
 
 export interface ICodeBlockProps {
   content: string;
@@ -31,13 +31,13 @@ export interface ICodeBlockProps {
 
 export default class CodeBlock extends React.Component<ICodeBlockProps> {
 
-  public block = 'CodeBlock';
+  public block = 'CodeBlock'
 
   /** render ** {{{
    */
   public render() {
-    const {language, content} = this.props;
-    const hasLanguage = language && Lowlight.hasLanguage(language);
+    const {language, content} = this.props
+    const hasLanguage = language && Lowlight.hasLanguage(language)
     return (
       <div className={cnCodeBlock()}>
       { hasLanguage ? (
@@ -53,7 +53,7 @@ export default class CodeBlock extends React.Component<ICodeBlockProps> {
         )
       }
       </div>
-    );
+    )
   }/*}}}*/
 
 }

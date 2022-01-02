@@ -5,6 +5,7 @@ env:
   commonjs: true
   es6: true
   # node: true
+parser: '@babel/eslint-parser'
 extends: 'eslint:recommended'
 parserOptions:
   # ecmaVersion: 2018
@@ -29,8 +30,69 @@ rules:
   #   - warn
   #   - single
   semi:
-    - error
-    - always
+    - warn
+    - never
 globals:
   modules: true
   config: true
+overrides:
+  - # ts,tsx
+    files: '**/*.+(ts|tsx)'
+    parser: '@typescript-eslint/parser'
+    plugins:
+      - '@typescript-eslint'
+      # - '@typescript-eslint/tslint'
+    extends:
+      # NOTE: The order of appearance is important here. Some basic rules may be overrided (and disabled) by more complex rulesets (like `@typescript-eslint`). Try turning them off to determine the forbidden rules.
+      - eslint:recommended
+      # - plugin:react/recommended
+      - plugin:@typescript-eslint/eslint-recommended
+      # - prettier
+      # - plugin:prettier/recommended
+      - plugin:@typescript-eslint/recommended
+    settings:
+      react:
+        version: 17.0.2
+    globals:
+      JSX: readonly
+      simpleheat: true
+      config: true
+    env:
+      es6: true
+      browser: true
+      jest: true
+      node: true
+    rules:
+      # react/react-in-jsx-scope: 0
+      # react/display-name: 0
+      # react/prop-types: 1
+      # no-unused-private-class-members: warn
+      '@typescript-eslint/no-empty-function': warn
+      '@typescript-eslint/camelcase': 0
+      '@typescript-eslint/explicit-function-return-type': 0
+      '@typescript-eslint/explicit-member-accessibility': 0
+      '@typescript-eslint/indent': 0
+      '@typescript-eslint/member-delimiter-style': 0
+      '@typescript-eslint/no-empty-interface': 0
+      '@typescript-eslint/no-explicit-any': 0
+      '@typescript-eslint/no-use-before-define': 0
+      '@typescript-eslint/no-var-requires': 0
+      # '@typescript-eslint/no-extra-semi': 0
+      '@typescript-eslint/no-unused-vars':
+        - warn
+        - # ...
+          # args: none
+          argsIgnorePattern: '^_'
+          varsIgnorePattern: '^[T]\w+' # Workaround for type errors on TS reused types or interfaces
+      no-unused-vars: 0
+      jsx-quotes:
+        - warn
+        - prefer-double
+      no-console: warn
+      no-debugger: warn
+      no-extra-semi: warn
+      no-redeclare: warn
+      no-undef: error
+      no-unreachable: warn
+      prefer-const: warn
+

@@ -15,7 +15,7 @@
 
 // TODO: Make imports compatible with VSCode Intellisense
 // export const pages = config.pages;
-export const css = require('./__css/config__css');
-export const site = require('./__site/config__site');
-export const pages = require('./__pages/config__pages');
-export default { css, site, pages };
+export const css = require('./__css/config__css')
+export const site = require('./__site/config__site')
+export const pages = require('./__pages/config__pages')
+export default { css, site, pages }

@@ -1,13 +1,13 @@
-import { cn } from '@bem-react/classname';
-import * as React from 'react';
+import { cn } from '@bem-react/classname'
+import * as React from 'react'
 
-import './Spinner.css';
+import './Spinner.css'
 
-const cnSpinner = cn('Spinner');
+const cnSpinner = cn('Spinner')
 
 export default class Spinner extends React.Component {
 
-  public block = 'Spinner';
+  public block = 'Spinner'
 
   public render() {
     return (
@@ -16,6 +16,6 @@ export default class Spinner extends React.Component {
           <div className={cnSpinner('Circle')} />
         </div>
       </div>
-    );
+    )
   }
 }

@@ -1,21 +1,21 @@
-import { cn } from '@bem-react/classname';
+import { cn } from '@bem-react/classname'
 // import { Registry, withRegistry, RegistryConsumer } from '@bem-react/di';
-import * as React from 'react';
+import * as React from 'react'
 
-import AppStore from 'lib/flux/AppStore';
+import AppStore from 'lib/flux/AppStore'
 
-import { PagesProvider, IPageContext } from 'lib/pages/PageContext';
+import { PagesProvider, IPageContext } from 'lib/pages/PageContext'
 
-import Main from 'blocks/layout/Main/Main';
-import Header from 'blocks/layout/Header/Header';
+import Main from 'blocks/layout/Main/Main'
+import Header from 'blocks/layout/Header/Header'
 
-import './App.css';
+import './App.css'
 
-const cnApp = cn('App');
+const cnApp = cn('App')
 
 const pagesContext: IPageContext = {
   AppStore,
-};
+}
 
 export interface IAppProps /* extends IClassNameProps */ {
   path: string;
@@ -28,26 +28,26 @@ export interface IAppState {
 
 export default class App extends React.Component<IAppProps, IAppState> {
 
-  public block = 'App';
+  public block = 'App'
 
   /** constructor ** {{{
    */
   constructor(props: IAppProps) {
-    super(props);
+    super(props)
     this.state = {
-    };
+    }
   }/*}}}*/
 
   /** componentDidMount ** {{{
    */
   public componentDidMount() {
-    AppStore.addListener('App_setPageType', this.onPageTypeChanged);
+    AppStore.addListener('App_setPageType', this.onPageTypeChanged)
   }/*}}}*/
 
   /** render ** {{{
    */
   public render() {
-    const {mode, prevMode, loading} = this.state;
+    const {mode, prevMode, loading} = this.state
     return (
       <PagesProvider value={pagesContext}>
         <div className={cnApp({ mode, prevMode, loading })}>
@@ -55,7 +55,7 @@ export default class App extends React.Component<IAppProps, IAppState> {
           <Main mode={mode} prevMode={prevMode} />
         </div>
       </PagesProvider>
-    );
+    )
   }/*}}}*/
 
   // Events...
@@ -63,12 +63,12 @@ export default class App extends React.Component<IAppProps, IAppState> {
   /** onPageTypeChanged ** {{{
    */
   private onPageTypeChanged = () => {
-    const prevMode = this.state.mode;
-    const mode = AppStore.getPageType();
+    const prevMode = this.state.mode
+    const mode = AppStore.getPageType()
     if (mode === 'loading') {
-      this.setState({ loading: true });
+      this.setState({ loading: true })
     } else /* if (mode !== prevMode) */ {
-      this.setState({ mode, prevMode, loading: false });
+      this.setState({ mode, prevMode, loading: false })
     }
   }/*}}}*/
 

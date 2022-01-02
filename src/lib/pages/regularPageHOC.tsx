@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from 'react'
 
 interface IRegularPageHOCProps {
   location?: object;
@@ -19,7 +19,7 @@ export default <P extends object>(Component: React.ComponentType<P>) =>
     public render() {
       return (
         <Component {...this.props} />
-      );
+      )
     }/*}}}*/
 
-  };
+  }

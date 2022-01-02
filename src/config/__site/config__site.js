@@ -9,12 +9,12 @@
 
 (function(){
 
-  var siteAddr = 'https://lilliputten.github.io';
+  var siteAddr = 'https://lilliputten.github.io'
 
   // Sample url: https://res.cloudinary.com/lilliputten/image/upload/v1544482091/Projects/Printing/1411-Bonjour/pages-07-08.jpg
-  var galleryRoot = 'https://res.cloudinary.com/lilliputten/image/upload/';
-  var galleryId = 'v1542040058';
-  var siteName = 'Lilliputten & Noble';
+  var galleryRoot = 'https://res.cloudinary.com/lilliputten/image/upload/'
+  var galleryId = 'v1542040058'
+  var siteName = 'Lilliputten & Noble'
 
   /** configSite ** {{{ */
   var configSite = /** @lends config__site.prototype */ {
@@ -44,17 +44,17 @@
       { url: '/Contacts', text: 'Contacts' },
     ],/*}}}*/
 
-  };/*}}}*/
+  }/*}}}*/
 
   /** Universal export... ** {{{ */
   if (typeof module === 'object' && typeof module.exports === 'object') {
-    module.exports = configSite;
+    module.exports = configSite
   }/*}}}*/
   /** YM export... ** {{{ */
   if (typeof modules === 'object' && typeof modules.define === 'function') {
     modules.define('config__site', [], function(provide) {
-      provide(configSite);
-    });
+      provide(configSite)
+    })
   }/*}}}*/
 
-})();
+})()

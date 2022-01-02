@@ -1,5 +1,5 @@
-import * as React from 'react';
-import { PagesConsumer, IPageContext } from './PageContext';
+import * as React from 'react'
+import { PagesConsumer, IPageContext } from './PageContext'
 
 // NOTE: @see hack at [Using React Context in a TypeScript
 // App](https://medium.com/@thehappybug/using-react-context-in-a-typescript-app-c4ef7504c858)
@@ -13,4 +13,4 @@ export default <
       <PagesConsumer>
         {(context) => <Component {...props} context={context} />}
       </PagesConsumer>
-    );
+    )
