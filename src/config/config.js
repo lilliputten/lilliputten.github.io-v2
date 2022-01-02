@@ -1,5 +1,4 @@
 /* eslint-env commonjs, browser, node */
-/* globals modules */
 /**
  * @module config
  * @author lilliputten <lilliputten@yandex.ru>
