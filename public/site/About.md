@@ -52,14 +52,6 @@ Yes, I'm really looking for an interesting new job right now. Basically, I
 consider options with step-by-step accessibility from home (the center of
 Moscow) or with the possibility of remote work (permanently or partially).
 
-Please do not offer: blockchain, fintech, work in banks, bettingand other strange stuff.
-
-The most interesting projects would be related to IoT, high-tech devices developing, etc.
-
-I am also considering options with relocation (despite my not very good
-English skills: they're great for reading documentation or texting, but not enough good
-for oral communication).
-
 <!--
- @changed 2022.01.03, 01:22
+ @changed 2022.01.15, 19:52
 -->

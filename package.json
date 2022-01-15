@@ -4,7 +4,7 @@
   "github-pages-site": "https://lilliputten.github.io",
   "github-pages-repository": "https://github.com/lilliputten/lilliputten.github.io",
   "version": "0.0.2",
-  "changed": "2021.08.18, 19:54",
+  "changed": "2022.01.15, 19:54",
   "author": "lilliputten <lilliputten@yandex.ru>",
   "license": "MIT",
   "repository": {
@@ -130,6 +130,7 @@
     "build": "echo --Make production build-- && react-app-rewired build",
     "gh-publish-UNUSED": "echo --Publish build to gitpages (via gulp-gh-pages, buggy)-- && gulp publish",
     "publish": "echo --Commit build to gitpages (via scripts)-- && cd .publish && git pull && rm -Rf * && cp -Rfu ../build/* . && git add . -Av && git commit -am \"auto-commit\" && git push && cd ..",
+    "build-and-publish": "echo --Build and publish project-- && npm-run-all build publish",
     "serve": "echo --Run static server for build-- && serve -s build",
     "pack-UNUSED": "echo --Pack build for demo server-- && rm -f build-pack.zip && zip -rq build-pack.zip build",
     "eject-UNUSED": "react-scripts eject",
