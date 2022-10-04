@@ -9,16 +9,16 @@ About
   <img src="/images/facepalm/BrownCBG-sm.jpg" />
 </div>
 
-__Name:__ Igor
+__Name:__ Igor.
 
-__Location:__ Moscow, Russia.
+__Location:__ Worldwide (I am a Russian citizen working and traveling all over the world).
 
 __Birth date:__ 1974.
 
-__Brief:__ Middle-junior programmer, frontend developer, designer and&nbsp;so&nbsp;on.
+__Brief:__ Middle programmer, frontend developer, designer and&nbsp;so&nbsp;on.
 Last few years have been specializing mainly in JavaScript development.
 
-__Current status:__ Now working as freelancer.
+__Current status:__ Now working remotely for international and Russia-based companies.
 
 ## Skills
 
@@ -49,9 +49,8 @@ __Interests__: Music (blues harp, CBG), painting, sports, biking, hiking, progra
 ## Info for HR/potential employers
 
 Yes, I'm really looking for an interesting new job right now. Basically, I
-consider options with step-by-step accessibility from home (the center of
-Moscow) or with the possibility of remote work (permanently or partially).
+consider options with remote work (permanently or partially) and, of course, with relocation.
 
 <!--
- @changed 2022.01.15, 19:52
+ @changed 2022.10.04, 14:54
 -->
