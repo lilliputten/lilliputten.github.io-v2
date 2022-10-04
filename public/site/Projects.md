@@ -39,5 +39,5 @@ Below are a few of current or finished projects.
 - (Old) Personal portfolio site (2000-2016, in Russian, external link): [lilliputten.ru](http://lilliputten.ru)
 
 <!--
- @changed 2022.01.03, 01:32
+ @changed 2022.10.04, 16:15
 -->
