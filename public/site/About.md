@@ -38,7 +38,7 @@ __Dev. tools:__ Webpack, Gulp, npm, git, svn, other NodeJS instruments.
 
 __Education:__ None (incomplete higher education, Moscow State University, CS facility).
 
-__Languages:__ English (technical), Russian (native).
+__Languages:__ English intermediate level & technical), Russian (native).
 
 __Interests__: Music (blues harp, CBG), painting, sports, biking, hiking, programming, IT, science.
 
@@ -52,5 +52,5 @@ Yes, I'm really looking for an interesting new job right now. Basically, I
 consider options with remote work (permanently or partially) and, of course, with relocation.
 
 <!--
- @changed 2022.10.04, 14:54
+ @changed 2022.10.04, 20:02
 -->
