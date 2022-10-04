@@ -2,7 +2,7 @@
 
 ## Selected projects
 
-Currently I work as a frontend developer in a division of the Moscow-based company "Kraftway" (NKB "NIR").
+Currently I work as a frontend developer for a Russia-based company "STEOR".
 
 Below are a few of current or finished projects.
 
