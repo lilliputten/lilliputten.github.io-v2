@@ -22,7 +22,7 @@ __Current status:__ Now working remotely for international and Russia-based comp
 
 ## Skills
 
-__Development:__ JavaScript, TypeScript, NodeJS, React, NextJS, mobx, redux, saga, i-bem, bem-xjst (bem-html), jquery.
+__Development:__ JavaScript, TypeScript, NodeJS, React, NextJS, mobx, redux, i-bem, bem-xjst (bem-html), jquery.
 
 __Imposing/prototyping/typesetting:__ Adobe XD, Photoshop, Illustrator, InDesign.
 
@@ -48,8 +48,7 @@ __Interests__: Music (blues harp, CBG), painting, sports, biking, hiking, progra
 
 ## Info for HR/potential employers
 
-Yes, I'm really looking for an interesting new job right now. Basically, I
-consider options with remote work (permanently or partially) and, of course, with relocation.
+Yes, I'm really looking for an interesting new job right now. At the moment, I'm only considering options with remote work or relocation.
 
 <!--
  @changed 2022.10.04, 20:02
