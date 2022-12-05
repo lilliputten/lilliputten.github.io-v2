@@ -8,6 +8,7 @@ Use any of the following methods:
 ## Social networks
 
 - Github: [github.com/lilliputten](https://github.com/lilliputten)
+- Gitpages (this site): [lilliputten.github.io](https://lilliputten.github.io)
 - LinkedIn: [linkedin.com/in/lilliputten](http://linkedin.com/in/lilliputten)
 - Facebook: [facebook.com/igor.lilliputten](https://facebook.com/igor.lilliputten)
 - Instagram: [instagram.com/igorlilliputten](https://instagram.com/igorlilliputten)
@@ -24,5 +25,5 @@ Use any of the following methods:
 - E-mail: [igor@lilliputten.ru](mailto:igor@lilliputten.ru?subject=Hi%20Igor!) (preferred contacts method)
 
 <!--
- @changed 2020.02.07, 12:41
+ @changed 2022.12.05, 19:15
 -->

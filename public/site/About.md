@@ -11,11 +11,12 @@ About
 
 __Name:__ Igor.
 
-__Location:__ Worldwide (I am a Russian citizen working and traveling all over the world).
+__Location:__ Worldwide (I'm an (ex-?)Russian citizen working and traveling all over the world).
 
 __Birth date:__ 1974.
 
-__Brief:__ Middle programmer, frontend developer, designer and&nbsp;so&nbsp;on.
+__Brief:__ Middle-senior programmer, frontend developer, designer and&nbsp;so&nbsp;on.
+
 Last few years have been specializing mainly in JavaScript development.
 
 __Current status:__ Now working remotely for international and Russia-based companies.
@@ -26,7 +27,7 @@ __Development:__ JavaScript, TypeScript, NodeJS, React, NextJS, mobx, redux, i-b
 
 __Imposing/prototyping/typesetting:__ Adobe XD, Photoshop, Illustrator, InDesign.
 
-__Design/layout/tamplating:__ HTML5, CSS3, Stylus, LESS, SCSS, PostCSS, Adaptive/Responsive.
+__Design/layout/templating:__ HTML5, CSS3, Stylus, LESS, SCSS, PostCSS, Adaptive/Responsive.
 
 __Programming:__ JavaScript (Web, NodeJS), PHP, Python, C++ (sometimes).
 
@@ -50,6 +51,8 @@ __Interests__: Music (blues harp, CBG), painting, sports, biking, hiking, progra
 
 Yes, I'm really looking for an interesting new job right now. At the moment, I'm only considering options with remote work or relocation.
 
+<a href="https://raw.githubusercontent.com/lilliputten/lilliputten.github.io/master/site/CV-2022-v1-1-1.pdf" target="_blank">Donwnload CV</a> (pdf, ~25K).
+
 <!--
- @changed 2022.10.04, 20:02
+ @changed 2022.12.05, 19:42
 -->
