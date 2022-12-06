@@ -51,8 +51,8 @@ __Interests__: Music (blues harp, CBG), painting, sports, biking, hiking, progra
 
 Yes, I'm really looking for an interesting new job right now. At the moment, I'm only considering options with remote work or relocation.
 
-- <a href="https://raw.githubusercontent.com/lilliputten/lilliputten.github.io/master/site/CV-2022-v1-1-1.pdf" target="_blank">Download an actual CV</a> for printing (pdf, ~25K).
+- Download an <a href="https://raw.githubusercontent.com/lilliputten/lilliputten.github.io/master/site/CV-2022-v1-1-1.pdf" target="_blank">actual CV</a> for printing (pdf, ~35K).
 
 <!--
- @changed 2022.12.06, 15:18
+ @changed 2022.12.06, 17:12
 -->
