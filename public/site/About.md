@@ -11,7 +11,7 @@ About
 
 __Name:__ Igor.
 
-__Location:__ Worldwide (I'm an (ex-?)Russian citizen working and traveling all over the world).
+__Location:__ Worldwide. I'm an (ex-?)Russian citizen working and traveling all over the world. Now (for winter 2022/23) I'm in Patong, Thailand.
 
 __Birth date:__ 1974.
 
@@ -39,20 +39,20 @@ __Dev. tools:__ Webpack, Gulp, npm, git, svn, other NodeJS instruments.
 
 __Education:__ None (incomplete higher education, Moscow State University, CS facility).
 
-__Languages:__ English intermediate level & technical), Russian (native).
+__Languages:__ English (intermediate level, technical), Russian (native).
 
 __Interests__: Music (blues harp, CBG), painting, sports, biking, hiking, programming, IT, science.
 
 ## See also
 
-- Old personal portfolio site (2000-2016, in Russian): [lilliputten.ru](http://lilliputten.ru)
+- Old personal portfolio site (2000-2016, in Russian): <a href="http://lilliputten.ru" target="_blank">lilliputten.ru</a>.
 
 ## Info for HR/potential employers
 
 Yes, I'm really looking for an interesting new job right now. At the moment, I'm only considering options with remote work or relocation.
 
-<a href="https://raw.githubusercontent.com/lilliputten/lilliputten.github.io/master/site/CV-2022-v1-1-1.pdf" target="_blank">Donwnload CV</a> (pdf, ~25K).
+- <a href="https://raw.githubusercontent.com/lilliputten/lilliputten.github.io/master/site/CV-2022-v1-1-1.pdf" target="_blank">Download an actual CV</a> for printing (pdf, ~25K).
 
 <!--
- @changed 2022.12.05, 19:42
+ @changed 2022.12.06, 15:18
 -->
