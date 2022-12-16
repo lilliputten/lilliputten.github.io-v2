@@ -8,15 +8,15 @@ Use any of the following methods:
 ## Social networks
 
 - Github: [github.com/lilliputten](https://github.com/lilliputten)
-- Gitpages (this site): [lilliputten.github.io](https://lilliputten.github.io)
 - LinkedIn: [linkedin.com/in/lilliputten](http://linkedin.com/in/lilliputten)
 - Facebook: [facebook.com/igor.lilliputten](https://facebook.com/igor.lilliputten)
 - Instagram: [instagram.com/igorlilliputten](https://instagram.com/igorlilliputten)
+- Gitpages (this site): [lilliputten.github.io](https://lilliputten.github.io)
 
 ## Online summaries (in Russian)
 
-- [HeadHunter](https://hh.ru/resume/d311fd1dff025511070039ed1f3946696f6451)
-- [MoiKrug](https://moikrug.ru/lilliputten)
+- [hh.ru](https://hh.ru/resume/d311fd1dff025511070039ed1f3946696f6451)
+- [career.habr.com](https://career.habr.com/lilliputten)
 
 ## Other
 
@@ -25,5 +25,5 @@ Use any of the following methods:
 - E-mail: [igor@lilliputten.ru](mailto:igor@lilliputten.ru?subject=Hi%20Igor!) (preferred contacts method)
 
 <!--
- @changed 2022.12.05, 19:15
+ @changed 2022.12.17, 00:32
 -->

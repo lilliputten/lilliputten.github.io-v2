@@ -39,7 +39,7 @@ __Dev. tools:__ Webpack, Gulp, npm, git, svn, other NodeJS instruments.
 
 __Education:__ None (incomplete higher education, Moscow State University, CS facility).
 
-__Languages:__ English (intermediate level, technical), Russian (native).
+__Languages:__ English (intermediate level, B1, full professional command of technical English), Russian (native).
 
 __Interests__: Music (blues harp, CBG), painting, sports, biking, skateboarding, hiking, programming, IT, science.
 
@@ -54,5 +54,5 @@ Yes, I'm really looking for an interesting new job right now. At the moment, I'm
 - Download <a href="https://raw.githubusercontent.com/lilliputten/lilliputten.github.io/master/site/cv-lilliputten-2022-v1-1-2.pdf" target="_blank">printable CV</a> (pdf, ~50K).
 
 <!--
- @changed 2022.12.08, 16:17
+ @changed 2022.12.17, 00:29
 -->
