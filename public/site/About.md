@@ -23,11 +23,11 @@ __Current status:__ Now working remotely for international and Russia-based comp
 
 ## Skills
 
-__Development:__ JavaScript, TypeScript, NodeJS, React, NextJS, mobx, redux, i-bem, bem-xjst (bem-html), jquery.
+__Development:__ JavaScript, TypeScript, NodeJS, React, NextJS, Express, Webpack, mobx, redux, i-bem, bem-xjst (bem-html), jquery.
 
 __Imposing/prototyping/typesetting:__ Adobe XD, Photoshop, Illustrator, InDesign.
 
-__Design/layout/templating:__ HTML5, CSS3, Stylus, LESS, SCSS, PostCSS, Adaptive/Responsive.
+__Web Design/layout/templating:__ HTML5, CSS3, Stylus, LESS, SCSS, PostCSS, Adaptive/Responsive.
 
 __Programming:__ JavaScript (Web, NodeJS), PHP, Python, C++ (sometimes).
 
@@ -53,6 +53,8 @@ Yes, I'm really looking for an interesting new job right now. At the moment, I'm
 
 - Download <a href="https://raw.githubusercontent.com/lilliputten/lilliputten.github.io/master/site/cv-lilliputten-2022-v1-1-2.pdf" target="_blank">printable CV</a> (pdf, ~50K).
 
+And, of course, I am against war! Live Ukraine!
+
 <!--
- @changed 2022.12.17, 00:29
+ @changed 2022.12.19, 17:50
 -->
