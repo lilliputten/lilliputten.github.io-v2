@@ -61,18 +61,18 @@ export default class HomePageAetherCanvas extends React.Component<IHomePageAethe
         <defs>
           <radialGradient id="Gradient1" cx="50%" cy="50%" fx="10%" fy="50%" r=".5">
             <animate attributeName="fx" dur="44s" values="0%;3%;0%" repeatCount="indefinite" />
-            <stop offset="0%" stop-color="#ff0" />
-            <stop offset="100%" stop-color="#ff00" />
+            <stop offset="0%" stopColor="#ff0" />
+            <stop offset="100%" stopColor="#ff00" />
           </radialGradient>
            <radialGradient id="Gradient2" cx="50%" cy="50%" fx="10%" fy="50%" r=".5">
             <animate attributeName="fx" dur="33.5s" values="0%;3%;0%" repeatCount="indefinite" />
-            <stop offset="0%" stop-color="#0ff" />
-            <stop offset="100%" stop-color="#0ff0" />
+            <stop offset="0%" stopColor="#0ff" />
+            <stop offset="100%" stopColor="#0ff0" />
           </radialGradient>
           <radialGradient id="Gradient3" cx="50%" cy="50%" fx="50%" fy="50%" r=".5">
             <animate attributeName="fx" dur="31.5s" values="0%;3%;0%" repeatCount="indefinite" />
-            <stop offset="0%" stop-color="#f0f" />
-            <stop offset="100%" stop-color="#f0f0" />
+            <stop offset="0%" stopColor="#f0f" />
+            <stop offset="100%" stopColor="#f0f0" />
           </radialGradient>
         </defs>
         <rect x="0" y="0" width="100%" height="100%" fill="url(#Gradient1)">

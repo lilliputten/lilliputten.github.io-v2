@@ -15,46 +15,44 @@ __Location:__ Worldwide. I'm a Russian citizen working and traveling all over th
 
 __Birth date:__ 1974.
 
-__Brief:__ Middle-senior programmer, frontend developer, designer and&nbsp;so&nbsp;on.
+__Brief:__ Middle-senior programmer, frontend (sometimes fullstack) developer and designer (both for the web and for printing). Last few years have been specializing mainly in JavaScript development.
 
-Last few years have been specializing mainly in JavaScript development.
+__Current status:__ Now I'm working remotely as Sr. Frontend Developer (with React stack and projects with a very interesting subject area) for a Russia-based company.
 
-__Current status:__ Now working remotely for international and Russia-based companies.
+And, of course, I am against the war! Live Ukraine!
 
 ## Skills
 
 __Development:__ JavaScript, TypeScript, NodeJS, React, NextJS, Express, Webpack, mobx, redux, i-bem, bem-xjst (bem-html), jquery.
 
-__Imposing/prototyping/typesetting:__ Adobe XD, Photoshop, Illustrator, InDesign.
+__Imposing/Prototyping/Typesetting (for web and printing):__ Adobe XD, Photoshop, Illustrator, InDesign.
 
-__Web Design/layout/templating:__ HTML5, CSS3, Stylus, LESS, SCSS, PostCSS, Adaptive/Responsive.
+__Web Design/Layout/Templating:__ HTML5, CSS3, Stylus, LESS, SCSS, PostCSS, Adaptive/Responsive.
 
-__Programming:__ JavaScript (Web, NodeJS), PHP, Python, C++ (sometimes).
+__Programming:__ JavaScript (Web, NodeJS -- main specialization), PHP (a very long time ago; Perl -- the ages ago), Python. (Sometimes C/C++ and other toys just for fun: for raspberries, esp32s etc.)
 
-__Applied:__ Python, JavaScript, PHP, Unix Shell, Powershell.
+__Applied/Automation:__ Python, JavaScript, PHP, Unix Shell, Powershell.
 
-__Dev. tools:__ Webpack, Gulp, npm, git, svn, other NodeJS instruments.
+__Dev. tools:__ Webpack, Gulp, npm, git, svn, other NodeJS and command line tools.
 
 ## Misc
 
 __Education:__ None (incomplete higher education, Moscow State University, CS facility).
 
-__Languages:__ English (intermediate level, B1, full professional command of technical English), Russian (native).
+__Languages:__ English (only intermediate/B1 level for spoken, but full professional command for technical English), Russian (native).
 
 __Interests__: Music (blues harp, CBG), painting, sports, biking, skateboarding, hiking, programming, IT, science.
 
 ## See also
 
-- Old personal portfolio site (2000-2016, in Russian): <a href="http://lilliputten.ru" target="_blank">lilliputten.ru</a>.
+- Old personal portfolio site (2000-2016, in Russian, not updated): <a href="http://lilliputten.ru" target="_blank">lilliputten.ru</a>.
 
 ## Info for HR/potential employers
 
 Yes, I'm really looking for an interesting new job right now. At the moment, I'm only considering options with remote work or relocation.
 
-- Download <a href="https://raw.githubusercontent.com/lilliputten/lilliputten.github.io/master/site/cv-lilliputten-2022-v1-1-2.pdf" target="_blank">printable CV</a> (pdf, ~50K).
-
-And, of course, I am against war! Live Ukraine!
+- You can download <a href="https://raw.githubusercontent.com/lilliputten/lilliputten.github.io/master/site/cv-lilliputten-2022-v1-1-2.pdf" target="_blank">the printable CV</a> (pdf, ~50K).
 
 <!--
- @changed 2022.12.19, 17:50
+ @changed 2022.12.19, 22:51
 -->
