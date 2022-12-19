@@ -15,7 +15,7 @@ __Location:__ Worldwide. I'm a Russian citizen working and traveling all over th
 
 __Birth date:__ 1974.
 
-__Brief:__ Middle-senior programmer, frontend (sometimes fullstack) developer and designer (both for the web and for printing). Last few years have been specializing mainly in JavaScript development.
+__Brief:__ Mid/senior programmer, web frontend (sometimes fullstack) developer and designer (both for the web and for printing). Last few years have been specializing mainly in JavaScript development.
 
 __Current status:__ Now I'm working remotely as Sr. Frontend Developer (with React stack and projects with a very interesting subject area) for a Russia-based company.
 
@@ -51,7 +51,7 @@ __Interests__: Music (blues harp, CBG), painting, sports, biking, skateboarding,
 
 Yes, I'm really looking for an interesting new job right now. At the moment, I'm only considering options with remote work or relocation.
 
-- You can download <a href="https://raw.githubusercontent.com/lilliputten/lilliputten.github.io/master/site/cv-lilliputten-2022-v1-1-2.pdf" target="_blank">the printable CV</a> (pdf, ~50K).
+- A <a href="https://raw.githubusercontent.com/lilliputten/lilliputten.github.io/master/site/cv-lilliputten-2022-v1-1-2.pdf" target="_blank">printable CV</a> (pdf, ~50K) is available.
 
 <!--
  @changed 2022.12.19, 22:51
