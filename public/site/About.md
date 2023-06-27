@@ -17,7 +17,7 @@ __Birth date:__ 1974.
 
 __Brief:__ Mid/senior programmer, web frontend (sometimes fullstack) developer and designer (both for the web and for printing). Last few years have been specializing mainly in JavaScript development.
 
-__Current status:__ Now I'm working remotely as Sr. Frontend Developer (with React stack and projects with a very interesting subject area) for a Russia-based company.
+__Current status:__ Currently I'm working for our own startup project.
 
 And, of course, I am against the war! Live Ukraine!
 
@@ -48,8 +48,6 @@ __Interests__: Music (blues harp, CBG), painting, skateboarding, running, biking
 - Old personal portfolio site (2000-2016, in Russian, not updated): <a href="http://lilliputten.ru" target="_blank">lilliputten.ru</a>.
 
 ## Info for HR/potential employers
-
-Currently I'm working for our own startup project.
 
 I'm really looking for an interesting new job right now. At the moment, I'm only considering options with remote work or relocation.
 
