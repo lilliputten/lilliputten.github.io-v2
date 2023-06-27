@@ -2,13 +2,13 @@
 
 ## Selected projects
 
-Currently I work as a frontend developer for a Russia-based company "STEOR".
+Currently I'm working for our own startup project.
 
 Below are a few of current or finished projects.
 
 ### Interfaces
 
-- Design of the navigation situation management and control interface, marine communication platform, remote vessel monitoring system (current project, NDA'ed).
+- Design of the navigation situation management and control interface, marine communication platform, remote vessel monitoring system (current project, NDA'ed, 2021-2022).
 - [Embedded interface, Web administration console, middleware NodeJS server](#/Projects/Interfaces/19xx-21xx-arti-printxpert) (2019-2021)
 - [Online GIS Monitoring and Control System](#/Projects/Interfaces/18xx-vektor-element) (2016-2018)
 
@@ -40,5 +40,5 @@ Below are a few of current or finished projects.
 - (Old) Personal portfolio site (2000-2016, in Russian, external link): [lilliputten.ru](http://lilliputten.ru)
 
 <!--
- @changed 2022.12.05, 19:14
+ @changed 2023.06.27, 14:24
 -->
