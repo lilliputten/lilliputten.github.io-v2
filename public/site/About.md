@@ -11,7 +11,7 @@ About
 
 __Name:__ Igor.
 
-__Location:__ Worldwide. I'm a Russian citizen working and traveling all over the world. Now (for winter 2022/23) I'm in Thailand.
+__Location:__ Worldwide. I'm a Russian citizen working and traveling all over the world. Now (for Summer 2023) I'm in Thailand.
 
 __Birth date:__ 1974.
 
@@ -54,5 +54,5 @@ I'm really looking for an interesting new job right now. At the moment, I'm only
 - A <a href="https://raw.githubusercontent.com/lilliputten/lilliputten.github.io/master/site/cv-lilliputten-2022-v1-1-2.pdf" target="_blank">printable CV</a> (pdf, ~50K) is available.
 
 <!--
- @changed 2023.06.27, 14:22
+ @changed 2023.06.27, 14:38
 -->
