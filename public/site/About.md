@@ -21,7 +21,7 @@ __Current status:__ Currently I'm working for our own startup project.
 
 ## Skills
 
-__Development:__ TypeScript, JavaScript (vanilla, ES5, ES6+), NodeJS, React, NextJS, Express, Webpack, mobx, redux, i-bem, Eleventhy, bem-xjst (bem-html), jquery.
+__Development:__ TypeScript, JavaScript (vanilla, ES5, ES6+), NodeJS, Python, Flask, React, NextJS, Express, Webpack, mobx, redux, i-bem, Eleventhy, bem-xjst (bem-html), jquery.
 
 __Prototyping:__ Figma, Adobe XD, Photoshop, Illustrator, InDesign.
 
