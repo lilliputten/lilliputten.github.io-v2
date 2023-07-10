@@ -2,15 +2,18 @@
 
 ## Selected projects
 
-Currently I'm working for our own startup project.
+Currently I'm working for our own startup project, 360caster, for interactive museums’ 3D tours platform. _(Using NextJS, mobx, MUI, SCSS, Mediasoup for Video/Audio support, proprietary 3D tools, Eleventhy.)_
 
-Below are a few of current or finished projects.
+Below are a few ongoing or finished projects.
 
 ### Interfaces
 
-- Design of the navigation situation management and control interface, marine communication platform, remote vessel monitoring system (current project, NDA'ed, 2022-2023).
-- [Embedded interface, Web administration console, middleware NodeJS server](#/Projects/Interfaces/19xx-21xx-arti-printxpert) (2019-2021)
-- [Online GIS Monitoring and Control System](#/Projects/Interfaces/18xx-vektor-element) (2016-2018)
+- Design of the navigation situation management and control interface, marine communication platform, remote vessel monitoring system (current project, NDA'ed, 2022-2023). _(OpenLayers, PrimeReact, NodeJS, React, Webpack, Redux,
+Webpack, SCSS)_
+- [Embedded interface, Web administration console, middleware NodeJS server](#/Projects/Interfaces/19xx-21xx-arti-printxpert) (2019-2021) _(React, Redux, Bootstrap, vanilla js
+for embeddable interfaces, Express, NodeJS)_
+- [Online GIS Monitoring and Control System](#/Projects/Interfaces/18xx-vektor-element) (2016-2018) _(SPA project based on i-bem, bem-xjst stack,
+particpation in development of PHP midware server)_
 
 ### Web sites
 
@@ -22,7 +25,7 @@ Below are a few of current or finished projects.
 
 - [NPM-Launcher -- scripts running GUI utility](#/Projects/Code/1811-npm-launcher) (2018)
 - [jsRTF -- documents generating library](#/Projects/Code/1707-jsrtf) (2017)
-- [Automatic deployment for bitbucket.org web-based projects](#/Projects/Code/2016-automatic-bitbucket-deploy) (from 2016)
+- [Automatic deployment for bitbucket.org web-based projects](#/Projects/Code/2016-automatic-bitbucket-deploy) (since 2016)
 
 ### Design & printing
 
@@ -40,5 +43,5 @@ Below are a few of current or finished projects.
 - (Old) Personal portfolio site (2000-2016, in Russian, external link): [lilliputten.ru](http://lilliputten.ru)
 
 <!--
- @changed 2023.06.27, 14:24
+ @changed 2023.07.11, 01:41
 -->

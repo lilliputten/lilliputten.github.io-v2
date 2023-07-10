@@ -21,23 +21,21 @@ __Current status:__ Currently I'm working for our own startup project.
 
 ## Skills
 
-__Development:__ TypeScript, JavaScript, NodeJS, React, NextJS, Express, Webpack, mobx, redux, i-bem, bem-xjst (bem-html), jquery.
+__Development:__ TypeScript, JavaScript (vanilla, ES5, ES6+), NodeJS, React, NextJS, Express, Webpack, mobx, redux, i-bem, Eleventhy, bem-xjst (bem-html), jquery.
 
 __Prototyping:__ Figma, Adobe XD, Photoshop, Illustrator, InDesign.
 
 __Layouting/Styling:__ HTML5, CSS3, Stylus, LESS, SCSS, PostCSS, Tailwind, MUI, Chakra UI, Bootstrap, Storybook, adaptive/responsive techniques, flexbox/grid.
 
-__Programming:__ JavaScript (Web, NodeJS, React, applied; main specialization), Python.
+__Applied/Automation:__ Python, JavaScript, PHP (in previous projects), Unix Shell, Powershell.
 
-__Applied/Automation:__ Python, JavaScript, PHP (previously), Unix Shell, Powershell.
-
-__Dev. tools:__ Webpack, Gulp, npm, git, svn, other NodeJS and Posix utilities, Jest, Jira.
+__Dev. tools:__ Webpack, Gulp, npm, git, svn, other NodeJS and CLI utilities, Jest, Jira.
 
 ## Misc
 
 __Education:__ None (incomplete higher education, Moscow State University, CS facility).
 
-__Languages:__ English (intermediate/upper-intermediate, B1/B2 level for spoken, but full professional command for technical English), Russian (native).
+__Languages:__ English (intermediate/upper-intermediate, B1/B2 level for spoken, full professional command for technical usage), Russian (native).
 
 __Interests__: Music (blues harp, CBG), painting, skateboarding, running, biking, hiking, programming, IT, science.
 
@@ -49,8 +47,8 @@ __Interests__: Music (blues harp, CBG), painting, skateboarding, running, biking
 
 I'm really looking for an interesting new job right now. At the moment, I'm only considering options with remote work or relocation.
 
-- A <a href="https://raw.githubusercontent.com/lilliputten/lilliputten.github.io/master/site/cv-lilliputten-2023-v1-1-2.pdf" target="_blank">printable CV</a> (pdf, ~40K) is available.
+- A <a href="https://raw.githubusercontent.com/lilliputten/lilliputten.github.io/master/site/cv-lilliputten-2023-v1-1-3.pdf" target="_blank">printable CV</a> (pdf, ~50K) is available.
 
 <!--
- @changed 2023.07.04, 17:12
+ @changed 2023.07.11, 01:36
 -->
