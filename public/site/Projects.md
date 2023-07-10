@@ -11,12 +11,9 @@ Below are a few ongoing or finished projects.
 - Online multiuser quiz game developed on Flask (Python) at server-side and NextJS application for my Russian clients. See [client](https://github.com/lilliputten/tournament-game-client) and [server](https://github.com/lilliputten/tournament-game-client) repositories, and hosted demo [application](https://tournament-game-build.march.team/) (in Russian). (Winter 2023) _(NextJS, Flask, TinyDB)_
 - Pet project for Seven Peaks group (news reader based on Guardian public API).
 See [repository](https://github.com/lilliputten/peaks-test-project), [demo build](https://peaks.lilliputten.ru/). (Winter 2023) _(NextJS, no extra libs used)_
-- Design of the navigation situation management and control interface, marine communication platform, remote vessel monitoring system (current project, NDA'ed, 2022-2023). _(OpenLayers, PrimeReact, NodeJS, React, Webpack, Redux,
-Webpack, SCSS)_
-- [Embedded interface, Web administration console, middleware NodeJS server](#/Projects/Interfaces/19xx-21xx-arti-printxpert) for Moscow-based company "GK ARTI". (2019-2021) _(React, Redux, Bootstrap, vanilla js
-for embeddable interfaces, Express, NodeJS)_
-- [Online GIS Monitoring and Control System](#/Projects/Interfaces/18xx-vektor-element) (2016-2018) _(SPA project based on i-bem, bem-xjst stack,
-particpation in development of PHP midware server)_
+- Design of the navigation situation management and control interface, marine communication platform, remote vessel monitoring system (NDA'ed, 2022-2023). _(OpenLayers, PrimeReact, NodeJS, React, Webpack, Redux, Webpack, SCSS)_
+- [Embedded interface, Web administration console, middleware NodeJS server](#/Projects/Interfaces/19xx-21xx-arti-printxpert) for Moscow-based company "GK ARTI". (2019-2021) _(React, Redux, Bootstrap, vanilla js for embeddable interfaces, Express, NodeJS fon the server side)_
+- [Online GIS Monitoring and Control System](#/Projects/Interfaces/18xx-vektor-element) (2016-2018) _(SPA project based on i-bem, bem-xjst stack, particpation in development of PHP midware server)_
 
 ### Web sites (design, layout, coding)
 
