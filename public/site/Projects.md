@@ -8,7 +8,7 @@ Below are a few ongoing or finished projects.
 
 ### Interfaces/applications
 
-- Online multiuser quiz game developed on Flask (Python) at server-side and NextJS application for my Russian clients. See [client](https://github.com/lilliputten/tournament-game-client) and [server](https://github.com/lilliputten/tournament-game-client) repositories, and hosted demo [application](https://tournament-game-build.march.team/) (in Russian). (Winter 2023) _(NextJS, Flask, TinyDB)_
+- Online multiuser quiz game developed on Flask (Python) at server-side and NextJS application for my Russian clients. See [client](https://github.com/lilliputten/tournament-game-client) and [server](https://github.com/lilliputten/tournament-game-client) repositories, demo application will be available soon. (Winter 2023) _(NextJS, Flask, TinyDB)_
 - Pet project for Seven Peaks group (news reader based on Guardian public API).
 See [repository](https://github.com/lilliputten/peaks-test-project), [demo build](https://peaks.lilliputten.ru/). (Winter 2023) _(NextJS, no extra libs used)_
 - Design of the navigation situation management and control interface, marine communication platform, remote vessel monitoring system (NDA'ed, 2022-2023). _(OpenLayers, PrimeReact, NodeJS, React, Webpack, Redux, Webpack, SCSS)_
@@ -43,5 +43,5 @@ See [repository](https://github.com/lilliputten/peaks-test-project), [demo build
 - (Old) Personal portfolio site (2000-2016, in Russian, external link): [lilliputten.ru](http://lilliputten.ru)
 
 <!--
- @changed 2023.07.11, 02:03
+ @changed 2023.07.12, 01:43
 -->
