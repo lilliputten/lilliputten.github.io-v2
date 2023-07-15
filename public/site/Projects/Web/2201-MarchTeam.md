@@ -31,7 +31,7 @@ I made all the parts of the project: frontend, backend, web design, logotype des
 
 It integrates a real estate search database subscription service from some major agencies and offers some interactive services (to make a property search request, callback request, etc).
 
-It made with React, NextJS and Chakra UI on the client side, Flask and TinyDb (Python) on the backend. Initially it used Google's Firebase service, but later replaced by our own Flask solution.
+It made with React, NextJS and Chakra UI on the client side, Flask and TinyDB (Python) on the backend. Initially it used Google's Firebase service, but later replaced by our own Flask solution.
 
 I've also developoed the entire corporate identity of the company (including logotype, business cards, letterhead, envelopes, advertising flyers and, of course, website design).
 
@@ -67,14 +67,14 @@ I've also developoed the entire corporate identity of the company (including log
 
 ## Tasks performed:
 
-- Full development cycle.
-- Frontend application.
-- Backend server.
-- Web design.
-- Logotype design.
-- Entire corporate identity design.
-- Hosting support and domen registration.
-- External service integration.
-- Interactive forms.
-- Interface design.
-- Adaptive web layout.
+- Full development cycle
+- Frontend application (React, NextJS)
+- Backend server (Flask, TinyDB, Python)
+- Web design
+- Logotype design
+- Entire corporate identity design
+- Hosting support and domen registration
+- External service integration
+- Interactive forms
+- Interface design
+- Adaptive web layout
