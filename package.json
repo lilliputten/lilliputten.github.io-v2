@@ -3,8 +3,8 @@
   "based-on": "bem-react-boilerplate-1811",
   "github-pages-site": "https://lilliputten.github.io",
   "github-pages-repository": "https://github.com/lilliputten/lilliputten.github.io",
-  "version": "0.0.3",
-  "changed": "2023.07.04, 01:03",
+  "version": "0.0.4",
+  "changed": "2023.07.16, 00:14",
   "author": "lilliputten <lilliputten@yandex.ru>",
   "license": "MIT",
   "repository": {
