@@ -21,6 +21,10 @@ tags:
 
 # March.Team real estate agency public site
 
+<div class="FrontImage">
+  <img src="https://res.cloudinary.com/lilliputten/image/upload/c_thumb,w_648,g_face/v1689444910/Projects/Web/2201-march-team/Layout.jpg" />
+</div>
+
 In the winter of 2022, I made a small representative website for a tiny real estate agency in Moscow.
 
 I made all the parts of the project: frontend, backend, web design, logotype design, entire corporate identity design, provided hosting support and domen registration services.
@@ -30,10 +34,6 @@ It integrates a real estate search database subscription service from some major
 It made with React, NextJS and Chakra UI on the client side, Flask and TinyDb (Python) on the backend. Initially it used Google's Firebase service, but later replaced by our own Flask solution.
 
 I've also developoed the entire corporate identity of the company (including logotype, business cards, letterhead, envelopes, advertising flyers and, of course, website design).
-
-<div class="FrontImage">
-  <img src="https://res.cloudinary.com/lilliputten/image/upload/c_thumb,w_648,g_face/v1689444910/Projects/Web/2201-march-team/Layout.jpg" />
-</div>
 
 ## Site screenshots
 
