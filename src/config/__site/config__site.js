@@ -33,7 +33,7 @@
     // Gallery...
     galleryRoot,
     galleryId,
-    galleryThumb: ({url, width, height}) => `${galleryRoot}c_thumb${width ? ',w_' + width : ''}${height ? ',h_' + height : ''},g_face/${galleryId}/${url}`,
+    galleryThumb: ({url, width, height}) => `${galleryRoot}c_thumb${width ? ',w_' + width : ''}${height ? ',h_' + height : ''}/${galleryId}/${url}`,
     galleryImage: ({url}) => `${galleryRoot}${galleryId}/${url}`,
 
     /** mainMenu ** {{{

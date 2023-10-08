@@ -27,9 +27,9 @@ __Prototyping:__ Figma, Adobe XD, Photoshop, Illustrator, InDesign.
 
 __Layouting/Styling:__ HTML5, CSS3, Stylus, LESS, SCSS, PostCSS, Tailwind, MUI, Chakra UI, Bootstrap, Storybook, adaptive/responsive techniques, flexbox/grid.
 
-__Applied/Automation:__ Python, JavaScript, PHP (in previous projects), Unix Shell, Powershell.
+__Applied/Automation:__ Python, JavaScript, PHP (in previous projects), Unix (bash) shell, Powershell.
 
-__Dev. tools:__ Webpack, Gulp, npm, git, svn, other NodeJS and CLI utilities, Jest, Jira.
+__Dev. tools:__ Webpack, Gulp, npm, git, svn, other NodeJS and CLI utilities, Selenium, Jest, Jira.
 
 ## Misc
 
@@ -50,5 +50,5 @@ I'm really looking for an interesting new job right now. At the moment, I'm only
 - A <a href="https://raw.githubusercontent.com/lilliputten/lilliputten.github.io/master/site/cv-lilliputten-2023-v1-1-3.pdf" target="_blank">printable CV</a> (pdf, ~50K) is available.
 
 <!--
- @changed 2023.07.11, 01:36
+ @changed 2023.07.21, 20:26
 -->

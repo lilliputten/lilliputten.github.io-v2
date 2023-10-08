@@ -6,8 +6,9 @@ Currently I'm working for our own startup project, 360caster, for interactive mu
 
 Below are a few ongoing or finished projects.
 
-### Interfaces/applications
+### Web applications and interfaces
 
+- [360caster MVP web application](#/Projects/Interfaces/2308-360caster-mvp). My partner and I made the MVP application for our last startup project 360caster. The application is designed for conducting virtual 3D excursions and tours of premises and objects previously filmed with high quality, mainly for museums and exhibition spaces. (2023)
 - Online multiuser quiz game developed on Flask (Python) at server-side and NextJS application for my Russian clients. See [client](https://github.com/lilliputten/tournament-game-client) and [server](https://github.com/lilliputten/tournament-game-client) repositories, demo application will be available soon. (Winter 2023) _(NextJS, Flask, TinyDB)_
 - Pet project for Seven Peaks group (news reader based on Guardian public API).
 See [repository](https://github.com/lilliputten/peaks-test-project), [demo build](https://peaks.lilliputten.ru/). (Winter 2023) _(NextJS, no extra libs used)_
@@ -35,6 +36,7 @@ See [repository](https://github.com/lilliputten/peaks-test-project), [demo build
 
 ### Identity
 
+- [Public website, logo and style for 360caster project](#/Projects/Identity/2305-360caster-style). I've developed a logo, general style and some applied designs, including pretty simple public website, for our recent (2023) startup project 360caster. (2023)
 - ["Pradna" fitness club identity](#/Projects/Identity/12xx-pradna) (2012)
 - [Alford law office logotypes](#/Projects/Identity/0807-alford) (2008)
 
