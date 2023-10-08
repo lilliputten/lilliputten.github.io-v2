@@ -1,15 +1,17 @@
 +++
 tags:
   - 2023
-  - online
-  - game
-  - quiz
-  - mobx
-  - web application
-  - react
+  - backend
   - flask
+  - frontend
+  - game
+  - mobx
+  - online
   - python
+  - quiz
+  - react
   - typescript
+  - web application
 +++
 
 # Online multi-user text quiz game

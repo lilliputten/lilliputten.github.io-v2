@@ -1,10 +1,13 @@
 +++
 tags:
   - 2023
+  - frontend
+  - mobx
   - mvp
   - react
-  - mobx
+  - typescript
   - web application
+  - webpack
 +++
 
 # 360caster MVP web application
