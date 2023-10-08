@@ -10,6 +10,8 @@ tags:
 
 # Public website, logo and style for 360caster project
 
+I've developed a logo, general style and some applied designs, including pretty simple public website, for our recent (2023) startup project 360caster.
+
 ## Final logotype variant
 
 <div class="FrontImage">
