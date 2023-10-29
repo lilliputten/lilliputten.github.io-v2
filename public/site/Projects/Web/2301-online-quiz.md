@@ -24,7 +24,7 @@ Game Scenario: Players log in to the main screen and wait for a partner (the fir
 
 The winner detecting by a formula that uses player's score and overall game time.
 
-See [client](https://github.com/lilliputten/tournament-game-client) and [server](https://github.com/lilliputten/tournament-game-client) repositories, demo application will be available soon
+See [client](https://github.com/lilliputten/tournament-game-client) and [server](https://github.com/lilliputten/tournament-game-server) repositories, demo application will be available soon
 
 The original site is in the possession of the client.
 
