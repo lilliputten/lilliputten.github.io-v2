@@ -11,7 +11,7 @@ About
 
 __Name:__ Igor.
 
-__Location:__ Worldwide. Now (for Winter 2023) I'm in Thailand, but ready to move almost everywhere.
+__Location:__ Worldwide. Now (for the Winter of 2023) I'm in Thailand, but ready to move almost everywhere.
 
 __Birth date:__ 1974.
 
