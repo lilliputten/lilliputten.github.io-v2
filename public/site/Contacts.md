@@ -9,14 +9,18 @@ Use any of the following methods:
 
 - Github: [github.com/lilliputten](https://github.com/lilliputten)
 - LinkedIn: [linkedin.com/in/lilliputten](http://linkedin.com/in/lilliputten)
+<!--
 - Facebook: [facebook.com/igor.lilliputten](https://facebook.com/igor.lilliputten)
 - Instagram: [instagram.com/igorlilliputten](https://instagram.com/igorlilliputten)
+-->
 - Gitpages (this site): [lilliputten.github.io](https://lilliputten.github.io)
 
+<!--
 ## Online summaries (in Russian)
 
 - [hh.ru](https://hh.ru/resume/d311fd1dff025511070039ed1f3946696f6451)
 - [career.habr.com](https://career.habr.com/lilliputten)
+-->
 
 ## Other
 
