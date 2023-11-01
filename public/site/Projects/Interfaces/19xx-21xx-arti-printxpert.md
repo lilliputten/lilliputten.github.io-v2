@@ -3,32 +3,32 @@ tags:
   - 2019
   - 2020
   - 2021
-  - interface
-  - intranet
-  - javascript
-  - nodejs
-  - npm
-  - programming
-  - security
-  - spa
-  - arti
-  - prinxpert
-  - web
-  - webpack
-  - react
-  - redux
-  - embedded-ui
-  - es6
-  - automation
-  - fullstack
-  - frontend
+  - IoT
+  - Interface
+  - Intranet
+  - Javascript
+  - Nodejs
+  - Npm
+  - Programming
+  - Security
+  - Spa
+  - Arti
+  - Prinxpert
+  - Web
+  - Webpack
+  - React
+  - Redux
+  - Embedded-ui
+  - Es6
+  - Automation
+  - Fullstack
+  - Frontend
 +++
 
-# PrintXpert project: Embedded MFU interface, Web administration client, middleware NodeJS server
+# PrintXpert IoT project: Embedded MFU interface, Web administration client, middleware NodeJS server
 
-All projects are developed For Moscow-based company "[GK
-ARTI](http://arti.ru/)" (PrintXpert division,
-[ASUPIM](https://arti.ru/management/) project, 2019-2021 yy).
+All projects are developed For Moscow-based company "[GK ARTI](http://arti.ru/)" (PrintXpert division,
+[ASUPIM](https://arti.ru/management/) project, 2019-2021 years).
 
 ## View of the demonstration stand in the exhibition pavilion
 
@@ -231,5 +231,5 @@ ARTI](http://arti.ru/)" (PrintXpert division,
 (in progress)
 
 <!--
- @changed 2021.08.18, 22:36
+ @changed 2023.11.01, 19:03
 -->
