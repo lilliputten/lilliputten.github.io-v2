@@ -25,8 +25,8 @@ Use any of the following methods:
 
 - Old personal portfolio site (2000-2016, in Russian, external link): [lilliputten.ru](http://lilliputten.ru)
 - Telegram: [lilliputten](https://t.me/lilliputten)
-- E-mail: [igor@lilliputten.ru](mailto:igor@lilliputten.ru?subject=Hi%20Igor!) (preferred contacts method)
+- E-mail: [igor@lilliputten.ru](mailto:igor@lilliputten.ru?subject=Hi%20Igor!)
 
 <!--
- @changed 2022.12.17, 00:32
+ @changed 2023.11.01, 19:48
 -->
