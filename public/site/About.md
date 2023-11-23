@@ -17,7 +17,7 @@ __Birth date:__ 1974.
 
 __Brief:__ Mid/senior programmer, web frontend (sometimes fullstack) developer and designer (both for the web and for printing). Last few years have been specializing mainly in JavaScript development (mostly using React).
 
-__Current status:__ Currently I'm working for our own startup project.
+__Current status:__ Currently I'm working with my upwork clients and for our own startup project.
 
 ## Skills
 
@@ -39,9 +39,11 @@ __Languages:__ English (intermediate/upper-intermediate, B1/B2 level for spoken,
 
 __Interests__: Music (blues harp, CBG), painting, skateboarding, running, biking, hiking, programming, IT, science.
 
+<!--
 ## See also
 
-- Old personal portfolio site (2000-2016, in Russian, is not updated): <a href="https://lilliputten.ru" target="_blank">lilliputten.ru</a>.
+- Old personal portfolio site (2000-2016, in Russian, is no longer updated): <a href="https://lilliputten.ru" target="_blank">lilliputten.ru</a>.
+-->
 
 ## Info for HR/potential employers
 
@@ -50,5 +52,5 @@ I'm really looking for an interesting new job right now. At the moment, I'm only
 - A <a href="https://raw.githubusercontent.com/lilliputten/lilliputten.github.io/master/site/cv-lilliputten-2023-v1-1-3.pdf" target="_blank">printable CV</a> (pdf, ~50K) is available.
 
 <!--
- @changed 2023.07.21, 20:26
+ @changed 2023.11.24, 04:50
 -->
