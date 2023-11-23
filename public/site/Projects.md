@@ -30,10 +30,12 @@ See [repository](https://github.com/lilliputten/peaks-test-project), [demo build
 - [jsRTF -- documents generating library](#/Projects/Code/1707-jsrtf) (2017)
 - [Automatic deployment for bitbucket.org web-based projects](#/Projects/Code/2016-automatic-bitbucket-deploy) (since 2016)
 
+<!--
 ### Design & printing
 
 - [Artistically designed book of poems](#/Projects/Printing/1411-Bonjour) (2014)
 - [INION book cover design](#/Projects/Printing/1403-kuraishity-book) (2014)
+-->
 
 ### Identity
 
@@ -41,11 +43,13 @@ See [repository](https://github.com/lilliputten/peaks-test-project), [demo build
 - ["Pradna" fitness club identity](#/Projects/Identity/12xx-pradna) (2012)
 - [Alford law office logotypes](#/Projects/Identity/0807-alford) (2008)
 
+<!--
 ## See also
 
 - [This portfolio "pet project"](https://github.com/lilliputten/lilliputten.github.io-v2) (external github repository link, 2018)
 - (Old) Personal portfolio site (2000-2016, in Russian, external link): [lilliputten.ru](http://lilliputten.ru)
+-->
 
 <!--
- @changed 2023.10.30, 01:08
+ @changed 2023.11.24, 04:43
 -->
