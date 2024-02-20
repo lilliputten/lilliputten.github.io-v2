@@ -9,7 +9,7 @@ Below are a few ongoing or finished projects.
 ### Web applications and interfaces
 
 - [360caster MVP web application](#/Projects/Web/2308-360caster-mvp). My partner and I made the MVP application for our last startup project 360caster. The application is designed for conducting virtual 3D excursions and tours of premises and objects previously filmed with high quality, mainly for museums and exhibition spaces. (2023)
-- [Online multi-user text quiz game](#/Projects/Web/2301-online-quiz) Online multiuser quiz game developed on Flask (Python) at server-side and NextJS application for my Russian clients. See [client](https://github.com/lilliputten/tournament-game-client) and [server](https://github.com/lilliputten/tournament-game-client) repositories, demo application will be available soon. (January 2023) _(NextJS, Flask, TinyDB)_
+- [Online multi-user text quiz game](#/Projects/Web/2301-online-quiz) Online multiuser quiz game developed on Flask (Python) at server-side and NextJS application for my Russian clients. See [client](https://github.com/lilliputten/tournament-game-client) and [server](https://github.com/lilliputten/tournament-game-server) repositories, demo application will be available soon. (January 2023) _(NextJS, Flask, TinyDB)_
 - Pet project for Seven Peaks group (news reader based on Guardian public API).
 See [repository](https://github.com/lilliputten/peaks-test-project), [demo build](https://peaks.lilliputten.ru/). (Winter 2023) _(NextJS, no extra libs used)_
 - Design of the navigation situation management and control interface, marine communication platform, remote vessel monitoring system (NDA'ed, 2022-2023). _(OpenLayers, PrimeReact, NodeJS, React, Webpack, Redux, Webpack, SCSS)_
@@ -51,5 +51,5 @@ See [repository](https://github.com/lilliputten/peaks-test-project), [demo build
 -->
 
 <!--
- @changed 2023.11.24, 04:43
+ @changed 2024.02.20, 23:14
 -->
