@@ -48,3 +48,4 @@ It allows guides and authors to use virtual reality, audio and video communicati
 ## See also
 
 - [Public website, logo and style for 360caster project](#/Projects/Identity/2305-360caster-style.md)
+- [Project landing page (external, 360caster.com)](https://360caster.com/)
