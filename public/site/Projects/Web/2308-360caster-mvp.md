@@ -12,7 +12,7 @@ tags:
 
 # 360caster MVP web application
 
-In the first half of the 20223, my partner and I made the MVP application for our last startup project 360caster.
+In the first half of the 2023, my partner and I made the MVP application for our last startup project 360caster.
 
 The application is designed for conducting virtual 3D excursions and tours of premises and objects previously filmed with high quality, mainly for museums and exhibition spaces.
 
