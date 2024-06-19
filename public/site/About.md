@@ -49,7 +49,7 @@ __Interests__: Music (blues harp, CBG), painting, skateboarding, running, biking
 
 I'm really looking for an interesting new job right now. At the moment, I'm only considering options with remote work or relocation.
 
-- A <a href="https://raw.githubusercontent.com/lilliputten/lilliputten.github.io/master/site/cv-lilliputten-2024-v1-1-1.pdf" target="_blank">printable CV</a> (pdf, ~50K) is available.
+- A <a href="https://lilliputten.com/static/docs/cv-lilliputten-2024-v1-1-1.pdf" target="_blank">printable CV</a> (pdf, ~50K) is available.
 
 <!--
  @changed 2023.11.24, 04:50
